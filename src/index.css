@@ -1,5 +1,109 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: poppins ;
+  src: url("../public/fonts/Poppins-Regular.ttf");
+}
+
+
+@theme{
+  --font-poppins: 'poppins', sans-serif;
+}
 body {
 background-color: black;
+}
+
+.underline-animate {
+  width: 0;
+  height: 7px;
+  background-color: #939793;
+  margin: 0 auto; /* center under text */
+  animation: slide 1s forwards;
+}
+
+@keyframes slide {
+  to { width: 200px; } /* adjust width as needed */
+}
+
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation with delay */
+.fade-up {
+  animation-name: fadeUp;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards; /* keep final state */
+  opacity: 0; /* start invisible */
+}
+
+/* Different delays for stagger */
+.fade-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.fade-delay-2 {
+  animation-delay: 0.5s;
+}
+
+.fade-delay-3 {
+  animation-delay: 0.8s;
+}
+
+.animated-ball{
+  background: rgb(118, 117, 119);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(130px);
+/* left: 100px; */
+/* top: 100px; */
+  animation: moveBall 3s infinite alternate;
+  /* z-index: -1; */
+}
+@keyframes moveBall {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(60px, 60px);
+  }
+}
+
+.addcolor{
+  background-color: rgb(11, 11, 12);
+  
+}
+
+/* Hide scrollbar but keep scroll */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari */
+}
+
+
+path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 3s ease forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
 }

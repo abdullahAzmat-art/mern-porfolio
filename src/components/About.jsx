@@ -62,13 +62,15 @@ The best decisions come from following your heart ❤️`;
 
   return (
     <div className='min-h-screen mt-8 bg-black'>
-      <h1 className='font-poppins text-center text-white' style={{fontSize:"50px", fontWeight:"bold"}}>
+      <h1 className='font-poppins text-center text-white appear-animation' style={{fontSize:"50px", fontWeight:"bold"}}>
         About Me
       </h1>
+                <p className="text-gray-500 appear-animation text-md text-center font-poppins ">    From Pre-Medical to MERN Stack Developer
+</p>
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 px-4 sm:px-6 md:px-8 lg:px-12 mt-12">
         {/* Left content - VS Code Style Journey */}
-        <div className="md:w-1/2 w-full" >
+        <div className="md:w-1/2 w-full appear-animation"  >
           <div className="relative max-w-2xl rounded-xl addcolor shadow-xl p-6 z-10" data-aos="fade-up-right">
             {/* Header bar */}
             <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-700">
@@ -144,10 +146,11 @@ The best decisions come from following your heart ❤️`;
         </div>
 
         {/* Right content */}
-       <div className="md:w-1/2 w-full flex justify-center items-center relative">
+       <div className="md:w-1/2 w-full  
+ flex appear-animation justify-center items-center relative">
   
   {/* soft glow background */}
-  <div className="absolute w-72 h-72 bg-gray-800/30 blur-4xl rounded-full"></div>
+  {/* <div className="absolute w-72 h-72 bg-gray-800/30 blur-4xl rounded-full"></div> */}
 
  <img
   src="/Capture.PNG"
@@ -159,7 +162,9 @@ The best decisions come from following your heart ❤️`;
     grayscale
     brightness-75
     contrast-125
-        
+   
+            hidden 
+    sm:block
     opacity-80
     shadow-[0_40px_80px_rgba(0,0,0,0.8)]
     transition-all

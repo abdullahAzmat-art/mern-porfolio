@@ -3,6 +3,12 @@ import Typed from 'typed.js';
 import './App.css';
 import Herosection from './components/Herosection';
 import About from './components/About';
+import Eduationsections from './components/Eduationsections';
+import EducationTimeline from './components/Eduationsections';
+import EducationJourney from './components/Eduationsections';
+import Tournamentcard from './components/Projectcard';
+import ProjectsSection from './components/Projectcard';
+import Footer from './components/Footer';
 
 function App() {
   const el = useRef(null);
@@ -21,7 +27,7 @@ function App() {
 
     const time = setTimeout(() => {
       setLoading(false);
-    }, 7000);
+    }, 7100);
 
     return () => {
       typed.destroy();
@@ -45,6 +51,9 @@ function App() {
       <div className={loading ? 'hidden' : 'visible'}>
   <Herosection/>
   <About/>
+  <EducationJourney/>
+  <ProjectsSection/>
+  <Footer/>
 </div>
     </>
   );

@@ -26,7 +26,7 @@ const ProjectsSection = () => {
       title: "E-Commerce Platform",
       subtitle: "Spring Boot University Project",
       description: "Full e-commerce website with product catalog, shopping cart, authentication, order management, and payment processing",
-      image: "./public/WhatsApp Image 2026-01-18 at 9.51.54 Px.jpeg",
+      image: "/WhatsApp Image 2026-01-18 at 9.51.54 Px.jpeg",
       technologies: ["React", "Spring Boot", "MySQL", "Redux"],
       github: "https://github.com/abdullahAzmat-art/Ecommence-Frontend-with-Spring-boot-Application-",
       live: "#"
@@ -35,7 +35,7 @@ const ProjectsSection = () => {
       title: "Royal Venue",
       subtitle: "Marriage Hall Booking Platform",
       description: "Platform connecting customers with hall managers. Features pre-booking system for checking availability and real-time communication",
-      image: "./public/Capture3.PNG",
+      image: "/Capture3.PNG",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
       github: "https://github.com/abdullahAzmat-art/Mariage-hall-booking-System",
       live: "https://royal-venue.vercel.app/"
@@ -44,7 +44,7 @@ const ProjectsSection = () => {
       title: "VORTX",
       subtitle: "eSports Tournament Platform",
       description: "Online tournament hosting platform for competitive gaming. Supports multiple games with automated bracket generation and real-time leaderboards",
-      image: "./public/image.png",
+      image: "/image.png",
       technologies: ["React", "Node.js", "MongoDB", "WebSocket"],
       github: "https://github.com/abdullahAzmat-art/vortex-esports",
       live: "https://vortex-esports-5swi.vercel.app/"

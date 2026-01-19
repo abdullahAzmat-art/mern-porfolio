@@ -143,3 +143,21 @@ path {
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
 }
+
+.scrollbaredit::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollbaredit::-webkit-scrollbar-track {
+  background: #161616;
+}
+
+.scrollbaredit::-webkit-scrollbar-thumb {
+  background: #464343;
+  /* background: #cacaca; */
+  border-radius: 10px;
+}
+.scrollbaredit::-webkit-scrollbar-thumb:hover {
+  background: #6b6565;
+  border-radius: 10px;
+}

@@ -31,7 +31,8 @@ const Herosection = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col justify-center items-center min-h-screen bg-black px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden py-4 sm:py-0">
+   <div>
+     <div className="relative flex flex-col justify-center items-center min-h-screen bg-black px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden py-4 sm:py-0">
 
       {/* Particles */}
       <ParticlesComponent id="hero-particles" />
@@ -93,6 +94,7 @@ const Herosection = () => {
         <span className="text-gray-500 text-xs sm:text-sm font-poppins">Scroll Down</span>
         <ChevronDown className="text-white animate-bounce" size={20} />
       </div>
+    
 
       <style jsx>{`
         .fade-up {
@@ -163,6 +165,11 @@ const Herosection = () => {
       `}</style>
 
     </div>
+      {/* <div className='flex justify-end items-end text-white  mb-4 p-4 absolute bottom-0 right-1 fixed'>
+        <div className=''><a href='https://wa.me/03084685669?text=Hello%20I%20want%20to%20contact%20you  target="_blank"
+'><img src="/fonts/wrpp2Nl4.png" alt="Abdullah Azmat" className="h-14 w-14 text-white rounded-2xl drop-shadow-[gray]" /></a></div>
+      </div> */}
+   </div>
   );
 };
 

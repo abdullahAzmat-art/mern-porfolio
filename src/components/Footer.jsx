@@ -8,7 +8,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black/60 backdrop-blur-xl border-t border-gray-600/30 text-white mt-32">
+    <footer className="w-full backdrop-blur-xl border-t border-gray-600/30 text-white mt-32">
       <div className="max-w-7xl mx-auto px-6 py-14 flex flex-col items-center">
 
         {/* Logo */}

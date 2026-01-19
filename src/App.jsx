@@ -31,7 +31,7 @@ const scroll = new LocomotiveScroll();
 
     const time = setTimeout(() => {
       setLoading(false);
-    }, 7100);
+    }, 7110);
 
     return () => {
       typed.destroy();
@@ -52,7 +52,8 @@ const scroll = new LocomotiveScroll();
         </div>
       )}
 
-      <div className={loading ? 'hidden' : 'visible'}>
+      <div className={loading ? 'hidden ' : 'visible'}>
+       
   <Herosection/>
   <About/>
   <EducationJourney/>

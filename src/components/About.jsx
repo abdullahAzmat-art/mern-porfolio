@@ -83,7 +83,7 @@ The best decisions come from following your heart ❤️`;
             </div>
 
             {/* Journey content - WITH SCROLL */}
-            <div className="h-[450px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600  no-scrollbar scrollbar-track-gray-800">
+            <div className="h-[450px] overflow-y-auto scrollbar-thin  scrollbaredit  ">
               <div className="text-gray-200 leading-relaxed whitespace-pre-wrap font-mono text-sm pr-2">
                 {displayedText.split('\n').map((line, i) => {
                   // Title - Purple like VS Code

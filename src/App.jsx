@@ -9,8 +9,12 @@ import EducationJourney from './components/Eduationsections';
 import Tournamentcard from './components/Projectcard';
 import ProjectsSection from './components/Projectcard';
 import Footer from './components/Footer';
+import LocomotiveScroll from 'locomotive-scroll';
 
 function App() {
+
+
+const scroll = new LocomotiveScroll();
   const el = useRef(null);
   const [loading, setLoading] = useState(true);
 

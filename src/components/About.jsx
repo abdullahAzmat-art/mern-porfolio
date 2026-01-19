@@ -11,7 +11,7 @@ const About = () => {
 Completed matriculation. My family wanted me to become a doctor, but deep inside, I had different dreams.
 
 📚 FSC Pre-Medical (2024)
-Enrolled at Punjab College as a private student. I studied Pre-Medical due to family pressure to pursue a medical career. However, I didn't have enough funds for medical school, and I realized this field was not my true passion.
+Enrolled at Punjab College. I studied Pre-Medical due to family pressure to pursue a medical career. However, I didn't have enough funds for medical school, and I realized this field was not my true passion.
 
 ✨ The Turning Point (2024)
 After FSC, I made the most important decision of my life — I enrolled in a MERN Stack Web Development course at PNY. This decision changed everything. I discovered my true interest in coding and software development.

@@ -71,7 +71,7 @@ const Herosection = () => {
 
       {/* Button - Responsive */}
       <a
-        href="/Abdullah-Azmat-Resume.pdf"
+        href="/Abdullah-Azmatresume.pdf"
         download="Abdullah-Azmat-Resume.pdf"
         className="relative mt-6 sm:mt-10 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-poppins font-bold text-sm sm:text-base
                    border border-white text-white

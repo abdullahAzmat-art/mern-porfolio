@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import 'locomotive-scroll/dist/locomotive-scroll.css'; 
 @font-face {
   font-family: poppins ;
   src: url("../public/fonts/Poppins-Regular.ttf");

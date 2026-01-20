@@ -62,7 +62,7 @@ The best decisions come from following your heart ❤️`;
 
   return (
     <div className='min-h-screen mt-8 bg-black'>
-      <h1 className='font-poppins text-center text-white appear-animation' style={{fontSize:"50px", fontWeight:"bold"}}>
+      <h1 className='font-poppins text-center text-white appear-animation font-bold' style={{fontSize:"50px"}}>
         About Me
       </h1>
                 <p className="text-gray-500 appear-animation text-md text-center font-poppins ">    From Pre-Medical to MERN Stack Developer
@@ -153,7 +153,7 @@ The best decisions come from following your heart ❤️`;
   {/* <div className="absolute w-72 h-72 bg-gray-800/30 blur-4xl rounded-full"></div> */}
 
  <img
-  src="/Capture.PNG"
+  src="/fonts/WhatsApp Image 2026-01-20 at 10.45.57 AM.jpeg"
   alt="About Me Illustration"
   className="
     relative

@@ -52,12 +52,15 @@ const EducationJourney = () => {
     <div className="min-h-screen  p-8 relative overflow-hidden mt-10">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-4 text-white" style={{fontSize:"50px"}}>
-            Education Journey
-          </h1>
-          <p className="text-gray-500 text-lg">Hover over each milestone to see details</p>
-        </div>
+       {/* Header */}
+<div className="text-center mb-16">
+  <h1 className="text-5xl font-bold mb-4 text-white tracking-tight" style={{ fontSize: "50px" }}>
+    Academic Journey
+  </h1>
+  <p className="text-gray-400 text-lg max-w-xl mx-auto">
+    A timeline of my formal education, key milestones, and practical university training. Hover over each card to explore.
+  </p>
+</div>
 
         {/* Desktop View - Curved Line */}
         <div className="hidden md:block relative mb-20 appear-animation" style={{ minHeight: '450px' }}>

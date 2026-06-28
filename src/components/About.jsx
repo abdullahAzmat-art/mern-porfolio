@@ -62,67 +62,72 @@ The best decisions come from following your heart ❤️`;
 
   return (
     <div className='min-h-screen mt-8 bg-black'>
-      <h1 className='font-poppins text-center text-white appear-animation font-bold' style={{fontSize:"50px"}}>
-        About Me
-      </h1>
-                <p className="text-gray-500 appear-animation text-md text-center font-poppins ">    From Pre-Medical to MERN Stack Developer
-</p>
+    {/* Header */}
+<div className="text-center mb-12">
+  <h1 className="font-poppins text-white appear-animation font-bold tracking-tight" style={{ fontSize: "50px" }}>
+    My Story
+  </h1>
+  <p className="text-gray-400 appear-animation text-lg max-w-xl mx-auto font-poppins">
+    A unique transition from a Pre-Medical background into a passionate MERN Stack developer, driven by logic, code, and continuous learning.
+  </p>
+</div>
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 px-4 sm:px-6 md:px-8 lg:px-12 mt-12">
         {/* Left content - VS Code Style Journey */}
         <div className="md:w-1/2 w-full appear-animation"  >
-          <div className="relative max-w-2xl rounded-xl addcolor shadow-xl p-6 z-10" data-aos="fade-up-right">
+          <div className="relative max-w-2xl rounded-xl bg-[#1e1e1e] shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-[#333] z-10 overflow-hidden" data-aos="fade-up-right">
             {/* Header bar */}
-            <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-700">
+            <div className="h-10 bg-[#2d2d2d] flex items-center px-4 border-b border-[#111] justify-between">
               <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                <div className="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
               </div>
-              <div className="text-xs text-gray-400">AbdullahJourney.txt</div>
+              <div className="text-xs text-[#858585] font-mono">AbdullahJourney.txt</div>
+              <div className="w-12"></div> {/* Spacer to center the text properly if needed, but flex-between handles it */}
             </div>
 
             {/* Journey content - WITH SCROLL */}
-            <div className="h-[450px] overflow-y-auto scrollbar-thin  scrollbaredit  ">
-              <div className="text-gray-200 leading-relaxed whitespace-pre-wrap font-mono text-sm pr-2">
+            <div className="h-[450px] overflow-y-auto scrollbar-thin scrollbaredit p-6">
+              <div className="text-[#d4d4d4] leading-relaxed whitespace-pre-wrap font-mono text-sm pr-2">
                 {displayedText.split('\n').map((line, i) => {
-                  // Title - Purple like VS Code
+                  // Title - Keyword Purple
                   if (line.includes('My Journey:')) {
-                    return <div key={i} className="text-purple-600 font-bold mb-3">{line}</div>;
+                    return <div key={i} className="text-[#c586c0] font-bold mb-3">{line}</div>;
                   }
-                  // Emoji headings - Blue like VS Code function names
+                  // Emoji headings - Function Blue
                   if (line.match(/^[🎓📚✨💻🚀⚡🌟💙]/)) {
-                    return <div key={i} className="text-blue-400 font-semibold mt-3 mb-1">{line}</div>;
+                    return <div key={i} className="text-[#4fc1ff] font-semibold mt-3 mb-1">{line}</div>;
                   }
-                  // Bullet points - Green like VS Code strings
+                  // Bullet points - String Orange/Brown
                   if (line.startsWith('•')) {
-                    return <div key={i} className="text-green-400 ml-4">{line}</div>;
+                    return <div key={i} className="text-[#ce9178] ml-4">{line}</div>;
                   }
-                  // Philosophy quote - Yellow like VS Code warnings
+                  // Philosophy quote - Bracket Yellow
                   if (line.includes('"')) {
-                    return <div key={i} className="text-yellow-300">{line}</div>;
+                    return <div key={i} className="text-[#ffd700]">{line}</div>;
                   }
-                  // Final message - Pink/Red like VS Code keywords
+                  // Final message - Property Light Blue
                   if (line.includes('heart ❤️')) {
-                    return <div key={i} className="text-pink-400 mt-2">{line}</div>;
+                    return <div key={i} className="text-[#9cdcfe] mt-2">{line}</div>;
                   }
                   // Empty lines
                   if (line.trim() === '') {
                     return <div key={i} className="h-1"></div>;
                   }
-                  // Regular text - Gray like VS Code comments
-                  return <div key={i} className="text-gray-300">{line}</div>;
+                  // Regular text - Standard Gray
+                  return <div key={i} className="text-[#d4d4d4]">{line}</div>;
                 })}
                 {/* Blinking cursor */}
                 {currentIndex < fullText.length && (
-                  <span className="inline-block w-2 h-5 bg-green-400 ml-1 animate-pulse"></span>
+                  <span className="inline-block w-2 h-4 bg-[#d4d4d4] ml-1 animate-pulse align-middle"></span>
                 )}
               </div>
             </div>
 
             {/* Footer */}
-            <div className="mt-4 pt-3 border-t border-gray-700 flex items-center justify-between">
-              <div className="flex items-center gap-4 text-xs text-gray-500">
+            <div className="px-6 py-3 border-t border-[#333] bg-[#007acc] flex items-center justify-between">
+              <div className="flex items-center gap-4 text-xs text-white font-mono">
                 <span>✓ No errors</span>
                 <span>{Math.round((currentIndex / fullText.length) * 100)}% complete</span>
               </div>
@@ -130,7 +135,7 @@ The best decisions come from following your heart ❤️`;
                 {currentIndex >= fullText.length && (
                   <button
                     onClick={handleRestart}
-                    className="px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all text-xs flex items-center gap-2"
+                    className="px-3 py-1 bg-white/20 hover:bg-white/30 text-white rounded transition-all text-xs flex items-center gap-2 font-mono"
                   >
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -138,8 +143,8 @@ The best decisions come from following your heart ❤️`;
                     Replay
                   </button>
                 )}
-                <span className={`w-2 h-2 rounded-full ${currentIndex < fullText.length ? 'bg-green-400 animate-pulse' : 'bg-gray-600'}`}></span>
-                <span className="text-xs text-gray-500">{currentIndex < fullText.length ? 'Typing...' : 'Complete'}</span>
+                <span className={`w-2 h-2 rounded-full ${currentIndex < fullText.length ? 'bg-white animate-pulse' : 'bg-gray-400'}`}></span>
+                <span className="text-xs text-white font-mono">{currentIndex < fullText.length ? 'Typing...' : 'Complete'}</span>
               </div>
             </div>
           </div>

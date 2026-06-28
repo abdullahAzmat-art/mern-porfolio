@@ -10,6 +10,7 @@ import Tournamentcard from './components/Projectcard';
 import ProjectsSection from './components/Projectcard';
 import Footer from './components/Footer';
 import LocomotiveScroll from 'locomotive-scroll';
+import CustomCursor from './components/CustomCursor';
 
 function App() {
 
@@ -41,6 +42,7 @@ const scroll = new LocomotiveScroll();
 
   return (
     <>
+      <CustomCursor />
       {loading && (
         <div className='flex justify-center items-center h-screen '>
           <span data-aos="fade-up"

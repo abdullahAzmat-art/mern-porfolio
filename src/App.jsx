@@ -1,67 +1,37 @@
 import { useEffect, useRef, useState } from 'react';
-import Typed from 'typed.js';
 import './App.css';
 import Herosection from './components/Herosection';
 import About from './components/About';
-import Eduationsections from './components/Eduationsections';
-import EducationTimeline from './components/Eduationsections';
-import EducationJourney from './components/Eduationsections';
-import Tournamentcard from './components/Projectcard';
+import ServicesSection from './components/ServicesSection';
+import TechStackSection from './components/TechStackSection';
+import AchievementsSection from './components/AchievementsSection';
 import ProjectsSection from './components/Projectcard';
+import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import LocomotiveScroll from 'locomotive-scroll';
 import CustomCursor from './components/CustomCursor';
+import Loader from './components/Loader';
 
 function App() {
-
-
-const scroll = new LocomotiveScroll();
-  const el = useRef(null);
+  const scroll = new LocomotiveScroll();
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: [
-        "Looking for a MERN Stack Developer?",
-        "You're in the right place."
-      ],
-      typeSpeed: 40,
-      backSpeed: 20,
-      loop: true,
-    });
-
-    const time = setTimeout(() => {
-      setLoading(false);
-    }, 7110);
-
-    return () => {
-      typed.destroy();
-      clearTimeout(time);
-    };
-  }, []);
 
   return (
     <>
       <CustomCursor />
-      {loading && (
-        <div className='flex justify-center items-center h-screen '>
-          <span data-aos="fade-up"
-            ref={el}
-            className='font-poppins'
-            style={{ color: "white", fontSize: "57px"  , fontWeight: "bold" , textAlign:"center"}}
-          ></span>
-          <span className="inline-block w-1 h-12 bg-white ml-2 animate-pulse"></span>
-        </div>
-      )}
+      
+      {loading && <Loader onComplete={() => setLoading(false)} />}
 
-      <div className={loading ? 'hidden ' : 'visible'}>
-       
-  <Herosection/>
-  <About/>
-  <EducationJourney/>
-  <ProjectsSection/>
-  <Footer/>
-</div>
+      <div className={loading ? 'hidden' : 'visible'}>
+        <Herosection/>
+        <About/>
+        <ServicesSection/>
+        <TechStackSection/>
+        <AchievementsSection/>
+        <ProjectsSection/>
+        <ContactSection/>
+        <Footer/>
+      </div>
     </>
   );
 }

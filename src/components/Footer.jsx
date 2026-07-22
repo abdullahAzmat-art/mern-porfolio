@@ -8,7 +8,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-full backdrop-blur-xl border-t border-gray-600/30 text-white mt-32">
+    <footer className="w-full backdrop-blur-xl border-t border-gray-600/30 text-white bg-black">
       <div className="max-w-7xl mx-auto px-6 py-14 flex flex-col items-center">
 
         {/* Logo */}
@@ -47,7 +47,7 @@ const Footer = () => {
       {/* Bottom */}
       <div className="border-t border-gray-600/20">
         <div className="text-center text-xs text-gray-400 py-4">
-          © 2025 Abdullah Azmat • All Rights Reserved
+          © 2026 Abdullah Azmat • All Rights Reserved
         </div>
       </div>
     </footer>

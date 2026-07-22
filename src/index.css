@@ -166,3 +166,647 @@ path {
   background: #6b6565;
   border-radius: 10px;
 }
+
+/* ════════════════════════════════════════════════════
+   MY STORY – Vertical Timeline / Glassmorphism Cards
+   ════════════════════════════════════════════════════ */
+
+/* ── Section ── */
+.story-section {
+  position: relative;
+  background: transparent;
+  padding: 80px 24px 120px;
+}
+
+/* ── Header ── */
+.story-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.story-heading {
+  font-family: 'poppins', sans-serif;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 14px;
+}
+
+.story-heading-underline {
+  width: 60px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  margin: 0 auto 18px;
+}
+
+.story-subheading {
+  font-family: 'poppins', sans-serif;
+  font-size: clamp(14px, 1.6vw, 17px);
+  color: #6b7280;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Two-column layout ── */
+.story-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 56px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.story-timeline-col {
+  flex: 1 1 58%;
+  min-width: 0;
+}
+
+.story-portrait-col {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 100px;
+}
+
+/* ── Portrait ── */
+.story-portrait-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.story-portrait-glow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(20px);
+}
+
+.story-portrait-img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 20px;
+  filter: grayscale(0.3) brightness(0.8) contrast(1.1);
+  object-fit: cover;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.08);
+  transition: filter 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.story-portrait-img:hover {
+  filter: grayscale(0) brightness(0.95) contrast(1.05);
+  transform: scale(1.03);
+  box-shadow: 0 50px 100px rgba(0,0,0,0.8), 0 0 30px rgba(255,255,255,0.08);
+}
+
+/* ── Quick-facts card (same glass spec) ── */
+.story-facts-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.story-facts-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+}
+
+.story-facts-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.8), transparent, rgba(255,255,255,0.3));
+}
+
+.story-fact {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.story-fact-icon {
+  font-size: 16px;
+  line-height: 1.4;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.story-fact-label {
+  font-family: 'poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #4b5563;
+  margin-bottom: 2px;
+}
+
+.story-fact-value {
+  font-family: 'poppins', sans-serif;
+  font-size: 13px;
+  color: #d1d5db;
+  line-height: 1.4;
+}
+
+/* ════════════════════
+   TIMELINE
+   ════════════════════ */
+.story-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* dot + connector column */
+.story-timeline-line-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 40px;
+}
+
+.story-timeline-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.story-timeline-dot--highlight {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.story-timeline-item:hover .story-timeline-dot {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.story-timeline-dot-num {
+  font-family: 'poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.story-timeline-connector {
+  width: 1px;
+  min-height: 28px;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 5px 0;
+}
+
+/* ── Glassmorphism card (user's exact spec) ── */
+.story-glass-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 0px 0px rgba(255, 255, 255, 0);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+.story-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+.story-glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+.story-glass-card:hover {
+  background: rgba(168, 104, 7, 0.08);
+  transform: translateX(4px);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Highlight card: "The Turning Point" — slightly brighter border, no color */
+.story-glass-card--highlight {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* Card body */
+.story-card-body {
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.story-card-year {
+  font-family: 'poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.story-card-title {
+  font-family: 'poppins', sans-serif;
+  font-size: clamp(14px, 1.5vw, 17px);
+  font-weight: 700;
+  color: #f9fafb;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.story-card-desc {
+  font-family: 'poppins', sans-serif;
+  font-size: clamp(12px, 1.1vw, 14px);
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 2px 0 0;
+}
+
+/* ════════════════════
+   RESPONSIVE
+   ════════════════════ */
+@media (max-width: 900px) {
+  .story-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .story-portrait-col {
+    flex: unset;
+    width: 100%;
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .story-portrait-img {
+    max-width: 200px;
+  }
+
+  .story-facts-card {
+    flex: 1 1 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  .story-section {
+    padding: 60px 16px 80px;
+  }
+
+  .story-header {
+    margin-bottom: 48px;
+  }
+
+  .story-portrait-col {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .story-portrait-img {
+    max-width: 180px;
+  }
+
+  .story-facts-card {
+    width: 100%;
+  }
+
+  .story-timeline-dot {
+    width: 32px;
+    height: 32px;
+  }
+
+  .story-timeline-line-wrapper {
+    width: 32px;
+  }
+
+  .story-timeline-item {
+    gap: 14px;
+  }
+
+  .story-card-body {
+    padding: 14px 16px;
+  }
+}
+
+/* ════════════════════════════════════════════════════
+   PROJECT SHOWCASE - Glassmorphism Cards & Parallax
+   ════════════════════════════════════════════════════ */
+.project-glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.project-glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5),
+    transparent,
+    rgba(255, 255, 255, 0.2)
+  );
+  pointer-events: none;
+}
+
+.project-glass-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* ════════════════════════════════════════════════════
+   WHAT I BUILD - Service Glassmorphism Cards
+   ════════════════════════════════════════════════════ */
+.service-glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.service-glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5),
+    transparent,
+    rgba(255, 255, 255, 0.2)
+  );
+  pointer-events: none;
+}
+
+.service-glass-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* ════════════════════════════════════════════════════
+   TECH STACK - Glassmorphism Tech Badges
+   ════════════════════════════════════════════════════ */
+.tech-glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.tech-glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5),
+    transparent,
+    rgba(255, 255, 255, 0.2)
+  );
+  pointer-events: none;
+}
+
+.tech-glass-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 16px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* ════════════════════════════════════════════════════
+   ACHIEVEMENTS - Glassmorphism Cards
+   ════════════════════════════════════════════════════ */
+.achievement-glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.achievement-glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5),
+    transparent,
+    rgba(255, 255, 255, 0.2)
+  );
+  pointer-events: none;
+}
+
+.achievement-glass-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+@keyframes fadeInUpModal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUpModal 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+
+
+

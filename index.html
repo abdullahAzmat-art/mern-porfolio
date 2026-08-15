@@ -1,83 +1,255 @@
+```html
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Basic -->
+    <!-- =========================================
+         BASIC DOCUMENT SETTINGS
+    ========================================== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Title (VERY IMPORTANT) -->
-    <title>Abdullah Azmat | Full Stack Developer</title>
+    <!-- =========================================
+         PRIMARY SEO
+    ========================================== -->
 
-    <!-- SEO Meta Tags -->
+    <title>
+      Abdullah Azmat | AI Engineer & Full Stack Developer
+    </title>
+
     <meta
       name="description"
-      content="Abdullah Azmat — Full Stack Developer specializing in React, Next.js, Node.js, and AI-integrated web applications that help businesses grow their online presence."
+      content="Abdullah Azmat is an AI Engineer and Full Stack Developer building AI agents, RAG systems, AI automations, and modern web applications with Python, React, Next.js, and Node.js."
     />
-    <meta
-      name="keywords"
-      content="Abdullah Azmat, Full Stack Developer, MERN Stack Developer, React Developer, AI Full Stack Developer"
-    />
+
     <meta name="author" content="Abdullah Azmat" />
 
-    <!-- Open Graph (for WhatsApp, Facebook, LinkedIn) -->
-    <meta property="og:title" content="Abdullah Azmat | Full Stack Developer" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://abdullah-azmat-porfolio.vercel.app/"
+    />
+
+    <!-- =========================================
+         THEME / BRAND
+    ========================================== -->
+
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- =========================================
+         OPEN GRAPH
+         Used by LinkedIn, Facebook, WhatsApp etc.
+    ========================================== -->
+
+    <meta
+      property="og:title"
+      content="Abdullah Azmat | AI Engineer & Full Stack Developer"
+    />
+
     <meta
       property="og:description"
-      content="Abdullah Azmat — Full Stack Developer specializing in React, Next.js, Node.js, and AI-integrated web applications that help businesses grow their online presence."
+      content="AI Engineer and Full Stack Developer building AI agents, RAG systems, AI automations, and modern web applications."
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://abdullah-azmat-porfolio.vercel.app/portfolio-preview.png" />
-    <meta property="og:url" content="https://abdullah-azmat-porfolio.vercel.app/" />
 
-    <!-- Favicon -->
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:url"
+      content="https://abdullah-azmat-porfolio.vercel.app/"
+    />
+
+    <meta
+      property="og:image"
+      content="https://abdullah-azmat-porfolio.vercel.app/portfolio-preview.png"
+    />
+
+    <meta
+      property="og:image:alt"
+      content="Abdullah Azmat - AI Engineer and Full Stack Developer"
+    />
+
+    <meta property="og:site_name" content="Abdullah Azmat" />
+
+    <!-- =========================================
+         TWITTER / X CARD
+    ========================================== -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta
+      name="twitter:title"
+      content="Abdullah Azmat | AI Engineer & Full Stack Developer"
+    />
+
+    <meta
+      name="twitter:description"
+      content="AI Engineer and Full Stack Developer building AI agents, RAG systems, AI automations, and modern web applications."
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://abdullah-azmat-porfolio.vercel.app/portfolio-preview.png"
+    />
+
+    <!-- =========================================
+         FAVICON
+    ========================================== -->
+
     <link
       rel="icon"
       type="image/png"
       href="/fonts/Gemini_Generated_Image_ltvr7bltvr7bltvr.png"
     />
 
-    <!-- AOS Animation -->
-       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- =========================================
+         PERFORMANCE
+    ========================================== -->
 
-    <!-- Schema.org Person Structured Data -->
+    <link rel="preconnect" href="https://unpkg.com" />
+
+    <!-- =========================================
+         AOS ANIMATION
+    ========================================== -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@next/dist/aos.css"
+    />
+
+    <!-- =========================================
+         PERSON STRUCTURED DATA
+         Helps search engines understand
+         that this website represents Abdullah.
+    ========================================== -->
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
+
       "name": "Abdullah Azmat",
+
       "url": "https://abdullah-azmat-porfolio.vercel.app/",
+
       "image": "https://abdullah-azmat-porfolio.vercel.app/fonts/abdullah-azmat-developer.jpg",
-      "jobTitle": "Full Stack Developer",
-      "description": "Full Stack Developer specializing in React, Next.js, Node.js, and AI-integrated web applications.",
+
+      "jobTitle": "AI Engineer & Full Stack Developer",
+
+      "description": "Abdullah Azmat is an AI Engineer and Full Stack Developer specializing in AI agents, RAG systems, AI automation, React, Next.js, Node.js, and Python.",
+
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "AI Engineering",
+        "AI Agents",
+        "Retrieval Augmented Generation",
+        "RAG",
+        "AI Automation",
+        "Large Language Models",
+        "Python",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "MongoDB",
+        "Full Stack Development",
+        "Web Development"
+      ],
+
       "sameAs": [
         "https://www.linkedin.com/in/abdullah-azmat-art/",
         "https://github.com/abdullahAzmat-art",
-        "https://www.upwork.com/freelancers/[my-upwork-profile]"
+        "https://www.instagram.com/brav_eabdullah/"
       ]
     }
     </script>
+
+    <!-- =========================================
+         WEBSITE STRUCTURED DATA
+    ========================================== -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+
+      "name": "Abdullah Azmat",
+      "url": "https://abdullah-azmat-porfolio.vercel.app/",
+
+      "description": "Official portfolio of Abdullah Azmat, AI Engineer and Full Stack Developer.",
+
+      "author": {
+        "@type": "Person",
+        "name": "Abdullah Azmat",
+        "url": "https://abdullah-azmat-porfolio.vercel.app/"
+      }
+    }
+    </script>
+
   </head>
 
   <body>
+
+    <!-- =========================================
+         ACCESSIBILITY / SEO FALLBACK
+    ========================================== -->
+
+    <noscript>
+      <h1>Abdullah Azmat - AI Engineer & Full Stack Developer</h1>
+
+      <p>
+        Abdullah Azmat is an AI Engineer and Full Stack Developer
+        specializing in AI agents, RAG systems, AI automation,
+        React, Next.js, Node.js, and Python.
+      </p>
+    </noscript>
+
+    <!-- =========================================
+         REACT APPLICATION
+    ========================================== -->
+
     <div id="root"></div>
 
-
-
     <!-- React Entry -->
-    <script type="module" src="/src/main.jsx"></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9SP5LHCMV2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      type="module"
+      src="/src/main.jsx"
+    ></script>
 
-  gtag('config', 'G-9SP5LHCMV2');
-</script>
-    
+    <!-- =========================================
+         GOOGLE ANALYTICS
+    ========================================== -->
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9SP5LHCMV2"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+
+      gtag("config", "G-9SP5LHCMV2");
+    </script>
+
+    <!-- =========================================
+         AOS
+    ========================================== -->
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+
+    <script>
+      AOS.init();
+    </script>
+
   </body>
 </html>
+```

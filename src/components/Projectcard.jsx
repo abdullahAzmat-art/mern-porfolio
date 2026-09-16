@@ -5,6 +5,29 @@ const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState('All');
 
   const projects = [
+    // ── FEATURED: Law Firm System (renders full-width at top) ──
+    {
+      id: 6,
+      title: "Law Firm Intake & Client Management System",
+      subtitle: "AI-Powered Legal Front-Office Platform",
+      description: "A full-stack system that modernizes how law firms handle new client enquiries. Replaces scattered emails and delayed responses with a single, structured intake workflow powered by AI — capturing enquiries, qualifying leads, and routing them to the right person automatically.",
+      image: "/law-firm-intake.png",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "LangChain", "OpenAI", "RAG"],
+      github: "#",
+      live: "#",
+      category: "AI Application",
+      featured: true,
+      aiPowered: true,
+      highlights: [
+        "Public Client Intake — Structured online enquiry forms",
+        "AI-Assisted Intake — Guided, safe AI conversations for clients",
+        "Lead Management — Organizes enquiries into leads & conversations",
+        "Smart Staff Dashboard — Lead statuses, follow-ups & notifications",
+        "Practice Area Management — Configurable rules, office hours & intake logic",
+        "Secure Staff Access — Protected internal login for the firm's team",
+      ],
+    },
+    // ── Standard cards ──
     {
       id: 1,
       title: "Royal Venue",
@@ -62,7 +85,7 @@ const ProjectsSection = () => {
     }
   ];
 
-  const categories = ['All', 'E-Commerce', 'Booking Platform', 'Web Application'];
+  const categories = ['All', 'AI Application', 'E-Commerce', 'Booking Platform', 'Web Application'];
 
   const filteredProjects = activeFilter === 'All'
     ? projects
@@ -71,7 +94,7 @@ const ProjectsSection = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-12 bg-black min-h-screen relative font-poppins" id="projects">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="text-center mb-12 appear-animation">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
@@ -79,7 +102,7 @@ const ProjectsSection = () => {
           </h2>
           <div className="w-16 h-1 bg-white/40 rounded-full mx-auto mb-5" />
           <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            A showcase of full-stack web applications, e-commerce platforms, and real-world client solutions.
+            Full-stack web apps, AI-integrated platforms, e-commerce solutions, and real-world client systems — built to solve real problems.
           </p>
         </div>
 
@@ -101,7 +124,7 @@ const ProjectsSection = () => {
         </div>
 
         {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch appear-animation">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-start appear-animation">
           {filteredProjects.map((project) => (
             <ProjectCardItem key={project.id} project={project} />
           ))}

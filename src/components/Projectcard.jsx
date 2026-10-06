@@ -27,6 +27,26 @@ const ProjectsSection = () => {
         "Secure Staff Access — Protected internal login for the firm's team",
       ],
     },
+    {
+      id: 7,
+      title: "LegalIntel AI",
+      subtitle: "Legal Document Search Engine & Clause Risk Analyzer",
+      description: "An AI document intelligence engine for legal teams. Upload contracts, commercial leases, and NDAs — then ask questions in plain English. Every answer is backed by exact page citations from the original document, ensuring zero hallucinations.",
+      image: "/legalintel-ai.png",
+      technologies: ["Next.js 14", "LangChain", "OpenAI API", "Tailwind CSS"],
+      github: "#",
+      live: "#",
+      category: "AI Application",
+      aiPowered: true,
+      highlights: [
+        "Instant Semantic Search — Ask natural language questions across long case files",
+        "Exact Page Citations — Every claim links directly to the source (Document.pdf, Page 4)",
+        "High-Risk Clause Detection — Automatically flags risky indemnification & liability clauses",
+        "Source Verification Panel — View the verbatim extracted text chunk for any AI answer",
+        "PDF Upload & Management — Drag-and-drop upload with multi-document indexing",
+        "Demo Mode — Pre-loaded NDA contract so clients can try it instantly",
+      ],
+    },
     // ── Standard cards ──
     {
       id: 1,

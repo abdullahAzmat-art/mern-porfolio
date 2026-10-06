@@ -3,7 +3,7 @@ import { ArrowRight, Download } from 'lucide-react';
 import ParticlesComponent from './Particlessection';
 
 const Herosection = () => {
-  const fullText = "Full Stack Developer & AI Integration Specialist";
+  const fullText = "AI Full Stack Developer";
 
   useEffect(() => {
     if (window.AOS) {
@@ -53,7 +53,7 @@ const Herosection = () => {
           className="relative text-gray-300 fade-up fade-delay-3 text-center mt-4 sm:mt-5 max-w-xl sm:max-w-2xl px-4 sm:px-0 font-bold"
           style={{ fontSize: "clamp(18px, 2.5vw, 24px)", zIndex: "10" }}
         >
-          I Build Websites That Grow Your Business
+          I Turn Law Firm Websites Into Client Magnets
         </p>
 
         {/* New Short Description Line - Smallest & Muted */}
@@ -61,7 +61,7 @@ const Herosection = () => {
           className="relative text-gray-400 fade-up fade-delay-3 text-center mt-3 sm:mt-4 max-w-xl px-4 sm:px-0 font-normal leading-relaxed"
           style={{ fontSize: "clamp(14px, 1.5vw, 18px)", zIndex: "10" }}
         >
-          Helping businesses launch fast, modern, AI-ready web applications.
+          AI-powered lead capture + Google Business Profile optimization for law firms.
         </p>
 
         {/* Dual CTA Buttons (Side-by-side desktop, stacked mobile) */}

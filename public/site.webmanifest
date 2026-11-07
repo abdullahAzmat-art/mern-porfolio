@@ -1,0 +1,41 @@
+{
+  "name": "Abdullah Azmat — AI Engineer & Full-Stack Developer",
+  "short_name": "Abdullah Azmat",
+  "description": "Portfolio of Abdullah Azmat, an AI engineer and full-stack developer in Pakistan building AI agents, RAG systems, and high-performance web applications.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#08090A",
+  "theme_color": "#08090A",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["portfolio", "developer", "technology"],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

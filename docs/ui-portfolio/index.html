@@ -1,0 +1,2743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Portfolio — 10 Directions for Abdullah Azmat</title>
+  <meta name="description" content="Ten fresh design directions for Abdullah Azmat's portfolio. Open any direction for a full landing-page preview." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f1efea'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%232479e8'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo:wght@400;500;600;700;800;900&amp;family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Instrument+Serif&amp;family=Inter+Tight:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Karla:wght@400;500;600;700&amp;family=Saira+Condensed:wght@600;700;800;900&amp;family=Space+Mono:wght@400;700&amp;family=Spline+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================================
+       BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #f1efea;
+      color: #161513;
+      font-family: "Instrument Sans", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; color: inherit; }
+    button { border: 0; }
+    img, svg { display: block; max-width: 100%; }
+    ::selection { background: #2479e8; color: #fff; }
+
+    /* ============================================================
+       PICKER
+    ============================================================ */
+    .picker {
+      position: relative;
+      min-height: 100vh;
+      padding: 0 clamp(20px, 4.5vw, 64px) 70px;
+      overflow: hidden;
+      background: #f1efea;
+    }
+    .picker::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(900px 520px at 88% -12%, rgba(36, 121, 232, 0.12), transparent 70%),
+        radial-gradient(760px 460px at -6% 104%, rgba(181, 84, 50, 0.09), transparent 72%);
+    }
+    .picker::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.5;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.045'/%3E%3C/svg%3E");
+    }
+    .picker > * { position: relative; z-index: 1; }
+    .pk-shell { max-width: 1200px; margin: 0 auto; }
+    .pk-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(22, 21, 19, 0.14);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 9.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #625e57;
+    }
+    .pk-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #161513;
+      font-weight: 500;
+    }
+    .pk-mark i {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #2479e8;
+      box-shadow: 0 0 0 4px rgba(36, 121, 232, 0.14);
+    }
+    .pk-head { padding: clamp(48px, 7vw, 86px) 0 44px; max-width: 950px; }
+    .pk-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #2479e8;
+    }
+    .pk-kicker::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: currentColor;
+    }
+    .pk-head h1 {
+      margin-top: 20px;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(50px, 7.2vw, 94px);
+      font-weight: 400;
+      line-height: 0.92;
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+    .pk-head h1 em { font-style: italic; color: #2479e8; }
+    .pk-sub {
+      max-width: 640px;
+      margin-top: 26px;
+      font-size: 16px;
+      line-height: 1.65;
+      color: #5c5851;
+    }
+    .pk-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 26px;
+      margin-top: 30px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: #6d6961;
+    }
+    .pk-legend span { display: inline-flex; align-items: center; gap: 8px; }
+    .pk-legend i { width: 6px; height: 6px; border-radius: 50%; background: #2479e8; }
+    .pk-legend i.alt { background: #b55432; }
+    .pk-legend .hint { color: #9a958b; }
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .pick {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding: 8px;
+      text-align: left;
+      background: #fff;
+      border: 1px solid rgba(22, 21, 19, 0.13);
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      color: inherit;
+      transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.45s, border-color 0.45s;
+    }
+    .pick:hover, .pick:focus-visible {
+      transform: translateY(-5px);
+      border-color: rgba(22, 21, 19, 0.4);
+      box-shadow: 0 34px 60px -42px rgba(22, 21, 19, 0.55);
+      outline: none;
+    }
+    .pick:focus-visible { box-shadow: 0 0 0 3px rgba(36, 121, 232, 0.35), 0 34px 60px -42px rgba(22, 21, 19, 0.55); }
+    .pick-art {
+      position: relative;
+      display: block;
+      aspect-ratio: 16 / 9;
+      padding: 22px;
+      border-radius: 13px;
+      overflow: hidden;
+      background: var(--t-bg);
+      color: var(--t-ink);
+      isolation: isolate;
+    }
+    .pa-title, .pa-kicker, .pa-tag, .pa-code { position: relative; z-index: 2; display: block; }
+    .pa-kicker {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 7.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 12px;
+    }
+    .pa-title { font-size: clamp(26px, 3.1vw, 40px); line-height: 0.9; }
+    .pa-tag {
+      position: absolute;
+      left: 22px;
+      bottom: 16px;
+      z-index: 3;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 7.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 8px;
+      border: 1px solid currentColor;
+      border-radius: 99px;
+      opacity: 0.65;
+    }
+    .pa-svg { position: absolute; z-index: 1; pointer-events: none; }
+
+    /* Mini art 01 — Kiln */
+    .pa-1 { background: #f3eadf; color: #2a211a; }
+    .pa-1 .pa-title { font-family: "Fraunces", serif; font-weight: 600; font-size: clamp(25px, 2.9vw, 37px); letter-spacing: -0.04em; }
+    .pa-1 .pa-title em { font-style: italic; color: #b55432; }
+    .pa-1::before {
+      content: "";
+      position: absolute;
+      right: 11%;
+      bottom: -38%;
+      z-index: 1;
+      width: 43%;
+      aspect-ratio: 0.78;
+      border-radius: 180px 180px 16px 16px;
+      background: linear-gradient(160deg, #ddbe9c, #b55432 58%, #7f3b24);
+      box-shadow: inset -18px -18px 40px rgba(42, 33, 26, 0.28);
+    }
+    .pa-1::after {
+      content: "";
+      position: absolute;
+      right: 11%;
+      bottom: -38%;
+      z-index: 1;
+      width: 43%;
+      aspect-ratio: 0.78;
+      border-radius: 180px 180px 16px 16px;
+      background: repeating-linear-gradient(0deg, transparent 0 27px, rgba(255, 255, 255, 0.17) 28px 29px);
+    }
+
+    /* Mini art 02 — Circuit Bloom */
+    .pa-2 { background: #f0f7ee; color: #0e2a22; }
+    .pa-2 .pa-title { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: clamp(27px, 3.2vw, 42px); line-height: 0.86; letter-spacing: -0.055em; }
+    .pa-2 .pa-title em { font-style: normal; color: #1e6b4f; background: #c6f24e; padding: 0 0.08em; }
+    .pa-2::before {
+      content: "";
+      position: absolute;
+      right: 9%;
+      top: 14%;
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      border: 1px solid rgba(30, 107, 79, 0.25);
+      box-shadow: 0 0 0 18px rgba(30, 107, 79, 0.04), 0 0 0 38px rgba(30, 107, 79, 0.025);
+    }
+    .pa-2 .pa-svg { right: 2%; bottom: 4%; width: 48%; }
+
+    /* Mini art 03 — Aero Index */
+    .pa-3 { background: #f5f6f2; color: #0b0f14; }
+    .pa-3 .pa-title { font-family: "Saira Condensed", sans-serif; font-weight: 800; text-transform: uppercase; font-size: clamp(22px, 2.5vw, 31px); line-height: 0.88; letter-spacing: -0.01em; }
+    .pa-3 .pa-code { position: absolute; right: 18px; bottom: 2px; font-family: "Saira Condensed", sans-serif; font-weight: 900; font-size: clamp(68px, 8vw, 104px); line-height: 0.8; color: #1746d1; letter-spacing: -0.04em; }
+    .pa-3::before { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 7px; background: #f2c500; }
+    .pa-3::after { content: "→"; position: absolute; right: 20px; top: 18px; font-size: 20px; color: #0b0f14; }
+
+    /* Mini art 04 — Nocturne */
+    .pa-4 { background: #0c0e26; color: #ede6d6; }
+    .pa-4 .pa-title { font-family: "Cormorant Garamond", serif; font-weight: 500; font-style: italic; font-size: clamp(30px, 3.6vw, 46px); line-height: 0.92; color: #c9a45c; letter-spacing: -0.02em; }
+    .pa-4::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 18% 24%, #ede6d6, transparent 100%),
+        radial-gradient(1.5px 1.5px at 74% 18%, #c9a45c, transparent 100%),
+        radial-gradient(1px 1px at 88% 62%, #ede6d6, transparent 100%),
+        radial-gradient(1.5px 1.5px at 34% 72%, #8b93d9, transparent 100%),
+        radial-gradient(1px 1px at 58% 44%, #ede6d6, transparent 100%);
+      opacity: 0.8;
+    }
+    .pa-4::after {
+      content: "";
+      position: absolute;
+      right: 10%;
+      top: 16%;
+      width: 38%;
+      aspect-ratio: 1;
+      border: 1px solid rgba(201, 164, 92, 0.35);
+      border-radius: 50%;
+      transform: rotate(-18deg);
+    }
+
+    /* Mini art 05 — Riso */
+    .pa-5 { background: #f3ede1; color: #141414; }
+    .pa-5 .pa-title { font-family: "Anton", sans-serif; text-transform: uppercase; font-size: clamp(30px, 3.8vw, 50px); line-height: 0.82; letter-spacing: 0.01em; text-shadow: 3px 3px 0 #ff4d8d, 6px 6px 0 #2d5bff; }
+    .pa-5::before {
+      content: "";
+      position: absolute;
+      right: 12%;
+      top: 18%;
+      width: 34%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(20, 20, 20, 0.55) 1px, transparent 1.6px);
+      background-size: 7px 7px;
+      opacity: 0.5;
+    }
+    .pa-5::after {
+      content: "";
+      position: absolute;
+      right: 22%;
+      bottom: -22%;
+      width: 34%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: #ff4d8d;
+      mix-blend-mode: multiply;
+      opacity: 0.8;
+    }
+
+    /* Mini art 06 — Terrain */
+    .pa-6 { background: #e8edf0; color: #20262b; }
+    .pa-6 .pa-title { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: clamp(27px, 3.2vw, 42px); line-height: 0.87; letter-spacing: -0.05em; }
+    .pa-6 .pa-title em { font-style: normal; color: #c4552b; }
+    .pa-6::before {
+      content: "";
+      position: absolute;
+      right: -10%;
+      top: -20%;
+      width: 70%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: repeating-radial-gradient(circle at 50% 50%, transparent 0 13px, rgba(32, 38, 43, 0.2) 14px 15px);
+      opacity: 0.8;
+    }
+    .pa-6::after {
+      content: "";
+      position: absolute;
+      right: 13%;
+      bottom: 22%;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #c4552b;
+      box-shadow: 0 0 0 6px rgba(196, 85, 43, 0.16);
+    }
+
+    /* Mini art 07 — Pulse */
+    .pa-7 { background: #08090b; color: #f5f5f2; }
+    .pa-7 .pa-title { font-family: "Barlow Condensed", sans-serif; font-weight: 800; text-transform: uppercase; font-size: clamp(26px, 3vw, 38px); line-height: 0.84; letter-spacing: 0.01em; }
+    .pa-7 .pa-title em { font-style: normal; color: #4d8dff; }
+    .pa-7 .pa-code { position: absolute; right: 16px; bottom: 0; font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: clamp(72px, 8.6vw, 112px); line-height: 0.78; color: #ff3b30; letter-spacing: -0.02em; }
+    .pa-7::before {
+      content: "";
+      position: absolute;
+      left: 22px;
+      bottom: 20px;
+      width: 34%;
+      height: 5px;
+      background: linear-gradient(90deg, #ff3b30 56%, #4d8dff 56%);
+    }
+    .pa-7::after {
+      content: "LIVE";
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 7px;
+      letter-spacing: 0.16em;
+      color: #ff3b30;
+      padding-left: 11px;
+    }
+    .pa-7 .pa-title::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-right: 6px;
+      border-radius: 50%;
+      background: #ff3b30;
+      box-shadow: 0 0 0 4px rgba(255, 59, 48, 0.18);
+      vertical-align: middle;
+    }
+
+    /* Mini art 08 — Monolith */
+    .pa-8 { background: #e9e7e1; color: #1b1b19; }
+    .pa-8 .pa-title { font-family: "Instrument Serif", serif; font-weight: 400; font-size: clamp(30px, 3.7vw, 47px); line-height: 0.88; letter-spacing: -0.03em; }
+    .pa-8 .pa-title em { font-style: normal; color: #d6401f; }
+    .pa-8::before {
+      content: "";
+      position: absolute;
+      right: 17%;
+      bottom: -12%;
+      width: 21%;
+      height: 76%;
+      background: linear-gradient(90deg, #b9b5ab, #ddd9d0 42%, #a8a49a);
+      box-shadow: 22px 22px 40px -20px rgba(27, 27, 25, 0.35);
+    }
+    .pa-8::after {
+      content: "";
+      position: absolute;
+      right: 21.5%;
+      bottom: 25%;
+      width: 3px;
+      height: 22%;
+      background: #d6401f;
+    }
+
+    /* Mini art 09 — Soft Machine */
+    .pa-9 { background: #e9e7e2; color: #22221f; }
+    .pa-9 .pa-title { font-family: "Archivo", sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 39px); line-height: 0.88; letter-spacing: -0.045em; }
+    .pa-9 .pa-title em { font-style: normal; color: #e85a2a; }
+    .pa-9::before {
+      content: "";
+      position: absolute;
+      right: 13%;
+      bottom: 16%;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: conic-gradient(from 220deg, #e85a2a 0 24%, #f4f2ed 24% 100%);
+      box-shadow: inset 0 0 0 13px #e9e7e2, inset 0 0 0 14px rgba(34, 34, 31, 0.25), 6px 6px 14px rgba(34, 34, 31, 0.16);
+    }
+    .pa-9::after {
+      content: "";
+      position: absolute;
+      right: 30%;
+      bottom: 24%;
+      width: 34px;
+      height: 16px;
+      border-radius: 99px;
+      background: #d6d3cb;
+      box-shadow: inset 3px 3px 6px rgba(34, 34, 31, 0.2);
+    }
+
+    /* Mini art 10 — Verdant */
+    .pa-10 { background: #fbf9ef; color: #20301f; }
+    .pa-10 .pa-title { font-family: "Fraunces", serif; font-weight: 600; font-size: clamp(26px, 3.1vw, 40px); line-height: 0.9; letter-spacing: -0.04em; }
+    .pa-10 .pa-title em { font-style: italic; color: #3f6b3a; }
+    .pa-10::before {
+      content: "";
+      position: absolute;
+      right: -16%;
+      bottom: -50%;
+      width: 74%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 35%, #ffe382, #f2b705 58%, rgba(242, 183, 5, 0));
+      opacity: 0.76;
+    }
+    .pa-10::after {
+      content: "";
+      position: absolute;
+      right: 9%;
+      bottom: 14%;
+      width: 42%;
+      height: 58%;
+      border: 1.5px solid rgba(63, 107, 58, 0.4);
+      border-radius: 50% 50% 4px 4px;
+      transform: rotate(-14deg);
+      border-bottom-color: transparent;
+    }
+
+    .pick-body { display: flex; flex-direction: column; gap: 7px; padding: 15px 14px 13px; }
+    .pick-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .pick-num {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      color: #8c877d;
+    }
+    .pick-badge {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 7.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #2479e8;
+      border: 1px solid rgba(36, 121, 232, 0.3);
+      background: rgba(36, 121, 232, 0.06);
+      padding: 4px 7px;
+      border-radius: 99px;
+    }
+    .pick-name { font-size: 21px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; }
+    .pick-desc { font-size: 13px; line-height: 1.5; color: #6a665f; }
+    .pick-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 5px; }
+    .pick-font {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 8px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #918c82;
+    }
+    .pick-dots { display: inline-flex; gap: 5px; }
+    .pick-dots i { width: 8px; height: 8px; border-radius: 50%; border: 1px solid rgba(22, 21, 19, 0.08); }
+    .picker-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding-top: 22px;
+      border-top: 1px solid rgba(22, 21, 19, 0.14);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 8.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #847f75;
+    }
+    .picker-foot a { color: #161513; border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+
+    /* ============================================================
+       PREVIEW CHROME
+    ============================================================ */
+    .preview-bar {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px;
+      border-radius: 999px;
+      background: rgba(16, 16, 18, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 20px 50px -24px rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      color: #f5f4f0;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 9.5px;
+      letter-spacing: 0.08em;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, 18px);
+      transition: opacity 0.35s, transform 0.35s;
+      max-width: calc(100vw - 24px);
+    }
+    .preview-bar.is-visible { opacity: 1; pointer-events: auto; transform: translate(-50%, 0); }
+    .preview-bar button {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s;
+      white-space: nowrap;
+    }
+    .preview-bar button:hover { background: rgba(255, 255, 255, 0.12); }
+    .preview-bar .pb-back { background: rgba(255, 255, 255, 0.14); }
+    .pb-label { padding: 0 10px; color: rgba(245, 244, 240, 0.62); white-space: nowrap; }
+    .pb-count { color: rgba(245, 244, 240, 0.4); padding-right: 2px; white-space: nowrap; }
+    .pb-arrow { width: 34px; height: 34px; justify-content: center; padding: 0 !important; font-size: 14px; }
+    .toast {
+      position: fixed;
+      left: 50%;
+      top: 18px;
+      z-index: 1000;
+      transform: translate(-50%, -16px);
+      padding: 11px 18px;
+      border-radius: 999px;
+      background: #161513;
+      color: #f7f5f0;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      box-shadow: 0 16px 40px -20px rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      max-width: calc(100vw - 32px);
+      text-align: center;
+    }
+    .toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
+
+    /* ============================================================
+       VIEW BASE
+    ============================================================ */
+    .view { display: none; min-height: 100vh; padding-bottom: 92px; overflow: hidden; }
+    .view.is-active { display: block; animation: viewIn 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+    @keyframes viewIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .view .wrap { max-width: 1220px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+    .view .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 26px 0;
+      position: relative;
+      z-index: 5;
+    }
+    .view .nav-links { display: flex; align-items: center; gap: 26px; }
+    .view .nav-links a { transition: color 0.25s, opacity 0.25s; }
+    .view .nav-links a:hover { opacity: 0.65; }
+    .view .brand { display: inline-flex; align-items: center; gap: 10px; }
+    .view .brand-mark { display: grid; place-items: center; flex: none; }
+    .view .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), background 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+    .view .btn:hover { transform: translateY(-2px); }
+    .view .btn svg { width: 14px; height: 14px; transition: transform 0.3s; }
+    .view .btn:hover svg { transform: translateX(3px); }
+    .view .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .view .section { padding: clamp(56px, 7vw, 88px) 0; }
+    .view .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 34px; }
+    .view .work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .view .work-card { display: flex; flex-direction: column; overflow: hidden; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s, border-color 0.4s; }
+    .view .work-card:hover { transform: translateY(-5px); }
+    .view .work-art { position: relative; aspect-ratio: 16 / 9.2; overflow: hidden; }
+    .view .work-body { display: flex; flex-direction: column; gap: 10px; padding: 20px; }
+    .view .work-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .view .work-title { font-size: 23px; line-height: 1.1; letter-spacing: -0.025em; }
+    .view .work-desc { font-size: 13.5px; line-height: 1.6; opacity: 0.68; }
+    .view .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .view .tag { font-family: "IBM Plex Mono", monospace; font-size: 7.5px; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 8px; border: 1px solid currentColor; border-radius: 99px; opacity: 0.55; }
+    .view .contact { position: relative; }
+    .view .contact-inner { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 44px; align-items: center; }
+    .view .contact h2 { font-size: clamp(34px, 5vw, 64px); line-height: 0.95; letter-spacing: -0.04em; }
+    .view .contact p { font-size: 15px; line-height: 1.6; opacity: 0.7; margin-top: 16px; max-width: 440px; }
+    .view .form { display: flex; gap: 8px; width: 100%; }
+    .view .form input { flex: 1; min-width: 0; padding: 14px 16px; border: 1px solid currentColor; background: transparent; outline: none; }
+    .view .form input:focus { box-shadow: 0 0 0 3px rgba(36, 121, 232, 0.16); }
+    .view footer { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 26px 0; margin-top: 20px; border-top: 1px solid currentColor; font-family: "IBM Plex Mono", monospace; font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.55; }
+    .view .foot-links { display: flex; gap: 18px; }
+    .view .eyebrow { font-family: "IBM Plex Mono", monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 9px; }
+    .view .eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; opacity: 0.6; }
+
+    @media (max-width: 960px) {
+      .view .contact-inner { grid-template-columns: 1fr; gap: 28px; }
+      .view .nav-links { display: none; }
+      .view .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      .pk-grid { grid-template-columns: 1fr; }
+      .pick-art { aspect-ratio: 16 / 8.4; }
+      .pk-head { padding-top: 42px; }
+      .pk-legend .hint { display: none; }
+      .pb-label { display: none; }
+      .view .work-grid { grid-template-columns: 1fr; }
+      .view .stats { grid-template-columns: 1fr 1fr; }
+      .view .section-head { align-items: flex-start; flex-direction: column; gap: 10px; }
+      .view .nav { padding: 18px 0; }
+      .view .brand { font-size: 90%; }
+      .view .form { flex-direction: column; }
+      .view footer { flex-direction: column; align-items: flex-start; gap: 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+    }
+
+    /* ============================================================
+       01 — KILN & CLAY
+    ============================================================ */
+    .t1 {
+      --bg: #f3eadf; --surface: #fbf6ef; --ink: #2a211a; --muted: #6f6259;
+      --clay: #b55432; --clay-dark: #94401f; --olive: #6e7152; --sand: #dfcbb2;
+      --line: rgba(42, 33, 26, 0.15);
+      background: var(--bg); color: var(--ink); font-family: "Karla", sans-serif; position: relative;
+    }
+    .t1::before {
+      content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0.55;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
+    }
+    .t1 .wrap { position: relative; z-index: 1; }
+    .t1 .nav { border-bottom: 1px solid var(--line); padding: 22px 0; }
+    .t1 .brand { font-family: "Fraunces", serif; font-size: 21px; font-weight: 600; letter-spacing: -0.025em; }
+    .t1 .brand-mark { width: 30px; height: 30px; border-radius: 50%; background: var(--clay); color: #fff; font-family: "Fraunces", serif; font-size: 12px; box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.16); }
+    .t1 .nav-links { font-family: "IBM Plex Mono", monospace; font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); }
+    .t1 .btn-nav { border: 1px solid var(--ink); border-radius: 999px; padding: 9px 17px; font-size: 11px; font-weight: 600; }
+    .t1 .btn-nav:hover { background: var(--ink); color: var(--bg); }
+    .t1 .hero-grid { display: grid; grid-template-columns: 1.02fr 0.98fr; gap: clamp(24px, 5vw, 64px); align-items: center; padding: clamp(48px, 7vw, 88px) 0 64px; }
+    .t1 .eyebrow { color: var(--clay); }
+    .t1 h1 { font-family: "Fraunces", serif; font-size: clamp(50px, 7.5vw, 102px); font-weight: 600; line-height: 0.9; letter-spacing: -0.052em; margin: 22px 0 26px; text-wrap: balance; }
+    .t1 h1 em { font-style: italic; font-weight: 400; color: var(--clay); }
+    .t1 .hero-copy p { max-width: 480px; color: var(--muted); font-size: 15.5px; line-height: 1.68; }
+    .t1 .actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 32px; }
+    .t1 .btn-main { background: var(--clay); color: #fff; border-radius: 999px; padding: 14px 24px; font-size: 12.5px; font-weight: 600; box-shadow: 0 15px 30px -18px rgba(181, 84, 50, 0.8); }
+    .t1 .btn-main:hover { background: var(--clay-dark); }
+    .t1 .btn-link { font-size: 12.5px; font-weight: 600; border-bottom: 1px solid var(--ink); padding-bottom: 4px; display: inline-flex; gap: 6px; align-items: center; }
+    .t1 .hero-note { display: flex; gap: 10px; align-items: center; margin-top: 34px; font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .t1 .hero-note i { width: 7px; height: 7px; border-radius: 50%; background: var(--olive); }
+    .t1 .art { position: relative; display: grid; place-items: center; min-height: clamp(380px, 42vw, 520px); }
+    .t1 .vessel { position: relative; width: min(78%, 360px); aspect-ratio: 0.76; border-radius: 190px 190px 22px 22px; background: linear-gradient(155deg, #d9b896, #b55432 58%, #7d3a23); box-shadow: 0 50px 80px -46px rgba(42, 33, 26, 0.6), inset -28px -20px 60px rgba(42, 33, 26, 0.28); z-index: 1; transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
+    .t1 .art:hover .vessel { transform: translateY(-6px) rotate(-1deg); }
+    .t1 .vessel::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: repeating-linear-gradient(0deg, transparent 0 36px, rgba(255, 255, 255, 0.15) 37px 38px); }
+    .t1 .vessel::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(50% 30% at 32% 12%, rgba(255, 255, 255, 0.35), transparent 70%); }
+    .t1 .vessel .glyph { position: absolute; inset: 0; z-index: 1; display: grid; place-items: center; color: rgba(243, 234, 223, 0.72); }
+    .t1 .vessel .glyph svg { width: 86px; height: 86px; }
+    .t1 .art-tag { position: absolute; z-index: 2; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 15px; box-shadow: 0 22px 40px -30px rgba(42, 33, 26, 0.45); }
+    .t1 .art-tag--1 { right: 0; top: 15%; }
+    .t1 .art-tag--2 { left: 0; bottom: 11%; }
+    .t1 .art-tag b { display: block; font-family: "Fraunces", serif; font-size: 16px; font-weight: 600; }
+    .t1 .art-tag span { font-family: "IBM Plex Mono", monospace; font-size: 7px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); }
+    .t1 .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .t1 .stat { padding: 23px 20px; border-right: 1px solid var(--line); }
+    .t1 .stat:last-child { border-right: 0; }
+    .t1 .stat strong { display: block; font-family: "Fraunces", serif; font-size: clamp(30px, 3.4vw, 42px); font-weight: 600; line-height: 1; letter-spacing: -0.03em; }
+    .t1 .stat span { display: block; margin-top: 8px; font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); }
+    .t1 .section-head h2 { font-family: "Fraunces", serif; font-size: clamp(30px, 4vw, 48px); font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
+    .t1 .section-head h2 em { font-style: italic; color: var(--clay); font-weight: 400; }
+    .t1 .section-head p { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); max-width: 220px; text-align: right; line-height: 1.7; }
+    .t1 .work-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 10px; }
+    .t1 .work-card:hover { box-shadow: 0 34px 50px -38px rgba(42, 33, 26, 0.55); }
+    .t1 .work-art { border-radius: 10px; }
+    .t1 .work-art--a { background: radial-gradient(80% 80% at 20% 20%, #e5c9a8, transparent 60%), linear-gradient(140deg, #fbf6ef, #dfcbb2); }
+    .t1 .work-art--a::before { content: ""; position: absolute; left: 12%; top: 12%; width: 56%; height: 76%; border-radius: 120px 120px 8px 8px; background: linear-gradient(150deg, #b55432, #7d3a23); box-shadow: 24px 24px 40px -20px rgba(42, 33, 26, 0.4); }
+    .t1 .work-art--a::after { content: "AI"; position: absolute; right: 16%; bottom: 12%; font-family: "Fraunces", serif; font-size: 46px; color: rgba(42, 33, 26, 0.28); }
+    .t1 .work-art--b { background: linear-gradient(140deg, #eef0e4, #c9cdb4); }
+    .t1 .work-art--b::before { content: ""; position: absolute; inset: 18% 22%; border-radius: 50%; background: conic-gradient(from 210deg, #6e7152 0 25%, transparent 25% 50%, #b55432 50% 75%, transparent 75%); opacity: 0.8; }
+    .t1 .work-art--b::after { content: ""; position: absolute; inset: 31%; border-radius: 50%; background: var(--surface); }
+    .t1 .work-body { padding: 18px 10px 12px; }
+    .t1 .work-title { font-family: "Fraunces", serif; font-size: 24px; font-weight: 600; letter-spacing: -0.03em; }
+    .t1 .work-desc { color: var(--muted); }
+    .t1 .tag { border-color: var(--line); color: var(--muted); opacity: 1; }
+    .t1 .contact { padding: 20px 0 30px; }
+    .t1 .contact-inner { background: var(--ink); color: #f5ede2; border-radius: 24px; padding: clamp(32px, 5vw, 58px); position: relative; overflow: hidden; }
+    .t1 .contact-inner::after { content: ""; position: absolute; right: -6%; top: -40%; width: 46%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(181, 84, 50, 0.6), transparent 65%); }
+    .t1 .contact h2 { position: relative; z-index: 1; font-family: "Fraunces", serif; font-weight: 600; font-size: clamp(34px, 4.8vw, 60px); letter-spacing: -0.04em; }
+    .t1 .contact h2 em { font-style: italic; color: var(--sand); font-weight: 400; }
+    .t1 .contact p { color: rgba(245, 237, 226, 0.65); }
+    .t1 .form { position: relative; z-index: 1; }
+    .t1 .form input { border-color: rgba(245, 237, 226, 0.3); border-radius: 999px; color: #f5ede2; font-size: 12px; }
+    .t1 .form input::placeholder { color: rgba(245, 237, 226, 0.4); }
+    .t1 .form .btn-main { background: var(--sand); color: var(--ink); box-shadow: none; }
+    .t1 .form .btn-main:hover { background: #fff; }
+    .t1 footer { border-color: rgba(42, 33, 26, 0.15); }
+    .t1 .art-tag--1 b { color: var(--clay); }
+
+    /* ============================================================
+       02 — CIRCUIT BLOOM
+    ============================================================ */
+    .t2 {
+      --bg: #f1f7ef; --panel: #e4f1e2; --ink: #0e2a22; --muted: #557166;
+      --green: #1e6b4f; --lime: #c6f24e; --line: rgba(14, 42, 34, 0.14);
+      background: var(--bg); color: var(--ink); font-family: "Instrument Sans", sans-serif; position: relative;
+    }
+    .t2::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(14, 42, 34, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 42, 34, 0.045) 1px, transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(#000 0 42%, transparent 80%); -webkit-mask-image: linear-gradient(#000 0 42%, transparent 80%); }
+    .t2 .wrap { position: relative; z-index: 1; }
+    .t2 .nav { padding: 22px 0; }
+    .t2 .brand span:last-child { font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.03em; }
+    .t2 .brand-mark { width: 34px; height: 34px; border-radius: 10px; background: var(--ink); color: var(--lime); }
+    .t2 .brand-mark svg { width: 18px; height: 18px; }
+    .t2 .nav-links { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .t2 .btn-nav { background: var(--lime); color: var(--ink); border-radius: 999px; padding: 10px 18px; font-size: 11px; font-weight: 600; box-shadow: 0 10px 24px -16px rgba(30, 107, 79, 0.7); }
+    .t2 .hero-grid { display: grid; grid-template-columns: 1.02fr 0.98fr; gap: clamp(24px, 5vw, 60px); align-items: center; padding: clamp(48px, 7vw, 86px) 0 58px; }
+    .t2 .eyebrow { color: var(--green); }
+    .t2 .chip { display: inline-flex; align-items: center; gap: 7px; padding: 6px 10px; border: 1px solid rgba(30, 107, 79, 0.25); border-radius: 999px; font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); }
+    .t2 .chip i { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(30, 107, 79, 0.12); animation: bloomPulse 3s ease-in-out infinite; }
+    .t2 h1 { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: clamp(50px, 7.4vw, 98px); line-height: 0.86; letter-spacing: -0.058em; margin: 20px 0 24px; }
+    .t2 h1 em { font-style: normal; color: var(--green); background: linear-gradient(transparent 64%, var(--lime) 64% 92%, transparent 92%); padding: 0 0.04em; }
+    .t2 .hero-copy p { max-width: 480px; color: var(--muted); font-size: 15.5px; line-height: 1.65; }
+    .t2 .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 30px; }
+    .t2 .btn-main { background: var(--ink); color: #f4faef; border-radius: 999px; padding: 14px 22px; font-size: 12px; font-weight: 600; }
+    .t2 .btn-main:hover { background: var(--green); }
+    .t2 .btn-soft { background: transparent; color: var(--green); border: 1px solid rgba(30, 107, 79, 0.3); border-radius: 999px; padding: 14px 20px; font-size: 12px; font-weight: 600; }
+    .t2 .btn-soft:hover { border-color: var(--green); background: rgba(30, 107, 79, 0.05); }
+    .t2 .metrics { display: flex; gap: 22px; margin-top: 34px; }
+    .t2 .metric { font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 7px; }
+    .t2 .metric b { color: var(--ink); font-weight: 500; }
+    .t2 .metric::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--green); }
+    .t2 .bloom-panel { position: relative; min-height: clamp(380px, 40vw, 500px); border: 1px solid rgba(30, 107, 79, 0.2); border-radius: 26px; background: radial-gradient(80% 80% at 70% 20%, #d9ecd7, transparent 70%), rgba(255, 255, 255, 0.45); overflow: hidden; display: grid; place-items: center; }
+    .t2 .bloom-panel::before { content: ""; position: absolute; inset: 18px; border: 1px dashed rgba(30, 107, 79, 0.16); border-radius: 18px; }
+    .t2 .bloom-panel svg { width: 86%; height: auto; position: relative; z-index: 1; }
+    .t2 .vine-path { stroke-dasharray: 6 8; animation: vineFlow 12s linear infinite; }
+    .t2 .node { animation: nodePulse 3.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .t2 .node:nth-child(2) { animation-delay: 0.6s; }
+    .t2 .node:nth-child(3) { animation-delay: 1.2s; }
+    .t2 .float-tag { position: absolute; z-index: 2; background: rgba(255, 255, 255, 0.86); border: 1px solid rgba(30, 107, 79, 0.18); border-radius: 10px; padding: 9px 12px; backdrop-filter: blur(8px); font-family: "IBM Plex Mono", monospace; font-size: 7.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); box-shadow: 0 14px 30px -22px rgba(14, 42, 34, 0.5); }
+    .t2 .float-tag b { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: 15px; color: var(--ink); letter-spacing: -0.02em; }
+    .t2 .float-tag--a { top: 18%; left: 6%; }
+    .t2 .float-tag--b { bottom: 14%; right: 5%; }
+    .t2 .stats { gap: 10px; }
+    .t2 .stat { background: rgba(255, 255, 255, 0.62); border: 1px solid rgba(30, 107, 79, 0.16); border-radius: 16px; padding: 20px; }
+    .t2 .stat strong { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: clamp(28px, 3.2vw, 40px); font-weight: 700; line-height: 1; letter-spacing: -0.045em; }
+    .t2 .stat span { display: block; margin-top: 8px; font-family: "IBM Plex Mono", monospace; font-size: 7.5px; letter-spacing: 0.11em; text-transform: uppercase; color: var(--muted); }
+    .t2 .section-head h2 { font-family: "Bricolage Grotesque", sans-serif; font-size: clamp(31px, 4vw, 48px); font-weight: 800; line-height: 0.95; letter-spacing: -0.045em; }
+    .t2 .section-head h2 em { font-style: normal; color: var(--green); }
+    .t2 .section-head p { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; letter-spacing: 0.11em; text-transform: uppercase; color: var(--muted); max-width: 230px; text-align: right; line-height: 1.7; }
+    .t2 .work-card { background: rgba(255, 255, 255, 0.68); border: 1px solid rgba(30, 107, 79, 0.16); border-radius: 20px; }
+    .t2 .work-card:hover { border-color: rgba(30, 107, 79, 0.45); box-shadow: 0 30px 60px -44px rgba(14, 42, 34, 0.55); }
+    .t2 .work-art { background: radial-gradient(70% 70% at 30% 25%, #d3ead0, transparent 65%), linear-gradient(135deg, #eef7ec, #cfe4cc); }
+    .t2 .work-art--a::before { content: ""; position: absolute; left: 22%; top: 20%; width: 38%; aspect-ratio: 1; border: 1px solid rgba(30, 107, 79, 0.35); border-radius: 50%; box-shadow: 0 0 0 24px rgba(30, 107, 79, 0.05), 0 0 0 48px rgba(30, 107, 79, 0.03); }
+    .t2 .work-art--a::after { content: ""; position: absolute; left: 38%; top: 36%; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 6px rgba(198, 242, 78, 0.25), 0 0 28px rgba(30, 107, 79, 0.6); }
+    .t2 .work-art--b { background: linear-gradient(135deg, #eef7ec, #dcecd9); }
+    .t2 .work-art--b::before { content: ""; position: absolute; inset: 24% 16%; border-top: 1px solid rgba(30, 107, 79, 0.4); border-bottom: 1px solid rgba(30, 107, 79, 0.4); transform: skewY(-8deg); }
+    .t2 .work-art--b::after { content: ""; position: absolute; right: 22%; top: 30%; width: 18%; aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(30, 107, 79, 0.4); background: rgba(198, 242, 78, 0.5); }
+    .t2 .work-title { font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; }
+    .t2 .work-desc { color: var(--muted); }
+    .t2 .tag { border-color: rgba(30, 107, 79, 0.25); color: var(--green); opacity: 1; }
+    .t2 .contact-inner { background: var(--ink); color: #eff8ec; border-radius: 26px; padding: clamp(32px, 5vw, 56px); position: relative; overflow: hidden; }
+    .t2 .contact-inner::after { content: ""; position: absolute; right: -12%; bottom: -70%; width: 48%; aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(198, 242, 78, 0.3); box-shadow: 0 0 0 40px rgba(198, 242, 78, 0.04), 0 0 0 80px rgba(198, 242, 78, 0.03); }
+    .t2 .contact h2 { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: clamp(34px, 4.8vw, 60px); letter-spacing: -0.05em; }
+    .t2 .contact h2 em { font-style: normal; color: var(--lime); }
+    .t2 .contact p { color: rgba(239, 248, 236, 0.65); }
+    .t2 .form input { border-color: rgba(239, 248, 236, 0.3); border-radius: 999px; color: #eff8ec; font-size: 12px; }
+    .t2 .form input::placeholder { color: rgba(239, 248, 236, 0.4); }
+    .t2 .form .btn-main { background: var(--lime); color: var(--ink); }
+    .t2 footer { border-color: rgba(14, 42, 34, 0.16); }
+
+    /* ============================================================
+       03 — AERO INDEX
+    ============================================================ */
+    .t3 {
+      --bg: #f5f6f2; --ink: #0b0f14; --blue: #1746d1; --yellow: #f2c500;
+      --line: #d8dad3; background: var(--bg); color: var(--ink); font-family: "Archivo", sans-serif;
+    }
+    .t3 .ticker-bar { background: var(--ink); color: var(--bg); padding: 8px 0; overflow: hidden; }
+    .t3 .ticker-track { display: flex; width: max-content; gap: 40px; font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; animation: ticker 30s linear infinite; }
+    .t3 .ticker-track span { display: inline-flex; align-items: center; gap: 40px; }
+    .t3 .ticker-track b { color: var(--yellow); font-weight: 500; }
+    .t3 .nav { padding: 18px 0; border-bottom: 2px solid var(--ink); }
+    .t3 .brand { font-family: "Saira Condensed", sans-serif; font-weight: 800; font-size: 27px; letter-spacing: 0.01em; text-transform: uppercase; gap: 9px; }
+    .t3 .brand-mark { width: 30px; height: 30px; border: 2px solid var(--ink); background: var(--yellow); color: var(--ink); font-family: "IBM Plex Mono", monospace; font-size: 9px; font-weight: 600; }
+    .t3 .nav-links { font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; }
+    .t3 .nav-links a { display: inline-flex; gap: 5px; align-items: center; }
+    .t3 .nav-links a:hover { color: var(--blue); }
+    .t3 .btn-nav { background: var(--ink); color: var(--bg); padding: 10px 16px; font-family: "IBM Plex Mono", monospace; font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; }
+    .t3 .btn-nav b { color: var(--yellow); }
+    .t3 .hero-grid { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: clamp(24px, 5vw, 56px); align-items: center; padding: clamp(46px, 7vw, 80px) 0 54px; }
+    .t3 .eyebrow { color: var(--blue); font-size: 8.5px; }
+    .t3 h1 { font-family: "Saira Condensed", sans-serif; font-weight: 900; font-size: clamp(62px, 9.8vw, 142px); line-height: 0.76; letter-spacing: -0.025em; text-transform: uppercase; margin: 20px 0 26px; }
+    .t3 h1 .blue { color: var(--blue); }
+    .t3 h1 .mark { position: relative; display: inline-block; }
+    .t3 h1 .mark::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0.04em; height: 0.1em; background: var(--yellow); z-index: -1; }
+    .t3 .hero-copy p { max-width: 470px; font-size: 14.5px; line-height: 1.6; color: #4d514b; }
+    .t3 .actions { display: flex; gap: 10px; margin-top: 28px; flex-wrap: wrap; }
+    .t3 .btn-main { background: var(--blue); color: #fff; padding: 14px 20px; font-family: "IBM Plex Mono", monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; box-shadow: 4px 4px 0 var(--ink); }
+    .t3 .btn-main:hover { background: #0f37ad; box-shadow: 6px 6px 0 var(--ink); transform: translate(-2px, -2px); }
+    .t3 .btn-soft { border: 2px solid var(--ink); padding: 12px 18px; font-family: "IBM Plex Mono", monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; background: transparent; }
+    .t3 .btn-soft:hover { background: var(--yellow); }
+    .t3 .hero-meta { display: flex; gap: 24px; margin-top: 34px; font-family: "IBM Plex Mono", monospace; font-size: 7.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #6d716b; }
+    .t3 .hero-meta b { display: block; margin-top: 4px; font-size: 10px; color: var(--ink); font-weight: 500; }
+    .t3 .board { border: 2px solid var(--ink); background: #fff; box-shadow: 8px 8px 0 var(--ink); }
+    .t3 .board-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; background: var(--ink); color: var(--bg); padding: 11px 14px; font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; }
+    .t3 .board-head b { color: var(--yellow); font-weight: 500; }
+    .t3 .board-row { display: grid; grid-template-columns: 1fr auto auto; gap: 16px; align-items: center; padding: 14px; border-bottom: 1px solid var(--line); font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .t3 .board-row:last-child { border-bottom: 0; }
+    .t3 .board-row strong { font-family: "Saira Condensed", sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0.02em; }
+    .t3 .board-row small { display: block; font-size: 6.5px; color: #8b8e88; margin-top: 2px; }
+    .t3 .board-row .status { color: var(--blue); }
+    .t3 .board-row .status.yellow { background: var(--yellow); color: var(--ink); padding: 4px 7px; }
+    .t3 .board-row .gate { font-family: "Saira Condensed", sans-serif; font-size: 24px; font-weight: 800; color: var(--blue); }
+    .t3 .runway { position: relative; height: 46px; margin-top: 22px; border-bottom: 2px solid var(--ink); overflow: hidden; }
+    .t3 .runway::before { content: ""; position: absolute; left: 0; right: 0; bottom: 10px; height: 2px; background: repeating-linear-gradient(90deg, var(--ink) 0 18px, transparent 18px 30px); }
+    .t3 .runway::after { content: "→"; position: absolute; right: 4px; bottom: -2px; font-size: 24px; color: var(--blue); animation: runwayArrow 2.4s ease-in-out infinite; }
+    .t3 .runway span { position: absolute; left: 0; bottom: 13px; font-family: "IBM Plex Mono", monospace; font-size: 7px; letter-spacing: 0.16em; text-transform: uppercase; color: #8b8e88; }
+    .t3 .stats { gap: 12px; }
+    .t3 .stat { border: 2px solid var(--ink); background: #fff; padding: 18px; position: relative; }
+    .t3 .stat:nth-child(2) { background: var(--yellow); }
+    .t3 .stat:nth-child(4) { background: var(--ink); color: var(--bg); }
+    .t3 .stat span { display: block; font-family: "IBM Plex Mono", monospace; font-size: 7px; letter-spacing: 0.12em; text-transform: uppercase; color: #6d716b; }
+    .t3 .stat:nth-child(4) span { color: rgba(245, 246, 242, 0.5); }
+    .t3 .stat strong { display: block; font-family: "Saira Condensed", sans-serif; font-size: clamp(30px, 3.4vw, 44px); font-weight: 800; line-height: 1; margin-top: 18px; }
+    .t3 .section-head h2 { font-family: "Saira Condensed", sans-serif; font-size: clamp(34px, 4.6vw, 56px); font-weight: 900; line-height: 0.86; text-transform: uppercase; letter-spacing: -0.01em; }
+    .t3 .section-head p { font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; color: #6d716b; max-width: 230px; text-align: right; line-height: 1.7; }
+    .t3 .work-card { background: #fff; border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); }
+    .t3 .work-card:hover { box-shadow: 9px 9px 0 var(--ink); transform: translate(-3px, -3px); }
+    .t3 .work-art { background: linear-gradient(135deg, #eef0ea, #dfe2da); border-bottom: 2px solid var(--ink); }
+    .t3 .work-art--a::before { content: "AI-04"; position: absolute; left: 18px; top: 16px; font-family: "Saira Condensed", sans-serif; font-weight: 800; font-size: 34px; color: var(--blue); }
+    .t3 .work-art--a::after { content: ""; position: absolute; left: 18px; right: 18px; bottom: 18px; height: 6px; background: repeating-linear-gradient(90deg, var(--ink) 0 14px, transparent 14px 24px); }
+    .t3 .work-art--b { background: var(--blue); }
+    .t3 .work-art--b::before { content: ""; position: absolute; left: 18px; right: 18px; top: 18px; height: 2px; background: rgba(255, 255, 255, 0.4); box-shadow: 0 34px 0 rgba(255, 255, 255, 0.4), 0 68px 0 rgba(255, 255, 255, 0.4); }
+    .t3 .work-art--b::after { content: "WEB-02"; position: absolute; left: 18px; bottom: 16px; color: var(--yellow); font-family: "Saira Condensed", sans-serif; font-weight: 800; font-size: 34px; }
+    .t3 .work-body { padding: 18px; }
+    .t3 .work-title { font-family: "Saira Condensed", sans-serif; font-weight: 800; text-transform: uppercase; font-size: 25px; letter-spacing: 0.01em; }
+    .t3 .work-desc { color: #5a5e58; }
+    .t3 .tag { border-color: var(--ink); color: var(--ink); opacity: 1; border-radius: 0; font-size: 7px; }
+    .t3 .contact-inner { background: var(--ink); color: var(--bg); padding: clamp(32px, 5vw, 56px); position: relative; overflow: hidden; }
+    .t3 .contact-inner::after { content: ""; position: absolute; right: -8%; top: -30%; width: 40%; aspect-ratio: 1; border: 2px solid rgba(242, 197, 0, 0.35); border-radius: 50%; box-shadow: 0 0 0 40px rgba(242, 197, 0, 0.05), 0 0 0 80px rgba(242, 197, 0, 0.03); }
+    .t3 .contact h2 { font-family: "Saira Condensed", sans-serif; font-weight: 900; font-size: clamp(38px, 5.4vw, 68px); text-transform: uppercase; line-height: 0.84; letter-spacing: -0.01em; }
+    .t3 .contact h2 em { font-style: normal; color: var(--yellow); }
+    .t3 .contact p { color: rgba(245, 246, 242, 0.6); }
+    .t3 .form { position: relative; z-index: 1; }
+    .t3 .form input { border: 2px solid rgba(245, 246, 242, 0.3); color: var(--bg); font-family: "IBM Plex Mono", monospace; font-size: 10px; }
+    .t3 .form input::placeholder { color: rgba(245, 246, 242, 0.4); }
+    .t3 .form .btn-main { background: var(--yellow); color: var(--ink); box-shadow: 4px 4px 0 rgba(245, 246, 242, 0.9); }
+    .t3 footer { border-color: rgba(245, 246, 242, 0.2); }
+
+    @keyframes ticker { to { transform: translateX(-50%); } }
+    @keyframes runwayArrow { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-10px); } }
+    @keyframes vineFlow { to { stroke-dashoffset: -140; } }
+    @keyframes nodePulse { 0%, 100% { transform: scale(1); opacity: 0.9; } 50% { transform: scale(1.35); opacity: 1; } }
+    @keyframes bloomPulse { 0%, 100% { box-shadow: 0 0 0 4px rgba(30, 107, 79, 0.12); } 50% { box-shadow: 0 0 0 7px rgba(30, 107, 79, 0.05); } }
+
+    /* ============================================================
+       04 — NOCTURNE LEDGER
+    ============================================================ */
+    .t4 {
+      --bg: #0c0e26; --surface: #141735; --ink: #ede6d6; --muted: #a6a4b8;
+      --brass: #c9a45c; --peri: #8b93d9; --line: rgba(237, 230, 214, 0.14);
+      background: var(--bg); color: var(--ink); font-family: "Spline Sans", sans-serif; position: relative;
+    }
+    .t4::before {
+      content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        radial-gradient(1.5px 1.5px at 8% 12%, rgba(237, 230, 214, 0.8), transparent 100%),
+        radial-gradient(1px 1px at 24% 34%, rgba(201, 164, 92, 0.8), transparent 100%),
+        radial-gradient(1.5px 1.5px at 67% 9%, rgba(237, 230, 214, 0.6), transparent 100%),
+        radial-gradient(1px 1px at 88% 26%, rgba(139, 147, 217, 0.8), transparent 100%),
+        radial-gradient(1px 1px at 45% 58%, rgba(237, 230, 214, 0.4), transparent 100%),
+        radial-gradient(1.5px 1.5px at 76% 74%, rgba(201, 164, 92, 0.55), transparent 100%),
+        radial-gradient(1px 1px at 16% 82%, rgba(237, 230, 214, 0.45), transparent 100%);
+    }
+    .t4 .wrap { position: relative; z-index: 1; }
+    .t4 .nav { padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .t4 .brand span:last-child { font-family: "Cormorant Garamond", serif; font-size: 25px; font-weight: 600; letter-spacing: -0.01em; }
+    .t4 .brand-mark { width: 32px; height: 32px; border: 1px solid rgba(201, 164, 92, 0.5); border-radius: 50%; color: var(--brass); }
+    .t4 .brand-mark svg { width: 16px; height: 16px; }
+    .t4 .nav-links { font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+    .t4 .btn-nav { border: 1px solid rgba(201, 164, 92, 0.5); color: var(--brass); padding: 10px 18px; font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; }
+    .t4 .btn-nav:hover { background: var(--brass); color: var(--bg); }
+    .t4 .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(24px, 5vw, 58px); align-items: center; padding: clamp(50px, 7.5vw, 94px) 0 60px; }
+    .t4 .eyebrow { color: var(--brass); font-size: 8px; }
+    .t4 h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(52px, 7.8vw, 108px); font-weight: 500; line-height: 0.9; letter-spacing: -0.025em; margin: 22px 0 26px; }
+    .t4 h1 em { font-style: italic; color: var(--brass); }
+    .t4 .hero-copy p { max-width: 470px; color: var(--muted); font-size: 14.5px; line-height: 1.7; }
+    .t4 .actions { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; align-items: center; }
+    .t4 .btn-main { background: var(--brass); color: #171407; padding: 13px 22px; font-family: "IBM Plex Mono", monospace; font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; }
+    .t4 .btn-main:hover { background: #e0bd77; }
+    .t4 .btn-link { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid rgba(201, 164, 92, 0.35); padding-bottom: 3px; }
+    .t4 .btn-link:hover { color: var(--brass); }
+    .t4 .hero-meta { display: flex; gap: 26px; margin-top: 36px; }
+    .t4 .hero-meta span { font-family: "IBM Plex Mono", monospace; font-size: 7.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .t4 .hero-meta b { display: block; margin-top: 5px; color: var(--ink); font-family: "Cormorant Garamond", serif; font-size: 18px; font-weight: 500; letter-spacing: 0; text-transform: none; }
+    .t4 .chart { position: relative; aspect-ratio: 1; border: 1px solid rgba(201, 164, 92, 0.28); background: radial-gradient(60% 60% at 50% 50%, rgba(201, 164, 92, 0.09), transparent 70%); overflow: hidden; }
+    .t4 .chart::before { content: ""; position: absolute; inset: 12%; border: 1px solid rgba(237, 230, 214, 0.08); border-radius: 50%; }
+    .t4 .chart::after { content: ""; position: absolute; inset: 25%; border: 1px dashed rgba(237, 230, 214, 0.1); border-radius: 50%; animation: spinSlow 40s linear infinite; }
+    .t4 .chart svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .t4 .chart-label { position: absolute; font-family: "IBM Plex Mono", monospace; font-size: 6.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .t4 .chart-label--a { top: 12%; left: 10%; }
+    .t4 .chart-label--b { bottom: 12%; right: 9%; text-align: right; }
+    .t4 .chart-label b { display: block; color: var(--brass); font-weight: 400; }
+    .t4 .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .t4 .stat { padding: 24px 20px; border-right: 1px solid var(--line); position: relative; }
+    .t4 .stat:last-child { border-right: 0; }
+    .t4 .stat::before { content: attr(data-num); position: absolute; top: 18px; right: 16px; font-family: "Cormorant Garamond", serif; font-size: 12px; font-style: italic; color: var(--brass); }
+    .t4 .stat strong { display: block; font-family: "Cormorant Garamond", serif; font-size: clamp(30px, 3.4vw, 42px); font-weight: 500; line-height: 1; }
+    .t4 .stat span { display: block; margin-top: 9px; font-family: "IBM Plex Mono", monospace; font-size: 7px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); }
+    .t4 .section-head h2 { font-family: "Cormorant Garamond", serif; font-size: clamp(34px, 4.4vw, 54px); font-weight: 500; line-height: 0.95; letter-spacing: -0.02em; }
+    .t4 .section-head h2 em { font-style: italic; color: var(--brass); }
+    .t4 .section-head p { font-family: "IBM Plex Mono", monospace; font-size: 7.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); max-width: 230px; text-align: right; line-height: 1.8; }
+    .t4 .work-card { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
+    .t4 .work-card:hover { border-color: rgba(201, 164, 92, 0.45); box-shadow: 0 30px 60px -40px rgba(0, 0, 0, 0.8); }
+    .t4 .work-art { background: radial-gradient(60% 60% at 70% 30%, rgba(201, 164, 92, 0.2), transparent 60%), #10132d; }
+    .t4 .work-art--a::before { content: ""; position: absolute; inset: 18%; border: 1px solid rgba(201, 164, 92, 0.3); border-radius: 50%; }
+    .t4 .work-art--a::after { content: ""; position: absolute; left: 42%; top: 28%; width: 7px; height: 7px; border-radius: 50%; background: var(--brass); box-shadow: 0 0 0 6px rgba(201, 164, 92, 0.12), 0 0 30px rgba(201, 164, 92, 0.7); }
+    .t4 .work-art--b { background: radial-gradient(50% 50% at 30% 70%, rgba(139, 147, 217, 0.24), transparent 65%), #10132d; }
+    .t4 .work-art--b::before { content: ""; position: absolute; left: 18%; top: 18%; width: 46%; height: 64%; border-left: 1px solid rgba(237, 230, 214, 0.3); border-bottom: 1px solid rgba(237, 230, 214, 0.3); transform: skewY(-12deg); }
+    .t4 .work-art--b::after { content: ""; position: absolute; left: 38%; top: 38%; width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--peri); }
+    .t4 .work-body { padding: 20px; }
+    .t4 .work-title { font-family: "Cormorant Garamond", serif; font-size: 27px; font-weight: 600; letter-spacing: -0.01em; }
+    .t4 .work-desc { color: var(--muted); }
+    .t4 .tag { border-color: rgba(201, 164, 92, 0.3); color: var(--brass); opacity: 1; border-radius: 2px; }
+    .t4 .contact { padding: 10px 0 30px; }
+    .t4 .contact-inner { border: 1px solid rgba(201, 164, 92, 0.28); background: linear-gradient(140deg, rgba(201, 164, 92, 0.06), transparent 55%); padding: clamp(32px, 5vw, 56px); position: relative; overflow: hidden; }
+    .t4 .contact-inner::after { content: ""; position: absolute; right: -10%; top: -50%; width: 42%; aspect-ratio: 1; border: 1px solid rgba(201, 164, 92, 0.2); border-radius: 50%; box-shadow: 0 0 0 36px rgba(201, 164, 92, 0.03), 0 0 0 72px rgba(201, 164, 92, 0.02); }
+    .t4 .contact h2 { font-family: "Cormorant Garamond", serif; font-weight: 500; font-size: clamp(36px, 5vw, 62px); letter-spacing: -0.02em; }
+    .t4 .contact h2 em { font-style: italic; color: var(--brass); }
+    .t4 .contact p { color: var(--muted); }
+    .t4 .form input { border-color: rgba(237, 230, 214, 0.2); background: rgba(237, 230, 214, 0.03); color: var(--ink); font-family: "IBM Plex Mono", monospace; font-size: 10px; border-radius: 2px; }
+    .t4 .form input::placeholder { color: rgba(237, 230, 214, 0.3); }
+    .t4 .form .btn-main { border-radius: 2px; }
+    .t4 footer { border-color: var(--line); }
+    @keyframes spinSlow { to { transform: rotate(360deg); } }
+
+    /* ============================================================
+       05 — RISO PRESS
+    ============================================================ */
+    .t5 {
+      --paper: #f3ede1; --ink: #141414; --pink: #ff4d8d; --blue: #2d5bff; --yellow: #ffd23f;
+      background: var(--paper); color: var(--ink); font-family: "Karla", sans-serif; position: relative;
+    }
+    .t5::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0.55; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.06'/%3E%3C/svg%3E"); }
+    .t5 .wrap { position: relative; z-index: 1; }
+    .t5 .topline { height: 10px; background: var(--ink); }
+    .t5 .nav { padding: 20px 0 18px; border-bottom: 2px solid var(--ink); }
+    .t5 .brand span:last-child { font-family: "Anton", sans-serif; font-size: 25px; font-weight: 400; letter-spacing: 0.02em; text-transform: uppercase; line-height: 1; }
+    .t5 .brand-mark { width: 32px; height: 32px; background: var(--ink); color: var(--yellow); font-family: "Anton", sans-serif; font-size: 13px; }
+    .t5 .nav-links { font-family: "Space Mono", monospace; font-size: 8px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .t5 .btn-nav { background: var(--pink); border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); padding: 8px 14px; font-family: "Space Mono", monospace; font-size: 8px; font-weight: 700; text-transform: uppercase; }
+    .t5 .btn-nav:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+    .t5 .hero-grid { display: grid; grid-template-columns: 1.02fr 0.98fr; gap: clamp(24px, 5vw, 54px); align-items: center; padding: clamp(46px, 7vw, 78px) 0 56px; }
+    .t5 .eyebrow { font-family: "Space Mono", monospace; font-size: 8px; color: var(--ink); background: var(--yellow); border: 1.5px solid var(--ink); padding: 5px 9px; transform: rotate(-1.5deg); width: fit-content; }
+    .t5 .eyebrow::before { display: none; }
+    .t5 h1 { font-family: "Anton", sans-serif; font-size: clamp(62px, 10vw, 142px); font-weight: 400; text-transform: uppercase; line-height: 0.8; letter-spacing: 0.005em; margin: 22px 0 26px; text-shadow: 3px 3px 0 var(--pink), 7px 7px 0 var(--blue); }
+    .t5 h1 .pink { color: var(--pink); }
+    .t5 .hero-copy p { max-width: 460px; font-size: 14.5px; line-height: 1.65; color: #47433c; }
+    .t5 .actions { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; align-items: center; }
+    .t5 .btn-main { background: var(--pink); border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); padding: 13px 20px; font-family: "Space Mono", monospace; font-size: 9px; font-weight: 700; text-transform: uppercase; }
+    .t5 .btn-main:hover { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--ink); }
+    .t5 .btn-soft { border-bottom: 2px solid var(--ink); padding-bottom: 4px; font-family: "Space Mono", monospace; font-size: 9px; font-weight: 700; text-transform: uppercase; }
+    .t5 .hero-note { margin-top: 32px; font-family: "Space Mono", monospace; font-size: 7px; letter-spacing: 0.08em; text-transform: uppercase; color: #6c675e; }
+    .t5 .page-mark { display: inline-block; margin-left: 10px; border: 1px solid var(--ink); padding: 3px 6px; background: var(--yellow); transform: rotate(1deg); }
+    .t5 .poster-wrap { position: relative; display: grid; place-items: center; min-height: clamp(400px, 42vw, 520px); }
+    .t5 .poster { position: relative; width: min(86%, 400px); aspect-ratio: 0.8; border: 3px solid var(--ink); background: #f8f3e9; box-shadow: 10px 10px 0 var(--ink); overflow: hidden; }
+    .t5 .poster::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(20, 20, 20, 0.42) 1px, transparent 1.7px); background-size: 8px 8px; opacity: 0.35; }
+    .t5 .poster-circle { position: absolute; border-radius: 50%; mix-blend-mode: multiply; }
+    .t5 .poster-circle--pink { width: 68%; aspect-ratio: 1; right: -6%; top: 12%; background: var(--pink); opacity: 0.9; }
+    .t5 .poster-circle--blue { width: 58%; aspect-ratio: 1; left: -8%; bottom: 8%; background: var(--blue); opacity: 0.82; }
+    .t5 .poster-type { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; padding: 20px; }
+    .t5 .poster-type strong { font-family: "Anton", sans-serif; font-size: clamp(44px, 5.4vw, 68px); text-transform: uppercase; line-height: 0.82; color: var(--ink); mix-blend-mode: multiply; }
+    .t5 .poster-type span { font-family: "Space Mono", monospace; font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; }
+    .t5 .sticker { position: absolute; right: -3%; top: 6%; z-index: 3; width: 92px; aspect-ratio: 1; border-radius: 50%; border: 2px solid var(--ink); background: var(--yellow); display: grid; place-items: center; text-align: center; font-family: "Space Mono", monospace; font-size: 8px; font-weight: 700; line-height: 1.2; text-transform: uppercase; transform: rotate(12deg); box-shadow: 3px 3px 0 var(--ink); }
+    .t5 .stats { gap: 12px; }
+    .t5 .stat { border: 2px solid var(--ink); background: #f8f3e9; box-shadow: 4px 4px 0 var(--ink); padding: 18px; }
+    .t5 .stat:nth-child(2) { background: var(--yellow); }
+    .t5 .stat:nth-child(4) { background: var(--pink); }
+    .t5 .stat span { display: block; font-family: "Space Mono", monospace; font-size: 7px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .t5 .stat strong { display: block; font-family: "Anton", sans-serif; font-size: clamp(32px, 3.6vw, 46px); font-weight: 400; line-height: 1; margin-top: 16px; letter-spacing: 0.01em; }
+    .t5 .section-head h2 { font-family: "Anton", sans-serif; font-size: clamp(38px, 5vw, 62px); font-weight: 400; line-height: 0.84; text-transform: uppercase; letter-spacing: 0.005em; }
+    .t5 .section-head h2 em { font-style: normal; color: var(--pink); }
+    .t5 .section-head p { font-family: "Space Mono", monospace; font-size: 7.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #6c675e; max-width: 220px; text-align: right; line-height: 1.7; }
+    .t5 .work-card { background: #f8f3e9; border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); padding: 0; }
+    .t5 .work-card:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--ink); }
+    .t5 .work-art { border-bottom: 2px solid var(--ink); }
+    .t5 .work-art--a { background: var(--yellow); }
+    .t5 .work-art--a::before { content: ""; position: absolute; left: 16%; top: 14%; width: 54%; aspect-ratio: 1; border-radius: 50%; background: var(--pink); mix-blend-mode: multiply; }
+    .t5 .work-art--a::after { content: "LEGAL"; position: absolute; left: 18px; bottom: 14px; font-family: "Anton", sans-serif; font-size: 40px; text-transform: uppercase; color: var(--ink); mix-blend-mode: multiply; }
+    .t5 .work-art--b { background: var(--blue); }
+    .t5 .work-art--b::before { content: ""; position: absolute; right: 10%; top: 18%; width: 46%; aspect-ratio: 1; border-radius: 50%; background: var(--pink); mix-blend-mode: multiply; }
+    .t5 .work-art--b::after { content: "STORE"; position: absolute; left: 18px; bottom: 14px; font-family: "Anton", sans-serif; font-size: 40px; text-transform: uppercase; color: #fff; }
+    .t5 .work-body { padding: 18px; }
+    .t5 .work-title { font-family: "Anton", sans-serif; font-size: 26px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.01em; }
+    .t5 .work-desc { color: #56514a; }
+    .t5 .tag { border: 1.5px solid var(--ink); border-radius: 0; color: var(--ink); opacity: 1; font-family: "Space Mono", monospace; }
+    .t5 .contact-inner { background: var(--ink); color: #f7f2e7; padding: clamp(32px, 5vw, 56px); position: relative; overflow: hidden; }
+    .t5 .contact-inner::after { content: ""; position: absolute; right: -8%; bottom: -40%; width: 40%; aspect-ratio: 1; border-radius: 50%; background: var(--pink); opacity: 0.28; }
+    .t5 .contact h2 { font-family: "Anton", sans-serif; font-weight: 400; font-size: clamp(40px, 5.6vw, 72px); text-transform: uppercase; line-height: 0.84; letter-spacing: 0.005em; }
+    .t5 .contact h2 em { font-style: normal; color: var(--pink); }
+    .t5 .contact p { color: rgba(247, 242, 231, 0.65); }
+    .t5 .form { position: relative; z-index: 1; }
+    .t5 .form input { border: 2px solid rgba(247, 242, 231, 0.45); color: #f7f2e7; font-family: "Space Mono", monospace; font-size: 9px; }
+    .t5 .form input::placeholder { color: rgba(247, 242, 231, 0.4); }
+    .t5 .form .btn-main { background: var(--pink); color: var(--ink); box-shadow: 4px 4px 0 #f7f2e7; }
+    .t5 footer { border-color: rgba(247, 242, 231, 0.2); }
+
+    /* ============================================================
+       06 — TERRAIN
+    ============================================================ */
+    .t6 {
+      --bg: #e8edf0; --ink: #20262b; --muted: #5d6c70; --rust: #c4552b; --pine: #3f5d4c;
+      --fog: #c9d3d6; --line: rgba(32, 38, 43, 0.18);
+      background: var(--bg); color: var(--ink); font-family: "Karla", sans-serif; position: relative;
+    }
+    .t6::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(32, 38, 43, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(32, 38, 43, 0.045) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(#000 0 45%, transparent 85%); -webkit-mask-image: linear-gradient(#000 0 45%, transparent 85%); }
+    .t6 .wrap { position: relative; z-index: 1; }
+    .t6 .nav { padding: 22px 0; border-bottom: 2px solid var(--ink); }
+    .t6 .brand span:last-child { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 19px; letter-spacing: -0.04em; }
+    .t6 .brand-mark { width: 32px; height: 32px; border: 2px solid var(--ink); color: var(--rust); }
+    .t6 .nav-links { font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .t6 .btn-nav { background: var(--rust); color: #fff; padding: 10px 16px; font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; }
+    .t6 .btn-nav:hover { background: #a84521; }
+    .t6 .hero-grid { display: grid; grid-template-columns: 1fr 0.95fr; gap: clamp(24px, 5vw, 58px); align-items: center; padding: clamp(48px, 7vw, 86px) 0 56px; }
+    .t6 .eyebrow { color: var(--rust); font-size: 8px; }
+    .t6 .coords { display: flex; gap: 18px; margin-bottom: 18px; font-family: "IBM Plex Mono", monospace; font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .t6 .coords b { color: var(--ink); font-weight: 500; }
+    .t6 h1 { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: clamp(52px, 7.6vw, 104px); line-height: 0.87; letter-spacing: -0.055em; margin: 20px 0 24px; }
+    .t6 h1 em { font-style: normal; color: var(--rust); }
+    .t6 .hero-copy p { max-width: 470px; color: var(--muted); font-size: 15px; line-height: 1.66; }
+    .t6 .actions { display: flex; gap: 12px; align-items: center; margin-top: 30px; flex-wrap: wrap; }
+    .t6 .btn-main { background: var(--ink); color: var(--bg); padding: 13px 20px; font-family: "IBM Plex Mono", monospace; font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; }
+    .t6 .btn-main:hover { background: var(--pine); }
+    .t6 .btn-link { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid var(--ink); padding-bottom: 3px; }
+    .t6 .map-panel { position: relative; aspect-ratio: 1; border: 2px solid var(--ink); background: #dfe8ea; overflow: hidden; }
+    .t6 .map-panel::before { content: ""; position: absolute; inset: 0; background: repeating-radial-gradient(ellipse at 62% 38%, transparent 0 16px, rgba(32, 38, 43, 0.12) 17px 18px); }
+    .t6 .map-panel svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .t6 .map-route { stroke-dasharray: 5 6; animation: routeFlow 10s linear infinite; }
+    .t6 .map-pin { animation: pinPulse 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .t6 .map-label { position: absolute; font-family: "IBM Plex Mono", monospace; font-size: 6.5px; letter-spacing: 0.08em; text-transform: uppercase; background: var(--bg); border: 1px solid var(--line); padding: 4px 6px; }
+    .t6 .map-label--a { top: 10%; left: 9%; }
+    .t6 .map-label--b { bottom: 10%; right: 8%; }
+    .t6 .map-label b { display: block; color: var(--rust); font-weight: 500; }
+    .t6 .stats { gap: 10px; }
+    .t6 .stat { border: 2px solid var(--ink); padding: 18px; background: rgba(232, 237, 240, 0.6); }
+    .t6 .stat:nth-child(3) { background: var(--rust); color: #fff; }
+    .t6 .stat:nth-child(4) { background: var(--ink); color: var(--bg); }
+    .t6 .stat span { display: block; font-family: "IBM Plex Mono", monospace; font-size: 7px; letter-spacing: 0.11em; text-transform: uppercase; color: var(--muted); }
+    .t6 .stat:nth-child(3) span, .t6 .stat:nth-child(4) span { color: rgba(255, 255, 255, 0.6); }
+    .t6 .stat strong { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: clamp(28px, 3.2vw, 40px); font-weight: 800; line-height: 1; margin-top: 18px; letter-spacing: -0.04em; }
+    .t6 .section-head h2 { font-family: "Bricolage Grotesque", sans-serif; font-size: clamp(32px, 4.2vw, 50px); font-weight: 800; line-height: 0.92; letter-spacing: -0.05em; }
+    .t6 .section-head h2 em { font-style: normal; color: var(--rust); }
+    .t6 .section-head p { font-family: "IBM Plex Mono", monospace; font-size: 7.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); max-width: 220px; text-align: right; line-height: 1.8; }
+    .t6 .work-card { background: rgba(247, 250, 250, 0.7); border: 2px solid var(--ink); }
+    .t6 .work-card:hover { box-shadow: 0 24px 40px -34px rgba(32, 38, 43, 0.6); }
+    .t6 .work-art { background: #dfe8ea; border-bottom: 2px solid var(--ink); }
+    .t6 .work-art--a::before { content: ""; position: absolute; inset: -20% -10% -20% 20%; background: repeating-radial-gradient(circle at 55% 55%, transparent 0 14px, rgba(32, 38, 43, 0.16) 15px 16px); }
+    .t6 .work-art--a::after { content: ""; position: absolute; left: 20%; top: 26%; width: 56%; height: 2px; background: var(--rust); transform: rotate(-12deg); box-shadow: 0 0 0 1px rgba(196, 85, 43, 0.1); }
+    .t6 .work-art--b { background: #d5e2e4; }
+    .t6 .work-art--b::before { content: ""; position: absolute; inset: 18% 12%; border-top: 2px solid var(--pine); border-bottom: 2px solid var(--pine); transform: skewY(6deg); }
+    .t6 .work-art--b::after { content: ""; position: absolute; left: 44%; top: 38%; width: 9px; height: 9px; border-radius: 50%; background: var(--rust); box-shadow: 0 0 0 6px rgba(196, 85, 43, 0.15); }
+    .t6 .work-body { padding: 18px; }
+    .t6 .work-title { font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; }
+    .t6 .work-desc { color: var(--muted); }
+    .t6 .tag { border-color: var(--line); color: var(--muted); opacity: 1; border-radius: 0; }
+    .t6 .contact-inner { border: 2px solid var(--ink); background: rgba(247, 250, 250, 0.55); padding: clamp(32px, 5vw, 56px); position: relative; overflow: hidden; }
+    .t6 .contact-inner::after { content: ""; position: absolute; right: -8%; top: -40%; width: 40%; aspect-ratio: 1; border: 2px solid rgba(196, 85, 43, 0.35); border-radius: 50%; box-shadow: 0 0 0 34px rgba(196, 85, 43, 0.05), 0 0 0 68px rgba(196, 85, 43, 0.03); }
+    .t6 .contact h2 { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: clamp(36px, 4.8vw, 62px); letter-spacing: -0.05em; }
+    .t6 .contact h2 em { font-style: normal; color: var(--rust); }
+    .t6 .contact p { color: var(--muted); }
+    .t6 .form input { border: 2px solid var(--ink); background: transparent; font-family: "IBM Plex Mono", monospace; font-size: 9px; }
+    .t6 .form .btn-main { background: var(--rust); }
+    .t6 footer { border-color: var(--line); }
+    @keyframes routeFlow { to { stroke-dashoffset: -120; } }
+    @keyframes pinPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.3); } }
+
+    /* ============================================================
+       07 — PULSE GRID
+    ============================================================ */
+    .t7 {
+      --bg: #08090b; --panel: #101216; --ink: #f5f5f2; --muted: #8f949d;
+      --red: #ff3b30; --blue: #4d8dff; --yellow: #ffd84d;
+      background: var(--bg); color: var(--ink); font-family: "Inter Tight", sans-serif; position: relative;
+    }
+    .t7::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(245, 245, 242, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(245, 245, 242, 0.035) 1px, transparent 1px); background-size: 56px 56px; mask-image: linear-gradient(#000 0 38%, transparent 80%); -webkit-mask-image: linear-gradient(#000 0 38%, transparent 80%); }
+    .t7 .wrap { position: relative; z-index: 1; }
+    .t7 .live-strip { border-bottom: 1px solid rgba(245, 245, 242, 0.12); overflow: hidden; }
+    .t7 .feed { display: flex; width: max-content; gap: 36px; padding: 8px 0; font-family: "JetBrains Mono", monospace; font-size: 7px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); animation: ticker 26s linear infinite; }
+    .t7 .feed span { display: inline-flex; align-items: center; gap: 36px; }
+    .t7 .feed b { color: var(--ink); font-weight: 500; }
+    .t7 .feed i { width: 5px; height: 5px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 4px rgba(255, 59, 48, 0.14); }
+    .t7 .nav { padding: 18px 0; }
+    .t7 .brand span:last-child { font-family: "Barlow Condensed", sans-serif; font-size: 27px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.015em; }
+    .t7 .brand-mark { width: 32px; height: 32px; background: var(--red); color: #fff; font-family: "Barlow Condensed", sans-serif; font-size: 13px; font-weight: 800; }
+    .t7 .nav-links { font-family: "JetBrains Mono", monospace; font-size: 7.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .t7 .btn-nav { background: var(--ink); color: var(--bg); padding: 10px 16px; font-family: "JetBrains Mono", monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; }
+    .t7 .btn-nav:hover { background: var(--red); color: #fff; }
+    .t7 .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(24px, 5vw, 56px); align-items: center; padding: clamp(46px, 7vw, 82px) 0 54px; }
+    .t7 .eyebrow { color: var(--red); font-size: 8px; }
+    .t7 h1 { font-family: "Barlow Condensed", sans-serif; font-size: clamp(64px, 10.2vw, 152px); font-weight: 900; line-height: 0.74; letter-spacing: 0.005em; text-transform: uppercase; margin: 20px 0 24px; }
+    .t7 h1 .blue { color: var(--blue); }
+    .t7 h1 .outline { color: transparent; -webkit-text-stroke: 1.5px var(--ink); }
+    .t7 .hero-copy p { max-width: 470px; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+    .t7 .actions { display: flex; gap: 10px; margin-top: 28px; flex-wrap: wrap; align-items: center; }
+    .t7 .btn-main { background: var(--red); color: #fff; padding: 13px 20px; font-family: "JetBrains Mono", monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; }
+    .t7 .btn-main:hover { background: #e42c22; box-shadow: 0 0 30px rgba(255, 59, 48, 0.35); }
+    .t7 .btn-link { font-family: "JetBrains Mono", monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid rgba(245, 245, 242, 0.3); padding-bottom: 3px; }
+    .t7 .btn-link:hover { color: var(--ink); }
+    .t7 .hero-meta { display: flex; gap: 28px; margin-top: 34px; }
+    .t7 .hero-meta span { font-family: "JetBrains Mono", monospace; font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .t7 .hero-meta b { display: block; margin-top: 4px; font-family: "Barlow Condensed", sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 0.02em; color: var(--ink); }
+    .t7 .scorecard { border: 1px solid rgba(245, 245, 242, 0.16); background: linear-gradient(160deg, #121419, #0b0c0f); padding: 20px; position: relative; overflow: hidden; }
+    .t7 .scorecard::before { content: ""; position: absolute; top: 0; left: 0; width: 40%; height: 2px; background: var(--red); }
+    .t7 .scorecard::after { content: ""; position: absolute; top: 0; right: 0; width: 26%; height: 2px; background: var(--blue); }
+    .t7 .score-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-family: "JetBrains Mono", monospace; font-size: 7px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .t7 .score-live { display: inline-flex; align-items: center; gap: 6px; color: var(--red); }
+    .t7 .score-live i { width: 5px; height: 5px; border-radius: 50%; background: var(--red); animation: livePulse 1.6s ease-in-out infinite; }
+    .t7 .score-main { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin: 18px 0 10px; }
+    .t7 .score-num { font-family: "Barlow Condensed", sans-serif; font-size: clamp(90px, 12vw, 150px); font-weight: 900; line-height: 0.72; letter-spacing: -0.02em; }
+    .t7 .score-num small { display: block; margin-top: 10px; font-family: "JetBrains Mono", monospace; font-size: 9px; font-weight: 400; letter-spacing: 0.08em; line-height: 1.5; color: var(--muted); }
+    .t7 .score-bars { width: 42%; display: flex; flex-direction: column; gap: 7px; padding-bottom: 10px; }
+    .t7 .score-bars i { display: block; height: 4px; background: rgba(245, 245, 242, 0.1); position: relative; }
+    .t7 .score-bars i::after { content: ""; position: absolute; inset: 0; width: var(--w, 60%); background: var(--red); }
+    .t7 .score-bars i:nth-child(2)::after { background: var(--blue); }
+    .t7 .score-bars i:nth-child(3)::after { background: var(--yellow); }
+    .t7 .score-rows { border-top: 1px solid rgba(245, 245, 242, 0.12); margin-top: 8px; }
+    .t7 .score-row { display: flex; justify-content: space-between; gap: 14px; padding: 9px 0; border-bottom: 1px solid rgba(245, 245, 242, 0.07); font-family: "JetBrains Mono", monospace; font-size: 7.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    .t7 .score-row b { color: var(--ink); font-weight: 500; }
+    .t7 .score-row .good { color: var(--yellow); }
+    .t7 .stats { gap: 10px; }
+    .t7 .stat { border: 1px solid rgba(245, 245, 242, 0.14); background: var(--panel); padding: 18px; position: relative; }
+    .t7 .stat::before { content: ""; position: absolute; left: 0; top: 0; width: 34px; height: 2px; background: var(--red); }
+    .t7 .stat:nth-child(2)::before { background: var(--blue); }
+    .t7 .stat:nth-child(3)::before { background: var(--yellow); }
+    .t7 .stat:nth-child(4)::before { background: var(--ink); }
+    .t7 .stat span { display: block; font-family: "JetBrains Mono", monospace; font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .t7 .stat strong { display: block; font-family: "Barlow Condensed", sans-serif; font-size: clamp(34px, 4vw, 50px); font-weight: 800; line-height: 1; margin-top: 16px; letter-spacing: 0.01em; }
+    .t7 .section-head h2 { font-family: "Barlow Condensed", sans-serif; font-size: clamp(40px, 5.4vw, 70px); font-weight: 900; text-transform: uppercase; line-height: 0.82; letter-spacing: 0.01em; }
+    .t7 .section-head h2 em { font-style: normal; color: var(--red); }
+    .t7 .section-head p { font-family: "JetBrains Mono", monospace; font-size: 7.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); max-width: 220px; text-align: right; line-height: 1.8; }
+    .t7 .work-card { background: var(--panel); border: 1px solid rgba(245, 245, 242, 0.14); }
+    .t7 .work-card:hover { border-color: rgba(245, 245, 242, 0.3); box-shadow: 0 30px 60px -40px rgba(0, 0, 0, 0.9); }
+    .t7 .work-art { background: linear-gradient(135deg, #111318, #0a0b0e); }
+    .t7 .work-art--a::before { content: "87"; position: absolute; left: 18px; bottom: 6px; font-family: "Barlow Condensed", sans-serif; font-size: 86px; font-weight: 900; line-height: 0.8; color: var(--red); }
+    .t7 .work-art--a::after { content: ""; position: absolute; right: 18px; top: 20px; width: 30%; height: 4px; background: var(--blue); box-shadow: 0 12px 0 rgba(77, 141, 255, 0.35), 0 24px 0 rgba(77, 141, 255, 0.18); }
+    .t7 .work-art--b { background: linear-gradient(135deg, #0d1018, #0a0b0e); }
+    .t7 .work-art--b::before { content: ""; position: absolute; left: 18px; right: 18px; top: 50%; height: 2px; background: repeating-linear-gradient(90deg, var(--red) 0 20px, transparent 20px 32px); }
+    .t7 .work-art--b::after { content: "FT"; position: absolute; right: 18px; top: 16px; font-family: "Barlow Condensed", sans-serif; font-size: 42px; font-weight: 900; color: var(--yellow); }
+    .t7 .work-body { padding: 18px; }
+    .t7 .work-title { font-family: "Barlow Condensed", sans-serif; font-weight: 800; text-transform: uppercase; font-size: 26px; letter-spacing: 0.01em; }
+    .t7 .work-desc { color: var(--muted); }
+    .t7 .tag { border-color: rgba(245, 245, 242, 0.2); color: var(--muted); opacity: 1; border-radius: 2px; }
+    .t7 .contact-inner { background: linear-gradient(140deg, #121419, #0b0c0f); border: 1px solid rgba(245, 245, 242, 0.14); padding: clamp(32px, 5vw, 56px); position: relative; overflow: hidden; }
+    .t7 .contact-inner::after { content: ""; position: absolute; right: -10%; top: -50%; width: 42%; aspect-ratio: 1; border: 1px solid rgba(255, 59, 48, 0.25); border-radius: 50%; box-shadow: 0 0 0 38px rgba(255, 59, 48, 0.04), 0 0 0 76px rgba(255, 59, 48, 0.02); }
+    .t7 .contact h2 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: clamp(42px, 5.8vw, 76px); text-transform: uppercase; line-height: 0.82; }
+    .t7 .contact h2 em { font-style: normal; color: var(--red); }
+    .t7 .contact p { color: var(--muted); }
+    .t7 .form { position: relative; z-index: 1; }
+    .t7 .form input { border: 1px solid rgba(245, 245, 242, 0.2); background: rgba(245, 245, 242, 0.04); color: var(--ink); font-family: "JetBrains Mono", monospace; font-size: 9px; border-radius: 2px; }
+    .t7 .form input::placeholder { color: rgba(245, 245, 242, 0.3); }
+    .t7 .form .btn-main { background: var(--red); }
+    .t7 footer { border-color: rgba(245, 245, 242, 0.12); }
+    @keyframes livePulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.5); } 50% { box-shadow: 0 0 0 7px rgba(255, 59, 48, 0); } }
+
+    /* ============================================================
+       08 — MONOLITH
+    ============================================================ */
+    .t8 {
+      --bg: #e9e7e1; --ink: #1b1b19; --stone: #c9c5bb; --bone: #f6f4ef; --red: #d6401f;
+      background: var(--bg); color: var(--ink); font-family: "Instrument Sans", sans-serif; position: relative;
+    }
+    .t8::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(27, 27, 25, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(27, 27, 25, 0.05) 1px, transparent 1px); background-size: 96px 96px; mask-image: radial-gradient(ellipse at 60% 20%, #000 10%, transparent 78%); -webkit-mask-image: radial-gradient(ellipse at 60% 20%, #000 10%, transparent 78%); }
+    .t8 .wrap { position: relative; z-index: 1; }
+    .t8 .nav { padding: 28px 0; border-bottom: 1px solid rgba(27, 27, 25, 0.22); }
+    .t8 .brand span:last-child { font-family: "IBM Plex Mono", monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+    .t8 .brand-mark { width: 10px; height: 10px; background: var(--red); }
+    .t8 .brand-mark svg { display: none; }
+    .t8 .nav-links { font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: #5f5c55; }
+    .t8 .nav-links a:hover { color: var(--red); opacity: 1; }
+    .t8 .btn-nav { border: 1px solid rgba(27, 27, 25, 0.4); padding: 10px 16px; font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; }
+    .t8 .btn-nav:hover { background: var(--ink); color: var(--bg); }
+    .t8 .hero-grid { display: grid; grid-template-columns: 1.18fr 0.82fr; gap: clamp(24px, 5vw, 58px); align-items: center; padding: clamp(54px, 8vw, 104px) 0 70px; }
+    .t8 .eyebrow { color: #6a665e; font-size: 8px; }
+    .t8 h1 { font-family: "Instrument Serif", serif; font-size: clamp(58px, 9.4vw, 132px); font-weight: 400; line-height: 0.92; letter-spacing: -0.035em; margin: 24px 0 28px; }
+    .t8 h1 em { font-style: normal; color: var(--red); }
+    .t8 .hero-copy p { max-width: 460px; color: #5b5751; font-size: 15px; line-height: 1.7; }
+    .t8 .actions { display: flex; gap: 22px; align-items: center; margin-top: 34px; flex-wrap: wrap; }
+    .t8 .btn-main { background: var(--red); color: #fff; padding: 13px 20px; font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; }
+    .t8 .btn-main:hover { background: #b93519; }
+    .t8 .btn-link { font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid var(--ink); padding-bottom: 3px; }
+    .t8 .hero-meta { display: flex; gap: 28px; margin-top: 40px; font-family: "IBM Plex Mono", monospace; font-size: 7px; letter-spacing: 0.12em; text-transform: uppercase; color: #6a665e; }
+    .t8 .hero-meta b { display: block; margin-top: 4px; color: var(--ink); font-family: "Instrument Serif", serif; font-size: 18px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+    .t8 .slab-stage { position: relative; display: grid; place-items: center; min-height: clamp(380px, 40vw, 500px); }
+    .t8 .slab { position: relative; width: min(54%, 238px); height: clamp(300px, 34vw, 430px); background: linear-gradient(90deg, #aaa69b, #dfdbd2 38%, #b8b3a9 72%, #928e84); box-shadow: 30px 36px 50px -30px rgba(27, 27, 25, 0.5); transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
+    .t8 .slab::before { content: ""; position: absolute; left: 30%; top: 18%; width: 3px; height: 30%; background: var(--red); }
+    .t8 .slab::after { content: "01"; position: absolute; left: 30%; bottom: 14%; font-family: "Instrument Serif", serif; font-size: 38px; color: rgba(27, 27, 25, 0.5); }
+    .t8 .slab-stage:hover .slab { transform: translateY(-6px); }
+    .t8 .slab-label { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); max-width: 260px; text-align: center; font-family: "IBM Plex Mono", monospace; font-size: 6.5px; line-height: 1.7; letter-spacing: 0.1em; text-transform: uppercase; color: #6a665e; }
+    .t8 .slab-label b { display: block; color: var(--ink); font-weight: 500; }
+    .t8 .stats { border-top: 1px solid rgba(27, 27, 25, 0.22); border-bottom: 1px solid rgba(27, 27, 25, 0.22); }
+    .t8 .stat { padding: 24px 20px; border-right: 1px solid rgba(27, 27, 25, 0.16); }
+    .t8 .stat:last-child { border-right: 0; }
+    .t8 .stat strong { display: block; font-family: "Instrument Serif", serif; font-size: clamp(30px, 3.4vw, 42px); font-weight: 400; line-height: 1; }
+    .t8 .stat span { display: block; margin-top: 8px; font-family: "IBM Plex Mono", monospace; font-size: 7px; letter-spacing: 0.14em; text-transform: uppercase; color: #6a665e; }
+    .t8 .section-head h2 { font-family: "Instrument Serif", serif; font-size: clamp(34px, 4.6vw, 56px); font-weight: 400; line-height: 0.94; letter-spacing: -0.03em; }
+    .t8 .section-head h2 em { font-style: normal; color: var(--red); }
+    .t8 .section-head p { font-family: "IBM Plex Mono", monospace; font-size: 7.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #6a665e; max-width: 230px; text-align: right; line-height: 1.8; }
+    .t8 .work-grid { grid-template-columns: 1fr; gap: 0; }
+    .t8 .work-card { flex-direction: row; align-items: center; gap: 24px; padding: 24px 0; border: 0; border-top: 1px solid rgba(27, 27, 25, 0.22); border-radius: 0; background: transparent; }
+    .t8 .work-card:last-child { border-bottom: 1px solid rgba(27, 27, 25, 0.22); }
+    .t8 .work-card:hover { transform: none; background: rgba(27, 27, 25, 0.035); box-shadow: none; }
+    .t8 .work-art { order: 2; flex: none; width: 112px; aspect-ratio: 1; margin-left: auto; border: 1px solid rgba(27, 27, 25, 0.18); background: linear-gradient(135deg, #d5d1c7, #b3afa5); }
+    .t8 .work-art--a::before { content: ""; position: absolute; left: 38%; top: 16%; width: 2px; height: 40%; background: var(--red); }
+    .t8 .work-art--a::after { content: "AI"; position: absolute; left: 42%; bottom: 14%; font-family: "Instrument Serif", serif; font-size: 22px; color: rgba(27, 27, 25, 0.5); }
+    .t8 .work-art--b { background: linear-gradient(135deg, #cfcbc1, #aaa69b); }
+    .t8 .work-art--b::before { content: ""; position: absolute; left: 24%; right: 24%; top: 46%; height: 1px; background: rgba(27, 27, 25, 0.4); transform: rotate(-18deg); }
+    .t8 .work-art--b::after { content: ""; position: absolute; left: 46%; top: 40%; width: 7px; height: 7px; border-radius: 50%; background: var(--red); }
+    .t8 .work-body { flex: 1; padding: 0; }
+    .t8 .work-title { font-family: "Instrument Serif", serif; font-size: clamp(27px, 3vw, 38px); font-weight: 400; letter-spacing: -0.02em; }
+    .t8 .work-desc { max-width: 520px; color: #5b5751; }
+    .t8 .tag { border-color: rgba(27, 27, 25, 0.22); color: #5b5751; opacity: 1; border-radius: 0; }
+    .t8 .contact { padding: 20px 0 26px; }
+    .t8 .contact-inner { border-top: 1px solid rgba(27, 27, 25, 0.22); border-bottom: 1px solid rgba(27, 27, 25, 0.22); padding: clamp(36px, 5vw, 58px) 0; align-items: end; }
+    .t8 .contact h2 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: clamp(38px, 5.4vw, 70px); letter-spacing: -0.035em; }
+    .t8 .contact h2 em { font-style: normal; color: var(--red); }
+    .t8 .contact p { color: #5b5751; }
+    .t8 .form input { border: 0; border-bottom: 1px solid rgba(27, 27, 25, 0.4); background: transparent; font-family: "IBM Plex Mono", monospace; font-size: 9px; padding-left: 0; }
+    .t8 .form .btn-main { border-radius: 0; }
+    .t8 footer { border-color: rgba(27, 27, 25, 0.22); }
+
+    /* ============================================================
+       09 — SOFT MACHINE
+    ============================================================ */
+    .t9 {
+      --bg: #e9e7e2; --panel: #f4f2ed; --ink: #22221f; --muted: #6e6a63; --orange: #e85a2a; --line: rgba(34, 34, 31, 0.16);
+      background: var(--bg); color: var(--ink); font-family: "Archivo", sans-serif; position: relative;
+    }
+    .t9::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: radial-gradient(rgba(34, 34, 31, 0.14) 1px, transparent 1.3px); background-size: 18px 18px; mask-image: linear-gradient(#000 0 38%, transparent 82%); -webkit-mask-image: linear-gradient(#000 0 38%, transparent 82%); opacity: 0.55; }
+    .t9 .wrap { position: relative; z-index: 1; }
+    .t9 .nav { padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .t9 .brand span:last-child { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.03em; }
+    .t9 .brand-mark { width: 34px; height: 34px; border-radius: 10px; background: var(--panel); border: 1px solid var(--line); color: var(--orange); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 3px 8px rgba(34, 34, 31, 0.1); }
+    .t9 .nav-links { font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .t9 .btn-nav { background: var(--orange); color: #fff; border-radius: 999px; padding: 10px 16px; font-size: 10px; font-weight: 600; box-shadow: 0 8px 18px -12px rgba(232, 90, 42, 0.8); }
+    .t9 .btn-nav:hover { background: #d34d20; }
+    .t9 .hero-grid { display: grid; grid-template-columns: 1.02fr 0.98fr; gap: clamp(24px, 5vw, 58px); align-items: center; padding: clamp(48px, 7vw, 88px) 0 56px; }
+    .t9 .eyebrow { color: var(--orange); font-size: 8px; }
+    .t9 h1 { font-family: "Archivo", sans-serif; font-size: clamp(50px, 7.4vw, 98px); font-weight: 800; line-height: 0.89; letter-spacing: -0.055em; margin: 22px 0 26px; }
+    .t9 h1 em { font-style: normal; color: var(--orange); }
+    .t9 .hero-copy p { max-width: 470px; color: var(--muted); font-size: 15px; line-height: 1.65; }
+    .t9 .actions { display: flex; gap: 10px; margin-top: 30px; flex-wrap: wrap; align-items: center; }
+    .t9 .btn-main { background: var(--ink); color: var(--panel); border-radius: 999px; padding: 13px 20px; font-size: 11px; font-weight: 600; }
+    .t9 .btn-main:hover { background: var(--orange); }
+    .t9 .btn-soft { border: 1px solid var(--line); border-radius: 999px; padding: 12px 18px; font-size: 11px; color: var(--muted); background: rgba(255, 255, 255, 0.3); }
+    .t9 .btn-soft:hover { border-color: var(--ink); color: var(--ink); }
+    .t9 .hero-meta { display: flex; gap: 26px; margin-top: 34px; }
+    .t9 .hero-meta span { font-family: "IBM Plex Mono", monospace; font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .t9 .hero-meta b { display: block; margin-top: 4px; font-family: "Archivo", sans-serif; font-size: 17px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); }
+    .t9 .console { position: relative; border: 1px solid var(--line); border-radius: 18px; background: var(--panel); padding: 16px; box-shadow: inset 0 1px 0 #fff, 0 30px 50px -38px rgba(34, 34, 31, 0.4); }
+    .t9 .console-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+    .t9 .console-head b { font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+    .t9 .console-dots { display: flex; gap: 5px; }
+    .t9 .console-dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--line); }
+    .t9 .console-dots i:first-child { background: var(--orange); }
+    .t9 .console-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px 0; }
+    .t9 .gauge { min-height: 150px; border: 1px solid var(--line); border-radius: 12px; background: #eceae5; box-shadow: inset 0 2px 5px rgba(34, 34, 31, 0.08); position: relative; padding: 12px; }
+    .t9 .gauge span { font-family: "IBM Plex Mono", monospace; font-size: 6.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .t9 .dial { position: absolute; left: 50%; top: 55%; width: 86px; height: 86px; border-radius: 50%; transform: translate(-50%, -50%); background: conic-gradient(from 220deg, var(--orange) 0 22%, #d8d5cd 22% 100%); box-shadow: inset 0 0 0 16px #eceae5, inset 0 0 0 17px rgba(34, 34, 31, 0.2), 3px 3px 8px rgba(34, 34, 31, 0.15); }
+    .t9 .dial::after { content: ""; position: absolute; left: 50%; top: 50%; width: 4px; height: 30px; background: var(--ink); transform-origin: 50% 100%; transform: translate(-50%, -100%) rotate(36deg); }
+    .t9 .gauge:nth-child(2) .dial { background: conic-gradient(from 220deg, var(--ink) 0 42%, #d8d5cd 42% 100%); }
+    .t9 .gauge:nth-child(2) .dial::after { transform: translate(-50%, -100%) rotate(78deg); }
+    .t9 .toggle-box { min-height: 150px; border: 1px solid var(--line); border-radius: 12px; background: #eceae5; box-shadow: inset 0 2px 5px rgba(34, 34, 31, 0.08); padding: 12px; }
+    .t9 .toggle-box span { font-family: "IBM Plex Mono", monospace; font-size: 6.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .t9 .toggle { position: relative; width: 58px; height: 28px; margin-top: 28px; border-radius: 99px; background: #d8d5cd; box-shadow: inset 2px 2px 5px rgba(34, 34, 31, 0.18), inset -2px -2px 5px rgba(255, 255, 255, 0.8); transition: background 0.3s; cursor: pointer; }
+    .t9 .toggle::after { content: ""; position: absolute; left: 4px; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: #f8f6f1; box-shadow: 2px 2px 5px rgba(34, 34, 31, 0.25); transition: transform 0.3s; }
+    .t9 .toggle-box:hover .toggle { background: rgba(232, 90, 42, 0.35); }
+    .t9 .toggle-box:hover .toggle::after { transform: translateX(30px); }
+    .t9 .toggle-labels { display: flex; justify-content: space-between; margin-top: 10px; font-family: "IBM Plex Mono", monospace; font-size: 6px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .t9 .console-foot { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); padding-top: 12px; font-family: "IBM Plex Mono", monospace; font-size: 6.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .t9 .console-foot b { color: var(--orange); font-weight: 500; }
+    .t9 .bars { display: flex; align-items: flex-end; gap: 5px; height: 44px; margin-top: 14px; }
+    .t9 .bars i { flex: 1; background: #d8d5cd; height: var(--h, 40%); border-radius: 2px 2px 0 0; }
+    .t9 .bars i:nth-child(3n) { background: var(--orange); }
+    .t9 .stats { gap: 10px; }
+    .t9 .stat { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; box-shadow: inset 0 1px 0 #fff; }
+    .t9 .stat span { display: block; font-family: "IBM Plex Mono", monospace; font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .t9 .stat strong { display: block; font-family: "Archivo", sans-serif; font-size: clamp(28px, 3.2vw, 40px); font-weight: 700; line-height: 1; margin-top: 18px; letter-spacing: -0.05em; }
+    .t9 .section-head h2 { font-family: "Archivo", sans-serif; font-size: clamp(32px, 4.2vw, 50px); font-weight: 800; line-height: 0.94; letter-spacing: -0.05em; }
+    .t9 .section-head h2 em { font-style: normal; color: var(--orange); }
+    .t9 .section-head p { font-family: "IBM Plex Mono", monospace; font-size: 7.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); max-width: 220px; text-align: right; line-height: 1.8; }
+    .t9 .work-card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; box-shadow: inset 0 1px 0 #fff; }
+    .t9 .work-card:hover { border-color: rgba(34, 34, 31, 0.3); box-shadow: inset 0 1px 0 #fff, 0 26px 40px -34px rgba(34, 34, 31, 0.5); }
+    .t9 .work-art { background: #eceae5; border-bottom: 1px solid var(--line); }
+    .t9 .work-art--a::before { content: ""; position: absolute; inset: 18% 16%; border: 1px solid rgba(34, 34, 31, 0.18); border-radius: 8px; background-image: radial-gradient(rgba(34, 34, 31, 0.18) 1px, transparent 1.2px); background-size: 10px 10px; }
+    .t9 .work-art--a::after { content: ""; position: absolute; left: 24%; right: 24%; top: 50%; height: 9px; border-radius: 99px; background: var(--orange); box-shadow: 0 0 0 4px #eceae5; }
+    .t9 .work-art--b { background: #eceae5; }
+    .t9 .work-art--b::before { content: ""; position: absolute; inset: 22% 18%; background: conic-gradient(from 200deg, var(--orange) 0 18%, transparent 18% 46%, var(--ink) 46% 64%, transparent 64%); border-radius: 50%; opacity: 0.75; }
+    .t9 .work-art--b::after { content: ""; position: absolute; inset: 36%; background: #eceae5; border-radius: 50%; }
+    .t9 .work-body { padding: 18px; }
+    .t9 .work-title { font-family: "Archivo", sans-serif; font-weight: 700; }
+    .t9 .work-desc { color: var(--muted); }
+    .t9 .tag { border-color: var(--line); color: var(--muted); opacity: 1; }
+    .t9 .contact-inner { background: var(--orange); color: #fff8f2; border-radius: 18px; padding: clamp(32px, 5vw, 56px); position: relative; overflow: hidden; }
+    .t9 .contact-inner::after { content: ""; position: absolute; right: -8%; top: -35%; width: 40%; aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(255, 248, 242, 0.35); box-shadow: 0 0 0 36px rgba(255, 248, 242, 0.06), 0 0 0 72px rgba(255, 248, 242, 0.03); }
+    .t9 .contact h2 { font-family: "Archivo", sans-serif; font-weight: 800; font-size: clamp(34px, 4.8vw, 62px); letter-spacing: -0.055em; }
+    .t9 .contact h2 em { font-style: normal; color: #ffe1d2; }
+    .t9 .contact p { color: rgba(255, 248, 242, 0.72); }
+    .t9 .form { position: relative; z-index: 1; }
+    .t9 .form input { border: 1px solid rgba(255, 248, 242, 0.45); border-radius: 99px; background: rgba(255, 248, 242, 0.08); color: #fff8f2; font-size: 11px; }
+    .t9 .form input::placeholder { color: rgba(255, 248, 242, 0.55); }
+    .t9 .form .btn-main { background: var(--ink); color: #fff8f2; border-radius: 99px; }
+    .t9 footer { border-color: var(--line); }
+
+    /* ============================================================
+       10 — VERDANT
+    ============================================================ */
+    .t10 {
+      --bg: #fbf9ef; --ink: #20301f; --muted: #66705f; --leaf: #3f6b3a; --sun: #f2b705; --sage: #dce5cf; --clay: #c77b4e;
+      background: var(--bg); color: var(--ink); font-family: "Karla", sans-serif; position: relative;
+    }
+    .t10::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(900px 560px at 88% -5%, rgba(242, 183, 5, 0.14), transparent 68%), radial-gradient(700px 500px at -8% 108%, rgba(63, 107, 58, 0.1), transparent 70%); }
+    .t10 .wrap { position: relative; z-index: 1; }
+    .t10 .nav { padding: 24px 0; border-bottom: 1px solid rgba(32, 48, 31, 0.14); }
+    .t10 .brand span:last-child { font-family: "Fraunces", serif; font-size: 19px; font-weight: 600; letter-spacing: -0.03em; }
+    .t10 .brand-mark { width: 32px; height: 32px; border-radius: 50%; background: var(--leaf); color: var(--bg); }
+    .t10 .nav-links { font-family: "IBM Plex Mono", monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .t10 .btn-nav { background: var(--leaf); color: var(--bg); border-radius: 999px; padding: 10px 18px; font-size: 10px; font-weight: 600; }
+    .t10 .btn-nav:hover { background: #2f5630; }
+    .t10 .hero-grid { display: grid; grid-template-columns: 1.03fr 0.97fr; gap: clamp(24px, 5vw, 58px); align-items: center; padding: clamp(48px, 7vw, 86px) 0 58px; }
+    .t10 .eyebrow { color: var(--leaf); font-size: 8px; }
+    .t10 h1 { font-family: "Fraunces", serif; font-size: clamp(52px, 7.6vw, 102px); font-weight: 600; line-height: 0.9; letter-spacing: -0.05em; margin: 22px 0 26px; }
+    .t10 h1 em { font-style: italic; font-weight: 400; color: var(--leaf); }
+    .t10 h1 .sun { position: relative; white-space: nowrap; }
+    .t10 h1 .sun::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0.03em; height: 0.22em; background: rgba(242, 183, 5, 0.5); z-index: -1; border-radius: 99px; }
+    .t10 .hero-copy p { max-width: 480px; color: var(--muted); font-size: 15px; line-height: 1.68; }
+    .t10 .actions { display: flex; gap: 12px; align-items: center; margin-top: 30px; flex-wrap: wrap; }
+    .t10 .btn-main { background: var(--leaf); color: var(--bg); border-radius: 999px; padding: 14px 22px; font-size: 11.5px; font-weight: 600; box-shadow: 0 14px 28px -18px rgba(63, 107, 58, 0.8); }
+    .t10 .btn-main:hover { background: #2f5630; }
+    .t10 .btn-link { font-size: 11.5px; font-weight: 600; border-bottom: 1px solid var(--ink); padding-bottom: 4px; display: inline-flex; gap: 6px; align-items: center; }
+    .t10 .hero-note { display: flex; gap: 9px; align-items: center; margin-top: 32px; font-family: "IBM Plex Mono", monospace; font-size: 7.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .t10 .hero-note i { width: 7px; height: 7px; border-radius: 50%; background: var(--sun); box-shadow: 0 0 0 4px rgba(242, 183, 5, 0.18); }
+    .t10 .sun-stage { position: relative; display: grid; place-items: end center; min-height: clamp(390px, 42vw, 520px); }
+    .t10 .sun-panel { position: relative; width: min(80%, 350px); height: clamp(330px, 36vw, 450px); border-radius: 220px 220px 20px 20px; overflow: hidden; background: linear-gradient(180deg, #f6e7b7, #f3cf6e 42%, #e4e8c9 68%, #d3dfc3); border: 1px solid rgba(32, 48, 31, 0.14); box-shadow: 0 40px 70px -44px rgba(32, 48, 31, 0.5); }
+    .t10 .sun-panel::before { content: ""; position: absolute; left: 50%; top: 11%; width: 58%; aspect-ratio: 1; border-radius: 50%; transform: translateX(-50%); background: radial-gradient(circle at 38% 32%, #fff6d5, #f2b705 58%, #e8a300); box-shadow: 0 0 70px rgba(242, 183, 5, 0.55); animation: sunBreathe 9s ease-in-out infinite; }
+    .t10 .sun-panel::after { content: ""; position: absolute; left: -10%; right: -10%; bottom: -6%; height: 44%; background: radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.55), transparent 60%), linear-gradient(180deg, transparent, rgba(63, 107, 58, 0.16)); border-radius: 50% 50% 0 0; }
+    .t10 .sun-panel svg { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; }
+    .t10 .glass-card { position: absolute; z-index: 3; left: -6%; bottom: 15%; background: rgba(251, 249, 239, 0.84); border: 1px solid rgba(32, 48, 31, 0.14); border-radius: 14px; padding: 13px 15px; backdrop-filter: blur(12px); box-shadow: 0 22px 40px -30px rgba(32, 48, 31, 0.5); }
+    .t10 .glass-card b { display: block; font-family: "Fraunces", serif; font-size: 18px; font-weight: 600; letter-spacing: -0.02em; }
+    .t10 .glass-card span { font-family: "IBM Plex Mono", monospace; font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .t10 .sun-tag { position: absolute; z-index: 3; right: 0; top: 20%; font-family: "IBM Plex Mono", monospace; font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); background: rgba(251, 249, 239, 0.8); border: 1px solid rgba(32, 48, 31, 0.12); border-radius: 99px; padding: 6px 10px; }
+    .t10 .stats { gap: 10px; }
+    .t10 .stat { background: rgba(255, 255, 255, 0.48); border: 1px solid rgba(32, 48, 31, 0.12); border-radius: 16px; padding: 20px; }
+    .t10 .stat strong { display: block; font-family: "Fraunces", serif; font-size: clamp(28px, 3.2vw, 40px); font-weight: 600; line-height: 1; letter-spacing: -0.035em; }
+    .t10 .stat span { display: block; margin-top: 8px; font-family: "IBM Plex Mono", monospace; font-size: 7.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .t10 .section-head h2 { font-family: "Fraunces", serif; font-size: clamp(32px, 4.2vw, 52px); font-weight: 600; line-height: 0.98; letter-spacing: -0.04em; }
+    .t10 .section-head h2 em { font-style: italic; color: var(--leaf); font-weight: 400; }
+    .t10 .section-head p { font-family: "IBM Plex Mono", monospace; font-size: 7.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); max-width: 220px; text-align: right; line-height: 1.8; }
+    .t10 .work-card { background: rgba(255, 255, 255, 0.5); border: 1px solid rgba(32, 48, 31, 0.12); border-radius: 22px; }
+    .t10 .work-card:hover { border-color: rgba(63, 107, 58, 0.35); box-shadow: 0 30px 60px -44px rgba(32, 48, 31, 0.5); }
+    .t10 .work-art { background: radial-gradient(70% 70% at 30% 25%, #f7e8b8, transparent 65%), linear-gradient(135deg, #edf0da, #d4e0c6); }
+    .t10 .work-art--a::before { content: ""; position: absolute; right: 12%; top: 14%; width: 40%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff6d5, #f2b705 60%, #e8a300); box-shadow: 0 0 40px rgba(242, 183, 5, 0.4); }
+    .t10 .work-art--a::after { content: ""; position: absolute; left: 16%; bottom: 12%; width: 44%; height: 48%; border: 1.5px solid rgba(63, 107, 58, 0.45); border-radius: 50% 50% 4px 4px; transform: rotate(-10deg); border-bottom-color: transparent; }
+    .t10 .work-art--b { background: linear-gradient(135deg, #e8eddc, #cfdcc1); }
+    .t10 .work-art--b::before { content: ""; position: absolute; inset: 22% 20%; border-top: 1.5px solid rgba(63, 107, 58, 0.45); border-bottom: 1.5px solid rgba(63, 107, 58, 0.45); border-radius: 50%; transform: rotate(8deg); }
+    .t10 .work-art--b::after { content: ""; position: absolute; right: 20%; top: 26%; width: 26%; aspect-ratio: 1; border-radius: 50%; background: rgba(199, 123, 78, 0.55); }
+    .t10 .work-body { padding: 20px; }
+    .t10 .work-title { font-family: "Fraunces", serif; font-weight: 600; letter-spacing: -0.03em; }
+    .t10 .work-desc { color: var(--muted); }
+    .t10 .tag { border-color: rgba(32, 48, 31, 0.16); color: var(--muted); opacity: 1; }
+    .t10 .contact-inner { background: var(--leaf); color: #f7f7e8; border-radius: 24px; padding: clamp(32px, 5vw, 56px); position: relative; overflow: hidden; }
+    .t10 .contact-inner::after { content: ""; position: absolute; right: -8%; top: -50%; width: 42%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(242, 183, 5, 0.55), transparent 65%); }
+    .t10 .contact h2 { font-family: "Fraunces", serif; font-weight: 600; font-size: clamp(36px, 5vw, 64px); letter-spacing: -0.04em; }
+    .t10 .contact h2 em { font-style: italic; color: #f7e8b8; font-weight: 400; }
+    .t10 .contact p { color: rgba(247, 247, 232, 0.68); }
+    .t10 .form { position: relative; z-index: 1; }
+    .t10 .form input { border-color: rgba(247, 247, 232, 0.35); border-radius: 999px; color: #f7f7e8; font-size: 12px; }
+    .t10 .form input::placeholder { color: rgba(247, 247, 232, 0.45); }
+    .t10 .form .btn-main { background: var(--sun); color: var(--ink); }
+    .t10 .form .btn-main:hover { background: #ffd23f; }
+    .t10 footer { border-color: rgba(32, 48, 31, 0.15); }
+    @keyframes sunBreathe { 0%, 100% { transform: translateX(-50%) scale(1); box-shadow: 0 0 70px rgba(242, 183, 5, 0.55); } 50% { transform: translateX(-50%) scale(1.03); box-shadow: 0 0 95px rgba(242, 183, 5, 0.7); } }
+
+    /* ============================================================
+       PREVIEW RESPONSIVE GUARDS
+       (declared last so they win over per-theme grid rules)
+    ============================================================ */
+    @media (max-width: 900px) {
+      .view .hero-grid { grid-template-columns: minmax(0, 1fr) !important; gap: clamp(28px, 6vw, 40px); }
+      .view .hero-grid > * { min-width: 0; }
+      .view .hero-grid .art,
+      .view .hero-grid .bloom-panel,
+      .view .hero-grid .map-panel,
+      .view .hero-grid .chart,
+      .view .hero-grid .slab-stage,
+      .view .hero-grid .sun-stage,
+      .view .hero-grid .console,
+      .view .hero-grid .board { width: 100%; max-width: 100%; }
+      .view .art,
+      .view .bloom-panel,
+      .view .slab-stage,
+      .view .sun-stage { min-height: clamp(320px, 58vw, 460px); }
+      .view .chart,
+      .view .map-panel { max-width: min(100%, 520px); margin-inline: auto; }
+      .t10 .glass-card { left: 0; }
+      .t10 .sun-tag { right: 4px; }
+      .t8 .work-card { flex-wrap: wrap; gap: 16px; }
+      .t8 .work-art { order: 0; width: 88px; margin-left: 0; }
+      .t8 .work-body { flex-basis: 100%; }
+      .t3 .ticker-track { font-size: 7px; }
+    }
+    @media (max-width: 560px) {
+      .view .stats { grid-template-columns: 1fr 1fr; }
+      .view .stat { padding: 16px; }
+      .view .work-body { padding: 16px; }
+      .t1 .art-tag--1 { right: 0; top: 4%; }
+      .t1 .art-tag--2 { left: 0; bottom: 4%; }
+      .t5 .brand span:last-child { font-size: 20px; }
+      .t5 .poster { width: 88%; }
+      .t5 .sticker { width: 74px; font-size: 6.5px; right: 2%; }
+      .t10 .glass-card { left: 4%; bottom: 8%; }
+      .t10 .sun-tag { top: 6%; }
+      .t8 .work-art { width: 72px; }
+      .t9 .console-grid { grid-template-columns: 1fr; }
+      .t4 .chart-label { font-size: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-bar" id="preview-bar" aria-label="Design preview navigation">
+    <button class="pb-back" id="pb-back" type="button">← All directions</button>
+    <span class="pb-label" id="pb-label">Direction 01</span>
+    <span class="pb-count" id="pb-count">01 / 10</span>
+    <button class="pb-arrow" id="pb-prev" type="button" aria-label="Previous direction">←</button>
+    <button class="pb-arrow" id="pb-next" type="button" aria-label="Next direction">→</button>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="picker" id="picker">
+    <div class="pk-shell">
+      <div class="pk-top">
+        <span class="pk-mark"><i></i> Abdullah Azmat · portfolio system</span>
+        <span>10 directions / 2026</span>
+      </div>
+      <header class="pk-head">
+        <span class="pk-kicker">UI portfolio — choose a direction</span>
+        <h1>Ten ways to make it <em>unmistakable.</em></h1>
+        <p class="pk-sub">Ten fresh, complete design languages built around your work in AI and full-stack engineering. Open any direction for a full landing-page preview, then pick one — I'll rebuild the real portfolio around it.</p>
+        <div class="pk-legend">
+          <span><i></i> Recommended for an AI engineer</span>
+          <span><i class="alt"></i> All-new systems · no repeats</span>
+          <span class="hint">Tip: use ← → inside a preview</span>
+        </div>
+      </header>
+
+      <div class="pk-grid">
+        <button class="pick" type="button" data-open="1" aria-label="Preview direction 01, Kiln and Clay">
+          <span class="pick-art pa-1" style="--t-bg:#f3eadf;--t-ink:#2a211a">
+            <span class="pa-kicker">Portfolio · 2026</span>
+            <span class="pa-title">Shaped<br />by <em>hand.</em></span>
+            <span class="pa-tag">Fraunces</span>
+          </span>
+          <span class="pick-body">
+            <span class="pick-row"><span class="pick-num">01</span><span class="pick-badge">Recommended</span></span>
+            <span class="pick-name">Kiln &amp; Clay</span>
+            <span class="pick-desc">Warm ceramics, arched forms, and quiet craft for a patient builder.</span>
+            <span class="pick-foot"><span class="pick-font">Fraunces · Karla</span><span class="pick-dots"><i style="background:#b55432"></i><i style="background:#6e7152"></i><i style="background:#dfcbb2"></i><i style="background:#f3eadf"></i></span></span>
+          </span>
+        </button>
+
+        <button class="pick" type="button" data-open="2" aria-label="Preview direction 02, Circuit Bloom">
+          <span class="pick-art pa-2" style="--t-bg:#f0f7ee;--t-ink:#0e2a22">
+            <span class="pa-kicker">AI · full-stack · systems</span>
+            <span class="pa-title">Intelligence<br />that <em>grows.</em></span>
+            <svg class="pa-svg" viewBox="0 0 220 150" aria-hidden="true"><path d="M10 138C40 120 18 92 52 78s44-4 52-30 12-32 46-38 50 4 60 10" fill="none" stroke="#1e6b4f" stroke-width="1.6" stroke-dasharray="5 6"/><circle cx="52" cy="78" r="4" fill="#c6f24e" stroke="#1e6b4f" stroke-width="1.4"/><circle cx="104" cy="48" r="3" fill="#c6f24e" stroke="#1e6b4f" stroke-width="1.4"/><circle cx="158" cy="14" r="5" fill="#c6f24e" stroke="#1e6b4f" stroke-width="1.4"/></svg>
+            <span class="pa-tag">Bricolage</span>
+          </span>
+          <span class="pick-body">
+            <span class="pick-row"><span class="pick-num">02</span><span class="pick-badge">Recommended</span></span>
+            <span class="pick-name">Circuit Bloom</span>
+            <span class="pick-desc">Botanical circuitry: living AI systems with precise green bones.</span>
+            <span class="pick-foot"><span class="pick-font">Bricolage · Instrument</span><span class="pick-dots"><i style="background:#1e6b4f"></i><i style="background:#c6f24e"></i><i style="background:#d9e9d6"></i><i style="background:#f0f7ee"></i></span></span>
+          </span>
+        </button>
+
+        <button class="pick" type="button" data-open="3" aria-label="Preview direction 03, Aero Index">
+          <span class="pick-art pa-3" style="--t-bg:#f5f6f2;--t-ink:#0b0f14">
+            <span class="pa-kicker">AA / index / departures</span>
+            <span class="pa-title">Built for<br />departure.</span>
+            <span class="pa-code">03</span>
+            <span class="pa-tag">Saira Condensed</span>
+          </span>
+          <span class="pick-body">
+            <span class="pick-row"><span class="pick-num">03</span><span class="pick-badge">Recommended</span></span>
+            <span class="pick-name">Aero Index</span>
+            <span class="pick-desc">Airport wayfinding clarity: sharp numbering, cobalt, safety yellow.</span>
+            <span class="pick-foot"><span class="pick-font">Saira · Archivo</span><span class="pick-dots"><i style="background:#1746d1"></i><i style="background:#f2c500"></i><i style="background:#d8dad3"></i><i style="background:#f5f6f2"></i></span></span>
+          </span>
+        </button>
+
+        <button class="pick" type="button" data-open="4" aria-label="Preview direction 04, Nocturne Ledger">
+          <span class="pick-art pa-4" style="--t-bg:#0c0e26;--t-ink:#ede6d6">
+            <span class="pa-kicker">Vol. 05 · night build</span>
+            <span class="pa-title">Notes from<br />the night.</span>
+            <span class="pa-tag" style="color:#c9a45c">Cormorant</span>
+          </span>
+          <span class="pick-body">
+            <span class="pick-row"><span class="pick-num">04</span><span class="pick-badge">New</span></span>
+            <span class="pick-name">Nocturne Ledger</span>
+            <span class="pick-desc">A midnight observatory of work: indigo, parchment, and brass.</span>
+            <span class="pick-foot"><span class="pick-font">Cormorant · Spline</span><span class="pick-dots"><i style="background:#c9a45c"></i><i style="background:#ede6d6"></i><i style="background:#8b93d9"></i><i style="background:#0c0e26"></i></span></span>
+          </span>
+        </button>
+
+        <button class="pick" type="button" data-open="5" aria-label="Preview direction 05, Riso Press">
+          <span class="pick-art pa-5" style="--t-bg:#f3ede1;--t-ink:#141414">
+            <span class="pa-kicker">Issue 01 · selected work</span>
+            <span class="pa-title">Print<br />the<br />future.</span>
+            <span class="pa-tag">Anton</span>
+          </span>
+          <span class="pick-body">
+            <span class="pick-row"><span class="pick-num">05</span><span class="pick-badge">New</span></span>
+            <span class="pick-name">Riso Press</span>
+            <span class="pick-desc">Risograph boldness: halftones, overprints, and honest ink.</span>
+            <span class="pick-foot"><span class="pick-font">Anton · Space Mono</span><span class="pick-dots"><i style="background:#ff4d8d"></i><i style="background:#2d5bff"></i><i style="background:#ffd23f"></i><i style="background:#141414"></i></span></span>
+          </span>
+        </button>
+
+        <button class="pick" type="button" data-open="6" aria-label="Preview direction 06, Terrain">
+          <span class="pick-art pa-6" style="--t-bg:#e8edf0;--t-ink:#20262b">
+            <span class="pa-kicker">Field notes · 2026</span>
+            <span class="pa-title">Map the<br /><em>unknown.</em></span>
+            <span class="pa-tag">Bricolage</span>
+          </span>
+          <span class="pick-body">
+            <span class="pick-row"><span class="pick-num">06</span><span class="pick-badge">New</span></span>
+            <span class="pick-name">Terrain</span>
+            <span class="pick-desc">Survey cartography: contour lines, coordinates, and field rigor.</span>
+            <span class="pick-foot"><span class="pick-font">Bricolage · Karla</span><span class="pick-dots"><i style="background:#c4552b"></i><i style="background:#3f5d4c"></i><i style="background:#c9d3d6"></i><i style="background:#e8edf0"></i></span></span>
+          </span>
+        </button>
+
+        <button class="pick" type="button" data-open="7" aria-label="Preview direction 07, Pulse Grid">
+          <span class="pick-art pa-7" style="--t-bg:#08090b;--t-ink:#f5f5f2">
+            <span class="pa-kicker">Live · portfolio feed</span>
+            <span class="pa-title">Build fast.<br /><em>Ship smart.</em></span>
+            <span class="pa-code">87</span>
+            <span class="pa-tag" style="color:#f5f5f2">Barlow</span>
+          </span>
+          <span class="pick-body">
+            <span class="pick-row"><span class="pick-num">07</span><span class="pick-badge">Recommended</span></span>
+            <span class="pick-name">Pulse Grid</span>
+            <span class="pick-desc">Broadcast energy: a live scoreboard for shipped work.</span>
+            <span class="pick-foot"><span class="pick-font">Barlow · JetBrains</span><span class="pick-dots"><i style="background:#ff3b30"></i><i style="background:#4d8dff"></i><i style="background:#ffd84d"></i><i style="background:#08090b"></i></span></span>
+          </span>
+        </button>
+
+        <button class="pick" type="button" data-open="8" aria-label="Preview direction 08, Monolith">
+          <span class="pick-art pa-8" style="--t-bg:#e9e7e1;--t-ink:#1b1b19">
+            <span class="pa-kicker">Room 01 · practice</span>
+            <span class="pa-title">Engineer,<br /><em>exhibited.</em></span>
+            <span class="pa-tag">Instrument Serif</span>
+          </span>
+          <span class="pick-body">
+            <span class="pick-row"><span class="pick-num">08</span><span class="pick-badge">New</span></span>
+            <span class="pick-name">Monolith</span>
+            <span class="pick-desc">Museum restraint: massive type, stone surfaces, one red accent.</span>
+            <span class="pick-foot"><span class="pick-font">Instrument Serif · Sans</span><span class="pick-dots"><i style="background:#d6401f"></i><i style="background:#1b1b19"></i><i style="background:#c9c5bb"></i><i style="background:#f6f4ef"></i></span></span>
+          </span>
+        </button>
+
+        <button class="pick" type="button" data-open="9" aria-label="Preview direction 09, Soft Machine">
+          <span class="pick-art pa-9" style="--t-bg:#e9e7e2;--t-ink:#22221f">
+            <span class="pa-kicker">Systems · 2026</span>
+            <span class="pa-title">Human<br />intent. <em>Machine</em><br />execution.</span>
+            <span class="pa-tag">Archivo</span>
+          </span>
+          <span class="pick-body">
+            <span class="pick-row"><span class="pick-num">09</span><span class="pick-badge">New</span></span>
+            <span class="pick-name">Soft Machine</span>
+            <span class="pick-desc">Braun-inspired product logic: dials, labels, and warm precision.</span>
+            <span class="pick-foot"><span class="pick-font">Archivo · IBM Plex</span><span class="pick-dots"><i style="background:#e85a2a"></i><i style="background:#22221f"></i><i style="background:#b9b5ac"></i><i style="background:#f4f2ed"></i></span></span>
+          </span>
+        </button>
+
+        <button class="pick" type="button" data-open="10" aria-label="Preview direction 10, Verdant">
+          <span class="pick-art pa-10" style="--t-bg:#fbf9ef;--t-ink:#20301f">
+            <span class="pa-kicker">Solar · systems · 2026</span>
+            <span class="pa-title">Build in<br /><em>daylight.</em></span>
+            <span class="pa-tag">Fraunces · Karla</span>
+          </span>
+          <span class="pick-body">
+            <span class="pick-row"><span class="pick-num">10</span><span class="pick-badge">New</span></span>
+            <span class="pick-name">Verdant</span>
+            <span class="pick-desc">Solarpunk warmth: humane AI, sunlit arches, and soft optimism.</span>
+            <span class="pick-foot"><span class="pick-font">Fraunces · Karla</span><span class="pick-dots"><i style="background:#3f6b3a"></i><i style="background:#f2b705"></i><i style="background:#dce5cf"></i><i style="background:#fbf9ef"></i></span></span>
+          </span>
+        </button>
+      </div>
+
+      <footer class="picker-foot">
+        <span>10 directions · built for Abdullah Azmat · 2026</span>
+        <span>Pick one → I rebuild the live site <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top</a></span>
+      </footer>
+    </div>
+  </div>
+
+  <!-- 01 — KILN & CLAY -->
+  <section class="view t1" data-index="1" data-name="01 · Kiln &amp; Clay">
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="#" data-toast="Preview only — the live site comes next.">
+          <span class="brand-mark">A</span>
+          <span>Abdullah Azmat</span>
+        </a>
+        <div class="nav-links">
+          <a href="#work-1" data-scroll="#work-1">Work</a>
+          <a href="#" data-toast="The approach section is planned for the live build.">Approach</a>
+          <a href="#contact-1" data-scroll="#contact-1">Contact</a>
+        </div>
+        <a class="btn btn-nav" href="#contact-1" data-scroll="#contact-1">Let's talk →</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">AI engineer · full-stack developer</span>
+          <h1>Software,<br />shaped by <em>hand.</em></h1>
+          <p>I'm Abdullah Azmat. I build AI systems and web products with the patience of a craftsperson and the precision of a compiler — from RAG pipelines to the interface on top.</p>
+          <div class="actions">
+            <a class="btn btn-main" href="#work-1" data-scroll="#work-1">View selected work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a class="btn btn-link" href="#" data-toast="A longer process write-up is planned for the live build.">Read the approach</a>
+          </div>
+          <div class="hero-note"><i></i> Pakistan · working worldwide · open to work</div>
+        </div>
+        <div class="art">
+          <div class="vessel">
+            <span class="glyph"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M30 72V58M50 72V38M70 72V24" /><circle cx="70" cy="14" r="4" fill="currentColor" stroke="none" /></svg></span>
+          </div>
+          <div class="art-tag art-tag--1"><b>AI, fired daily.</b><span>RAG · agents · web</span></div>
+          <div class="art-tag art-tag--2"><b>06 shipped</b><span>selected work</span></div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><strong>06</strong><span>Projects shipped</span></div>
+        <div class="stat"><strong>03</strong><span>AI systems</span></div>
+        <div class="stat"><strong>5th</strong><span>CS semester</span></div>
+        <div class="stat"><strong>01</strong><span>Maker · builder</span></div>
+      </div>
+
+      <section class="section" id="work-1">
+        <div class="section-head">
+          <h2>Selected <em>work.</em></h2>
+          <p>Two pieces from six, chosen for the problem — not the polish.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-art work-art--a"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">AI application</span><span class="tag">2026</span></div>
+              <h3 class="work-title">LegalIntel AI</h3>
+              <p class="work-desc">A document intelligence engine for legal teams. Ask a contract a question, get an answer backed by exact page citations.</p>
+              <div class="tags"><span class="tag">Next.js</span><span class="tag">LangChain</span><span class="tag">RAG</span></div>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-art work-art--b"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">AI automation</span><span class="tag">2026</span></div>
+              <h3 class="work-title">Law Firm Intake</h3>
+              <p class="work-desc">An AI front office that qualifies leads, routes matters, and replaces scattered email with one clean intake flow.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact-1">
+        <div class="contact-inner">
+          <div>
+            <h2>Have a problem worth <em>shaping?</em></h2>
+            <p>Freelance projects, collaborations, and full-time roles. Tell me what you're building — I'll reply within a day.</p>
+          </div>
+          <form class="form demo-form">
+            <input type="email" placeholder="you@company.com" aria-label="Your email" required />
+            <button class="btn btn-main" type="submit">Start a conversation</button>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Abdullah Azmat · built by hand</span>
+        <span class="foot-links"><a href="#work-1" data-scroll="#work-1">Work</a><a href="#contact-1" data-scroll="#contact-1">Contact</a></span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- 02 — CIRCUIT BLOOM -->
+  <section class="view t2" data-index="2" data-name="02 · Circuit Bloom">
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="#" data-toast="Preview only — the live site comes next.">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9M12 13C12 9 9 6 4 6c0 5 3 7 8 7ZM12 10c0-4 3-6 8-6 0 4-3 6-8 6Z" /></svg></span>
+          <span>Abdullah Azmat</span>
+        </a>
+        <div class="nav-links">
+          <a href="#work-2" data-scroll="#work-2">Work</a>
+          <a href="#" data-toast="The systems section is planned for the live build.">Systems</a>
+          <a href="#contact-2" data-scroll="#contact-2">Contact</a>
+        </div>
+        <a class="btn btn-nav" href="#contact-2" data-scroll="#contact-2">Let's grow →</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">AI · full-stack · systems</span>
+          <h1>Intelligence<br />that <em>grows.</em></h1>
+          <p>I design AI systems that take root — retrieval pipelines, agents, and interfaces that feel alive. Full-stack from model to pixel, with every node accounted for.</p>
+          <div class="actions">
+            <a class="btn btn-main" href="#work-2" data-scroll="#work-2">Explore the work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a class="btn btn-soft" href="#" data-toast="A systems write-up is planned for the live build.">How it works</a>
+          </div>
+          <div class="metrics">
+            <span class="metric"><b>24</b> docs grounded</span>
+            <span class="metric"><b>87</b> lead score</span>
+            <span class="metric"><b>0</b> hallucinations</span>
+          </div>
+        </div>
+        <div class="bloom-panel">
+          <svg viewBox="0 0 420 420" aria-hidden="true">
+            <circle cx="210" cy="210" r="156" fill="none" stroke="#1e6b4f" stroke-opacity="0.14" stroke-dasharray="2 9" />
+            <circle cx="210" cy="210" r="108" fill="none" stroke="#1e6b4f" stroke-opacity="0.1" />
+            <path class="vine-path" d="M74 342C116 286 82 246 152 214s132 8 134-66-58-76 62-92" fill="none" stroke="#1e6b4f" stroke-width="2" />
+            <path class="vine-path" d="M108 364C154 320 134 286 194 264s112 6 118-52" fill="none" stroke="#1e6b4f" stroke-opacity="0.45" stroke-width="1.2" />
+            <g fill="#c6f24e" stroke="#1e6b4f" stroke-width="1.5">
+              <circle class="node" cx="152" cy="214" r="6" />
+              <circle class="node" cx="286" cy="148" r="8" />
+              <circle class="node" cx="194" cy="264" r="5" />
+              <circle class="node" cx="312" cy="212" r="4" />
+            </g>
+            <g fill="none" stroke="#1e6b4f" stroke-opacity="0.28">
+              <circle cx="286" cy="148" r="30" />
+              <circle cx="286" cy="148" r="54" stroke-dasharray="3 7" />
+              <circle cx="152" cy="214" r="22" />
+            </g>
+            <g fill="#1e6b4f" opacity="0.5" font-family="IBM Plex Mono, monospace" font-size="7" letter-spacing="1">
+              <text x="302" y="110">AGENT NODE</text>
+              <text x="86" y="200">ROOT / 01</text>
+              <text x="236" y="360">RAG · 24 DOCS</text>
+            </g>
+          </svg>
+          <div class="float-tag float-tag--a"><b>1.2s</b>response time</div>
+          <div class="float-tag float-tag--b"><b>online</b>agent · grounded</div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><strong>24</strong><span>Documents grounded</span></div>
+        <div class="stat"><strong>87</strong><span>Avg. lead score</span></div>
+        <div class="stat"><strong>1.2s</strong><span>Response time</span></div>
+        <div class="stat"><strong>0</strong><span>Hallucinations</span></div>
+      </div>
+
+      <section class="section" id="work-2">
+        <div class="section-head">
+          <h2>Things that <em>took root.</em></h2>
+          <p>Selected systems — each one shipped, measured, and still growing.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-art work-art--a"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">AI application</span><span class="tag">2026</span></div>
+              <h3 class="work-title">LegalIntel AI</h3>
+              <p class="work-desc">Contract Q&amp;A with page-level citations, clause risk analysis, and a workspace built for zero-hallucination output.</p>
+              <div class="tags"><span class="tag">Next.js</span><span class="tag">LangChain</span><span class="tag">OpenAI</span></div>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-art work-art--b"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Community platform</span><span class="tag">2025</span></div>
+              <h3 class="work-title">VORTX Esports</h3>
+              <p class="work-desc">Tournament infrastructure for a growing competitive scene — brackets, registrations, and a live match hub.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Supabase</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact-2">
+        <div class="contact-inner">
+          <div>
+            <h2>Plant the <em>next idea.</em></h2>
+            <p>I'm open to AI engineering, full-stack builds, and product collaborations. Bring the ambiguous problem — I'll bring the system.</p>
+          </div>
+          <form class="form demo-form">
+            <input type="email" placeholder="you@company.com" aria-label="Your email" required />
+            <button class="btn btn-main" type="submit">Start a project</button>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Abdullah Azmat · systems that grow</span>
+        <span class="foot-links"><a href="#work-2" data-scroll="#work-2">Work</a><a href="#contact-2" data-scroll="#contact-2">Contact</a></span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- 03 — AERO INDEX -->
+  <section class="view t3" data-index="3" data-name="03 · Aero Index">
+    <div class="ticker-bar">
+      <div class="ticker-track">
+        <span><b>AA / 026</b> · AI engineering <b>·</b> full-stack development <b>·</b> open to work <b>·</b> departures daily <b>·</b> legalintel ai <b>·</b> law firm intake <b>·</b> vortx <b>·</b></span>
+        <span><b>AA / 026</b> · AI engineering <b>·</b> full-stack development <b>·</b> open to work <b>·</b> departures daily <b>·</b> legalintel ai <b>·</b> law firm intake <b>·</b> vortx <b>·</b></span>
+      </div>
+    </div>
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="#" data-toast="Preview only — the live site comes next.">
+          <span class="brand-mark">AA</span>
+          <span>Index / 026</span>
+        </a>
+        <div class="nav-links">
+          <a href="#work-3" data-scroll="#work-3">Work</a>
+          <a href="#" data-toast="The profile section is planned for the live build.">Profile</a>
+          <a href="#contact-3" data-scroll="#contact-3">Contact</a>
+        </div>
+        <a class="btn btn-nav" href="#contact-3" data-scroll="#contact-3">Check in <b>↗</b></a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">AI engineer &amp; full-stack developer</span>
+          <h1>Built for<br /><span class="blue">departure.</span></h1>
+          <p>Clear systems, fast handoffs, and products that land on time. I build the AI layer and the interface that makes it usable.</p>
+          <div class="actions">
+            <a class="btn btn-main" href="#work-3" data-scroll="#work-3">View departures →</a>
+            <a class="btn btn-soft" href="#" data-toast="A profile card is planned for the live build.">Operator profile</a>
+          </div>
+          <div class="hero-meta">
+            <span>Route<b>AI → Web</b></span>
+            <span>Base<b>Pakistan</b></span>
+            <span>Status<b style="color:#1746d1">Available</b></span>
+          </div>
+        </div>
+        <div>
+          <div class="board" aria-label="Selected work departure board">
+            <div class="board-head"><span>Selected work / departures</span><b>Gate 03</b></div>
+            <div class="board-row">
+              <div><strong>LEGALINTEL AI</strong><small>AI application · 2026</small></div>
+              <span class="gate">A1</span>
+              <span class="status">On time</span>
+            </div>
+            <div class="board-row">
+              <div><strong>LAW FIRM INTAKE</strong><small>AI automation · 2026</small></div>
+              <span class="gate">B2</span>
+              <span class="status yellow">Boarding</span>
+            </div>
+            <div class="board-row">
+              <div><strong>VORTX ESPORTS</strong><small>Web platform · 2025</small></div>
+              <span class="gate">C3</span>
+              <span class="status">Departed</span>
+            </div>
+            <div class="board-row">
+              <div><strong>ROYAL VENUE</strong><small>Booking platform · 2025</small></div>
+              <span class="gate">D4</span>
+              <span class="status">On time</span>
+            </div>
+          </div>
+          <div class="runway"><span>AA / 026 · cleared for build</span></div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span>Total releases</span><strong>06</strong></div>
+        <div class="stat"><span>AI routes</span><strong>03</strong></div>
+        <div class="stat"><span>Core stacks</span><strong>02</strong></div>
+        <div class="stat"><span>Operator</span><strong>01</strong></div>
+      </div>
+
+      <section class="section" id="work-3">
+        <div class="section-head">
+          <h2>Now <em>boarding.</em></h2>
+          <p>Selected work, sorted by departure. Every build cleared for production.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-art work-art--a"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">AI-04 · on time</span><span class="tag">2026</span></div>
+              <h3 class="work-title">LegalIntel AI</h3>
+              <p class="work-desc">An AI document intelligence engine for legal teams. Grounded answers, exact citations, and a review workspace.</p>
+              <div class="tags"><span class="tag">Next.js</span><span class="tag">LangChain</span><span class="tag">RAG</span></div>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-art work-art--b"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">WEB-02 · departed</span><span class="tag">2025</span></div>
+              <h3 class="work-title">Royal Venue</h3>
+              <p class="work-desc">A booking platform for a marriage hall — availability, enquiries, and a clean operator dashboard.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact-3">
+        <div class="contact-inner">
+          <div>
+            <h2>Ready for <em>departure?</em></h2>
+            <p>Tell me the destination. I'll map the route, build the system, and keep the handoffs clean.</p>
+          </div>
+          <form class="form demo-form">
+            <input type="email" placeholder="you@company.com" aria-label="Your email" required />
+            <button class="btn btn-main" type="submit">Check in →</button>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Abdullah Azmat · AA / Index 026</span>
+        <span class="foot-links"><a href="#work-3" data-scroll="#work-3">Departures</a><a href="#contact-3" data-scroll="#contact-3">Check in</a></span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- 04 — NOCTURNE LEDGER -->
+  <section class="view t4" data-index="4" data-name="04 · Nocturne Ledger">
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="#" data-toast="Preview only — the live site comes next.">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4 8.5 8.5 0 1 0 20 14.2Z" /></svg></span>
+          <span>Abdullah Azmat</span>
+        </a>
+        <div class="nav-links">
+          <a href="#work-4" data-scroll="#work-4">Catalogue</a>
+          <a href="#" data-toast="The notes section is planned for the live build.">Notes</a>
+          <a href="#contact-4" data-scroll="#contact-4">Signal</a>
+        </div>
+        <a class="btn btn-nav" href="#contact-4" data-scroll="#contact-4">Send a signal</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Vol. 05 · the night build</span>
+          <h1>Notes from<br />the <em>night</em><br />build.</h1>
+          <p>A catalogue of AI systems and web products, assembled between midnight and morning. Precise, grounded, and built to be read by daylight.</p>
+          <div class="actions">
+            <a class="btn btn-main" href="#work-4" data-scroll="#work-4">Open the catalogue</a>
+            <a class="btn btn-link" href="#" data-toast="The process notes are planned for the live build.">Read the notes →</a>
+          </div>
+          <div class="hero-meta">
+            <span>Entries<b>06</b></span>
+            <span>Discipline<b>AI · Web</b></span>
+            <span>Status<b>Open</b></span>
+          </div>
+        </div>
+        <div class="chart">
+          <svg viewBox="0 0 400 400" aria-hidden="true">
+            <g fill="none" stroke="#c9a45c" stroke-opacity="0.5">
+              <circle cx="200" cy="200" r="128" stroke-dasharray="2 8" />
+              <ellipse cx="200" cy="200" rx="150" ry="64" transform="rotate(-24 200 200)" stroke-opacity="0.25" />
+              <ellipse cx="200" cy="200" rx="86" ry="150" transform="rotate(38 200 200)" stroke-opacity="0.18" />
+            </g>
+            <path d="M128 122L196 176L282 98L318 240L196 176L96 270" fill="none" stroke="#c9a45c" stroke-width="1" stroke-opacity="0.55" />
+            <g fill="#ede6d6">
+              <circle cx="128" cy="122" r="2" />
+              <circle cx="282" cy="98" r="1.5" />
+              <circle cx="320" cy="240" r="2" />
+              <circle cx="96" cy="270" r="1.5" />
+            </g>
+            <circle cx="196" cy="176" r="4" fill="#c9a45c" />
+            <circle cx="196" cy="176" r="13" fill="none" stroke="#c9a45c" stroke-opacity="0.3" />
+            <circle cx="282" cy="98" r="3" fill="#8b93d9" />
+            <circle cx="318" cy="240" r="3" fill="#c9a45c" />
+            <g fill="#a6a4b8" font-family="IBM Plex Mono, monospace" font-size="6.5" letter-spacing="1.2">
+              <text x="206" y="172">CORE / 05</text>
+              <text x="288" y="92">AGENT</text>
+              <text x="120" y="116">RAG</text>
+            </g>
+          </svg>
+          <span class="chart-label chart-label--a">Fig. 01<b>System map</b></span>
+          <span class="chart-label chart-label--b">Lat. 33.68° N<b>Long. 73.04° E</b></span>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat" data-num="I"><strong>03:41</strong><span>Average build hour</span></div>
+        <div class="stat" data-num="II"><strong>24</strong><span>Documents grounded</span></div>
+        <div class="stat" data-num="III"><strong>87%</strong><span>Answer precision</span></div>
+        <div class="stat" data-num="IV"><strong>∞</strong><span>Iterations</span></div>
+      </div>
+
+      <section class="section" id="work-4">
+        <div class="section-head">
+          <h2>Selected <em>entries.</em></h2>
+          <p>From the ledger — systems with citations, constraints, and a point of view.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-art work-art--a"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Entry 01 · AI</span><span class="tag">2026</span></div>
+              <h3 class="work-title">LegalIntel AI</h3>
+              <p class="work-desc">Contract Q&amp;A grounded in source pages, with clause-level risk and a workspace designed for legal review.</p>
+              <div class="tags"><span class="tag">Next.js</span><span class="tag">LangChain</span><span class="tag">RAG</span></div>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-art work-art--b"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Entry 02 · Web</span><span class="tag">2025</span></div>
+              <h3 class="work-title">Campus Lost &amp; Found</h3>
+              <p class="work-desc">A community recovery platform for a university campus — lost items, claims, and a trustworthy handover flow.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MySQL</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact-4">
+        <div class="contact-inner">
+          <div>
+            <h2>Send a <em>signal.</em></h2>
+            <p>If you're building something that needs intelligence and structure, I'd like to hear about it.</p>
+          </div>
+          <form class="form demo-form">
+            <input type="email" placeholder="you@company.com" aria-label="Your email" required />
+            <button class="btn btn-main" type="submit">Write to me</button>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Abdullah Azmat · nocturnal ledger</span>
+        <span class="foot-links"><a href="#work-4" data-scroll="#work-4">Catalogue</a><a href="#contact-4" data-scroll="#contact-4">Signal</a></span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- 05 — RISO PRESS -->
+  <section class="view t5" data-index="5" data-name="05 · Riso Press">
+    <div class="topline"></div>
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="#" data-toast="Preview only — the live site comes next.">
+          <span class="brand-mark">AA</span>
+          <span>Abdullah<br />Azmat</span>
+        </a>
+        <div class="nav-links">
+          <a href="#work-5" data-scroll="#work-5">Editions</a>
+          <a href="#" data-toast="The process section is planned for the live build.">Process</a>
+          <a href="#contact-5" data-scroll="#contact-5">Contact</a>
+        </div>
+        <a class="btn btn-nav" href="#contact-5" data-scroll="#contact-5">Get in touch ↗</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Issue 01 · selected work</span>
+          <h1>Print<br />the<br /><span class="pink">future.</span></h1>
+          <p>AI + full-stack, pressed in two inks. I build bold ideas with honest craft and zero filler — from retrieval systems to storefronts.</p>
+          <div class="actions">
+            <a class="btn btn-main" href="#work-5" data-scroll="#work-5">See the editions</a>
+            <a class="btn btn-soft" href="#" data-toast="The colophon is planned for the live build.">Read the colophon</a>
+          </div>
+          <div class="hero-note">Six editions · two inks · one maker <span class="page-mark">P. 01</span></div>
+        </div>
+        <div class="poster-wrap">
+          <div class="poster">
+            <span class="poster-circle poster-circle--pink"></span>
+            <span class="poster-circle poster-circle--blue"></span>
+            <div class="poster-type">
+              <strong>Build<br />with<br />intent.</strong>
+              <span>Abdullah Azmat · AI + full-stack</span>
+            </div>
+          </div>
+          <span class="sticker">AI / ML<br />INSIDE</span>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span>Editions</span><strong>06</strong></div>
+        <div class="stat"><span>AI runs</span><strong>03</strong></div>
+        <div class="stat"><span>Inks</span><strong>02</strong></div>
+        <div class="stat"><span>Maker</span><strong>01</strong></div>
+      </div>
+
+      <section class="section" id="work-5">
+        <div class="section-head">
+          <h2>Selected <em>editions.</em></h2>
+          <p>Printed matter for the web. Each edition solved a real problem.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-art work-art--a"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Edition 01 · AI</span><span class="tag">2026</span></div>
+              <h3 class="work-title">LegalIntel AI</h3>
+              <p class="work-desc">An AI document engine for legal teams. Ask a contract a question; get an answer with exact page citations.</p>
+              <div class="tags"><span class="tag">Next.js</span><span class="tag">LangChain</span><span class="tag">RAG</span></div>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-art work-art--b"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Edition 02 · Commerce</span><span class="tag">2025</span></div>
+              <h3 class="work-title">Ayesha.a Collection</h3>
+              <p class="work-desc">A boutique storefront with a handmade feel — catalogue, cart, and a checkout that stays out of the way.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact-5">
+        <div class="contact-inner">
+          <div>
+            <h2>Commission the <em>next edition.</em></h2>
+            <p>Have a product that needs a point of view? Let's make something worth printing.</p>
+          </div>
+          <form class="form demo-form">
+            <input type="email" placeholder="you@company.com" aria-label="Your email" required />
+            <button class="btn btn-main" type="submit">Get in touch ↗</button>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Abdullah Azmat · printed with intent</span>
+        <span class="foot-links"><a href="#work-5" data-scroll="#work-5">Editions</a><a href="#contact-5" data-scroll="#contact-5">Contact</a></span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- 06 — TERRAIN -->
+  <section class="view t6" data-index="6" data-name="06 · Terrain">
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="#" data-toast="Preview only — the live site comes next.">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8" /><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z" /></svg></span>
+          <span>Abdullah Azmat</span>
+        </a>
+        <div class="nav-links">
+          <a href="#work-6" data-scroll="#work-6">Field work</a>
+          <a href="#" data-toast="The survey notes are planned for the live build.">Survey notes</a>
+          <a href="#contact-6" data-scroll="#contact-6">Contact</a>
+        </div>
+        <a class="btn btn-nav" href="#contact-6" data-scroll="#contact-6">Start a survey →</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="coords"><span>LAT <b>33.68° N</b></span><span>LONG <b>73.04° E</b></span><span>ELEV <b>540 M</b></span></div>
+          <span class="eyebrow">Field notes · 2026</span>
+          <h1>Map the<br /><em>unknown.</em></h1>
+          <p>I turn ambiguous problems into shipped systems — measured, tested, and built to last. AI engineering with a surveyor's discipline.</p>
+          <div class="actions">
+            <a class="btn btn-main" href="#work-6" data-scroll="#work-6">Open field work</a>
+            <a class="btn btn-link" href="#" data-toast="The survey method is planned for the live build.">Survey method</a>
+          </div>
+        </div>
+        <div class="map-panel">
+          <svg viewBox="0 0 400 400" aria-hidden="true">
+            <g fill="none" stroke="#20262b" stroke-opacity="0.24" stroke-width="1">
+              <path d="M-20 76C54 38 108 118 196 84S318 28 420 66" />
+              <path d="M-20 116C54 78 108 158 196 124S318 68 420 106" />
+              <path d="M-20 336C54 298 108 378 196 344S318 288 420 326" />
+            </g>
+            <g fill="none" stroke="#20262b" stroke-opacity="0.14" stroke-dasharray="2 7">
+              <circle cx="212" cy="212" r="122" />
+              <circle cx="212" cy="212" r="82" />
+            </g>
+            <path class="map-route" d="M60 300C120 260 110 200 190 190S300 160 330 92" fill="none" stroke="#c4552b" stroke-width="2" />
+            <g fill="#c4552b">
+              <circle class="map-pin" cx="60" cy="300" r="5" />
+              <circle class="map-pin" cx="330" cy="92" r="5" />
+            </g>
+            <g fill="#20262b" font-family="IBM Plex Mono, monospace" font-size="6.5" letter-spacing="1.1" opacity="0.6">
+              <text x="70" y="322">START / 02</text>
+              <text x="280" y="82">SHIP / 06</text>
+              <text x="196" y="236">ROUTE 01</text>
+            </g>
+          </svg>
+          <span class="map-label map-label--a">Sector 01<b>Discovery</b></span>
+          <span class="map-label map-label--b">Sector 06<b>Production</b></span>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span>Projects mapped</span><strong>06</strong></div>
+        <div class="stat"><span>AI builds</span><strong>03</strong></div>
+        <div class="stat"><span>Uptime</span><strong>99.9%</strong></div>
+        <div class="stat"><span>Active route</span><strong>01</strong></div>
+      </div>
+
+      <section class="section" id="work-6">
+        <div class="section-head">
+          <h2>Field <em>reports.</em></h2>
+          <p>Selected expeditions — each one surveyed, built, and documented.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-art work-art--a"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Report 01 · AI</span><span class="tag">2026</span></div>
+              <h3 class="work-title">Law Firm Intake</h3>
+              <p class="work-desc">An AI front office that captures enquiries, scores leads, and routes matters to the right person automatically.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">LangChain</span></div>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-art work-art--b"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Report 02 · Web</span><span class="tag">2025</span></div>
+              <h3 class="work-title">VORTX Esports</h3>
+              <p class="work-desc">A tournament platform for a growing competitive scene — registrations, brackets, and a live match hub.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Supabase</span><span class="tag">Tailwind</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact-6">
+        <div class="contact-inner">
+          <div>
+            <h2>Start a new <em>survey.</em></h2>
+            <p>Bring the unmapped problem. I'll scope the terrain, choose the route, and build the system.</p>
+          </div>
+          <form class="form demo-form">
+            <input type="email" placeholder="you@company.com" aria-label="Your email" required />
+            <button class="btn btn-main" type="submit">Send coordinates →</button>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Abdullah Azmat · terrain survey 026</span>
+        <span class="foot-links"><a href="#work-6" data-scroll="#work-6">Field work</a><a href="#contact-6" data-scroll="#contact-6">Contact</a></span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- 07 — PULSE GRID -->
+  <section class="view t7" data-index="7" data-name="07 · Pulse Grid">
+    <div class="live-strip">
+      <div class="feed">
+        <span><i></i><b>Portfolio feed</b> · LegalIntel AI shipped · response time 1.2s · 24/24 docs grounded · VORTX live · open to work ·</span>
+        <span><i></i><b>Portfolio feed</b> · LegalIntel AI shipped · response time 1.2s · 24/24 docs grounded · VORTX live · open to work ·</span>
+      </div>
+    </div>
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="#" data-toast="Preview only — the live site comes next.">
+          <span class="brand-mark">AA</span>
+          <span>Pulse / 026</span>
+        </a>
+        <div class="nav-links">
+          <a href="#work-7" data-scroll="#work-7">Results</a>
+          <a href="#" data-toast="The profile section is planned for the live build.">Roster</a>
+          <a href="#contact-7" data-scroll="#contact-7">Contact</a>
+        </div>
+        <a class="btn btn-nav" href="#contact-7" data-scroll="#contact-7">Let's talk ↗</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Live · portfolio feed</span>
+          <h1>Build fast.<br /><span class="outline">Ship</span> <span class="blue">smart.</span></h1>
+          <p>AI systems and full-stack products for people who measure results, not promises. I build the pipeline, the interface, and the proof.</p>
+          <div class="actions">
+            <a class="btn btn-main" href="#work-7" data-scroll="#work-7">See the results ↓</a>
+            <a class="btn btn-link" href="#" data-toast="The full stats page is planned for the live build.">Open the stats</a>
+          </div>
+          <div class="hero-meta">
+            <span>Lead score<b>87 / 100</b></span>
+            <span>Response<b>1.2 seconds</b></span>
+            <span>Uptime<b>24 / 7</b></span>
+          </div>
+        </div>
+        <div class="scorecard">
+          <div class="score-head"><span>Portfolio / live</span><span class="score-live"><i></i>Live</span></div>
+          <div class="score-main">
+            <div class="score-num">87<small> / 100<br />lead score</small></div>
+            <div class="score-bars"><i style="--w:92%"></i><i style="--w:74%"></i><i style="--w:61%"></i></div>
+          </div>
+          <div class="score-rows">
+            <div class="score-row"><span>Response</span><b>1.2s</b></div>
+            <div class="score-row"><span>Grounded docs</span><b>24 / 24</b></div>
+            <div class="score-row"><span>Hallucinations</span><b>0</b></div>
+            <div class="score-row"><span>Status</span><b class="good">Shipping</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span>Lead score</span><strong>87</strong></div>
+        <div class="stat"><span>Response</span><strong>1.2s</strong></div>
+        <div class="stat"><span>Uptime</span><strong>24/7</strong></div>
+        <div class="stat"><span>Fluff</span><strong>0</strong></div>
+      </div>
+
+      <section class="section" id="work-7">
+        <div class="section-head">
+          <h2>Recent <em>results.</em></h2>
+          <p>Match report — shipped builds with the numbers still attached.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-art work-art--a"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">AI application · 87</span><span class="tag">2026</span></div>
+              <h3 class="work-title">LegalIntel AI</h3>
+              <p class="work-desc">Contract Q&amp;A with exact citations, clause risk, and a review surface built for zero-hallucination output.</p>
+              <div class="tags"><span class="tag">Next.js</span><span class="tag">LangChain</span><span class="tag">RAG</span></div>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-art work-art--b"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Commerce · FT</span><span class="tag">2025</span></div>
+              <h3 class="work-title">NOVA Commerce</h3>
+              <p class="work-desc">A full commerce stack — catalogue, cart, checkout, and an admin view that makes stock feel simple.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact-7">
+        <div class="contact-inner">
+          <div>
+            <h2>Join the <em>roster.</em></h2>
+            <p>Have a build that needs to ship? Send the brief. I'll reply with a plan, not a pitch deck.</p>
+          </div>
+          <form class="form demo-form">
+            <input type="email" placeholder="you@company.com" aria-label="Your email" required />
+            <button class="btn btn-main" type="submit">Let's talk →</button>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Abdullah Azmat · pulse feed 026</span>
+        <span class="foot-links"><a href="#work-7" data-scroll="#work-7">Results</a><a href="#contact-7" data-scroll="#contact-7">Contact</a></span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- 08 — MONOLITH -->
+  <section class="view t8" data-index="8" data-name="08 · Monolith">
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="#" data-toast="Preview only — the live site comes next.">
+          <span class="brand-mark"></span>
+          <span>Abdullah Azmat</span>
+        </a>
+        <div class="nav-links">
+          <a href="#work-8" data-scroll="#work-8">Works</a>
+          <a href="#" data-toast="The practice page is planned for the live build.">Practice</a>
+          <a href="#contact-8" data-scroll="#contact-8">Visit</a>
+        </div>
+        <a class="btn btn-nav" href="#contact-8" data-scroll="#contact-8">Get in touch</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Room 01 · the practice</span>
+          <h1>Engineer,<br /><em>exhibited.</em></h1>
+          <p>A practice concerned with intelligence, structure, and the space between. I build AI systems and web products that are meant to be used, not just viewed.</p>
+          <div class="actions">
+            <a class="btn btn-main" href="#work-8" data-scroll="#work-8">View the works</a>
+            <a class="btn btn-link" href="#" data-toast="The artist statement is planned for the live build.">Read the statement</a>
+          </div>
+          <div class="hero-meta">
+            <span>Period<b>2021 — 26</b></span>
+            <span>Media<b>AI · Web</b></span>
+            <span>Status<b>Open</b></span>
+          </div>
+        </div>
+        <div class="slab-stage">
+          <div class="slab"></div>
+          <span class="slab-label"><b>Fig. 01</b>Engineer / builder, 2026. Stone, code, and patience.</span>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><strong>2021—26</strong><span>Years in practice</span></div>
+        <div class="stat"><strong>06</strong><span>Works</span></div>
+        <div class="stat"><strong>03</strong><span>Media</span></div>
+        <div class="stat"><strong>01</strong><span>Practice</span></div>
+      </div>
+
+      <section class="section" id="work-8">
+        <div class="section-head">
+          <h2>Selected <em>works.</em></h2>
+          <p>Objects in the collection. Each work is a shipped system.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-art work-art--a"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Work 01 · AI application</span><span class="tag">2026</span></div>
+              <h3 class="work-title">LegalIntel AI</h3>
+              <p class="work-desc">Document intelligence for legal teams — grounded answers, exact citations, and a workspace built for review.</p>
+              <div class="tags"><span class="tag">Next.js</span><span class="tag">LangChain</span><span class="tag">RAG</span></div>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-art work-art--b"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Work 02 · Web platform</span><span class="tag">2025</span></div>
+              <h3 class="work-title">Royal Venue</h3>
+              <p class="work-desc">A booking platform for a marriage hall — availability, enquiries, and a clean operator dashboard.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact-8">
+        <div class="contact-inner">
+          <div>
+            <h2>Visit the <em>studio.</em></h2>
+            <p>For commissions, collaborations, and full-time roles. The studio is open — bring a problem.</p>
+          </div>
+          <form class="form demo-form">
+            <input type="email" placeholder="you@company.com" aria-label="Your email" required />
+            <button class="btn btn-main" type="submit">Get in touch</button>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Abdullah Azmat · practice 01</span>
+        <span class="foot-links"><a href="#work-8" data-scroll="#work-8">Works</a><a href="#contact-8" data-scroll="#contact-8">Visit</a></span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- 09 — SOFT MACHINE -->
+  <section class="view t9" data-index="9" data-name="09 · Soft Machine">
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="#" data-toast="Preview only — the live site comes next.">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 18v-4M12 18v-8M18 18V6" /></svg></span>
+          <span>Abdullah Azmat</span>
+        </a>
+        <div class="nav-links">
+          <a href="#work-9" data-scroll="#work-9">Products</a>
+          <a href="#" data-toast="The method section is planned for the live build.">Method</a>
+          <a href="#contact-9" data-scroll="#contact-9">Contact</a>
+        </div>
+        <a class="btn btn-nav" href="#contact-9" data-scroll="#contact-9">Start a build</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Systems · 2026</span>
+          <h1>Human intent.<br /><em>Machine</em><br />execution.</h1>
+          <p>Product-minded engineering for AI tools that feel obvious. I turn complicated models into controls people actually want to touch.</p>
+          <div class="actions">
+            <a class="btn btn-main" href="#work-9" data-scroll="#work-9">Inspect the products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a class="btn btn-soft" href="#" data-toast="The operating manual is planned for the live build.">Operating manual</a>
+          </div>
+          <div class="hero-meta">
+            <span>Products<b>06 shipped</b></span>
+            <span>Discipline<b>AI · Full-stack</b></span>
+            <span>Mode<b>Available</b></span>
+          </div>
+        </div>
+        <div class="console">
+          <div class="console-head"><b>System / 01 · AI operator</b><span class="console-dots"><i></i><i></i><i></i></span></div>
+          <div class="console-grid">
+            <div class="gauge"><span>Model confidence</span><div class="dial"></div></div>
+            <div class="gauge"><span>Retrieval depth</span><div class="dial"></div></div>
+            <div class="toggle-box" style="grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 92px;">
+              <div><span>Agent mode</span><div class="toggle-labels" style="justify-content: flex-start; gap: 18px;"><span>Manual</span><span>Autonomous</span></div></div>
+              <div class="toggle" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="console-foot"><span>Status <b>Online</b></span><span>Last build <b>02:14</b></span><span>Units <b>06</b></span></div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span>Products</span><strong>06</strong></div>
+        <div class="stat"><span>AI systems</span><strong>03</strong></div>
+        <div class="stat"><span>Core stacks</span><strong>02</strong></div>
+        <div class="stat"><span>Operator</span><strong>01</strong></div>
+      </div>
+
+      <section class="section" id="work-9">
+        <div class="section-head">
+          <h2>Built to be <em>used.</em></h2>
+          <p>Selected products, reduced to the parts that matter.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-art work-art--a"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Product 01 · AI</span><span class="tag">2026</span></div>
+              <h3 class="work-title">LegalIntel AI</h3>
+              <p class="work-desc">A document intelligence workspace where every answer is grounded, cited, and easy to verify.</p>
+              <div class="tags"><span class="tag">Next.js</span><span class="tag">LangChain</span><span class="tag">OpenAI</span></div>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-art work-art--b"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Product 02 · Community</span><span class="tag">2025</span></div>
+              <h3 class="work-title">Campus Lost &amp; Found</h3>
+              <p class="work-desc">A recovery platform for campus life — lost items, claims, and a handover flow people trust.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MySQL</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact-9">
+        <div class="contact-inner">
+          <div>
+            <h2>Specify the <em>next build.</em></h2>
+            <p>Tell me what should feel obvious. I'll design the system, the interface, and the handoff.</p>
+          </div>
+          <form class="form demo-form">
+            <input type="email" placeholder="you@company.com" aria-label="Your email" required />
+            <button class="btn btn-main" type="submit">Start a build</button>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Abdullah Azmat · soft machine 026</span>
+        <span class="foot-links"><a href="#work-9" data-scroll="#work-9">Products</a><a href="#contact-9" data-scroll="#contact-9">Contact</a></span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- 10 — VERDANT -->
+  <section class="view t10" data-index="10" data-name="10 · Verdant">
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="#" data-toast="Preview only — the live site comes next.">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 21V10M12 14c0-5-4-7-8-6 0 5 4 7 8 6ZM12 11c0-5 4-7 8-6 0 5-4 7-8 6Z" /></svg></span>
+          <span>Abdullah Azmat</span>
+        </a>
+        <div class="nav-links">
+          <a href="#work-10" data-scroll="#work-10">Work</a>
+          <a href="#" data-toast="The approach section is planned for the live build.">Approach</a>
+          <a href="#contact-10" data-scroll="#contact-10">Contact</a>
+        </div>
+        <a class="btn btn-nav" href="#contact-10" data-scroll="#contact-10">Say hello</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Solar · systems · 2026</span>
+          <h1>Build in<br /><span class="sun"><em>daylight.</em></span></h1>
+          <p>AI and web products designed to be useful, humane, and a little bit optimistic. I build systems that leave people with more time, not more friction.</p>
+          <div class="actions">
+            <a class="btn btn-main" href="#work-10" data-scroll="#work-10">See the work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a class="btn btn-link" href="#" data-toast="The principles page is planned for the live build.">Read the principles</a>
+          </div>
+          <div class="hero-note"><i></i> Open to work · building in Pakistan · shipping worldwide</div>
+        </div>
+        <div class="sun-stage">
+          <div class="sun-panel">
+            <svg viewBox="0 0 350 450" aria-hidden="true">
+              <g fill="none" stroke="#3f6b3a" stroke-opacity="0.5" stroke-width="1.4">
+                <path d="M54 430C86 348 54 302 108 242s66-74 56-150" />
+                <path d="M108 302c-30-10-42-38-34-66 28 3 46 26 34 66Z" fill="#3f6b3a" fill-opacity="0.14" />
+                <path d="M124 244c-6-30 8-54 34-62 8 28-6 52-34 62Z" fill="#3f6b3a" fill-opacity="0.12" />
+                <path d="M148 174c-2-24 12-42 32-48 6 22-6 40-32 48Z" fill="#3f6b3a" fill-opacity="0.1" />
+              </g>
+            </svg>
+          </div>
+          <div class="glass-card"><b>06 projects</b><span>shipped &amp; documented</span></div>
+          <span class="sun-tag">Solar / 2026</span>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><strong>06</strong><span>Projects shipped</span></div>
+        <div class="stat"><strong>03</strong><span>AI builds</span></div>
+        <div class="stat"><strong>100%</strong><span>Intent</span></div>
+        <div class="stat"><strong>01</strong><span>Planet</span></div>
+      </div>
+
+      <section class="section" id="work-10">
+        <div class="section-head">
+          <h2>Useful by <em>design.</em></h2>
+          <p>Selected work — built to be clear, kind, and dependable.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-art work-art--a"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Commerce · 2026</span><span class="tag">2025</span></div>
+              <h3 class="work-title">NOVA Commerce</h3>
+              <p class="work-desc">A full commerce stack with a warm interface — catalogue, cart, checkout, and a calm admin view.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span></div>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-art work-art--b"></div>
+            <div class="work-body">
+              <div class="work-top"><span class="tag">Community · 2025</span><span class="tag">2025</span></div>
+              <h3 class="work-title">Campus Lost &amp; Found</h3>
+              <p class="work-desc">A small, useful platform for a big campus problem — lost items, claims, and a trustworthy handover.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MySQL</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact-10">
+        <div class="contact-inner">
+          <div>
+            <h2>Grow something <em>useful.</em></h2>
+            <p>If you're building something that should make life lighter, I'd love to help. Freelance, collaboration, or full-time.</p>
+          </div>
+          <form class="form demo-form">
+            <input type="email" placeholder="you@company.com" aria-label="Your email" required />
+            <button class="btn btn-main" type="submit">Say hello</button>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Abdullah Azmat · verdant 026</span>
+        <span class="foot-links"><a href="#work-10" data-scroll="#work-10">Work</a><a href="#contact-10" data-scroll="#contact-10">Contact</a></span>
+      </footer>
+    </div>
+  </section>
+
+
+
+  <script>
+    const views = Array.from(document.querySelectorAll(".view"));
+    const picker = document.getElementById("picker");
+    const bar = document.getElementById("preview-bar");
+    const label = document.getElementById("pb-label");
+    const count = document.getElementById("pb-count");
+    const toastEl = document.getElementById("toast");
+    let current = 1;
+    let toastTimer;
+
+    function toast(message) {
+      toastEl.textContent = message;
+      toastEl.classList.add("is-visible");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toastEl.classList.remove("is-visible"), 2600);
+    }
+
+    function openView(index) {
+      index = Math.min(10, Math.max(1, index));
+      current = index;
+      const view = views.find((v) => Number(v.dataset.index) === index);
+      if (!view) return;
+      picker.style.display = "none";
+      views.forEach((v) => v.classList.toggle("is-active", v === view));
+      bar.classList.add("is-visible");
+      label.textContent = view.dataset.name;
+      count.textContent = String(index).padStart(2, "0") + " / 10";
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+
+    function closeView() {
+      picker.style.display = "";
+      views.forEach((v) => v.classList.remove("is-active"));
+      bar.classList.remove("is-visible");
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+
+    document.querySelectorAll("[data-open]").forEach((button) => {
+      button.addEventListener("click", () => openView(Number(button.dataset.open)));
+    });
+    document.getElementById("pb-back").addEventListener("click", closeView);
+    document.getElementById("pb-prev").addEventListener("click", () => openView(current - 1));
+    document.getElementById("pb-next").addEventListener("click", () => openView(current + 1));
+
+    document.addEventListener("keydown", (event) => {
+      if (!bar.classList.contains("is-visible")) return;
+      if (event.key === "Escape") closeView();
+      if (event.key === "ArrowLeft") openView(current - 1);
+      if (event.key === "ArrowRight") openView(current + 1);
+    });
+
+    document.querySelectorAll("[data-scroll]").forEach((el) => {
+      el.addEventListener("click", (event) => {
+        event.preventDefault();
+        const target = document.querySelector(el.dataset.scroll);
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+
+    document.querySelectorAll("[data-toast]").forEach((el) => {
+      el.addEventListener("click", (event) => {
+        event.preventDefault();
+        toast(el.dataset.toast || "Design preview only — the live build comes next.");
+      });
+    });
+
+    document.querySelectorAll(".demo-form").forEach((form) => {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        toast("Preview only — the real form gets wired in the build.");
+      });
+    });
+  </script>
+</body>
+</html>

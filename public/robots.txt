@@ -1,0 +1,11 @@
+# https://abdullah-azmat-rho.vercel.app/robots.txt
+# Search crawlers and AI agents may read, index, and cite the portfolio.
+# Training rights are reserved; no Content-Signal directive is asserted here.
+
+User-agent: *
+Allow: /
+
+# Internal design archive and build notes are not part of the public site.
+Disallow: /docs/
+
+Sitemap: https://abdullah-azmat-rho.vercel.app/sitemap.xml

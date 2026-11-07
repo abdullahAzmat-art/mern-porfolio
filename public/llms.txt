@@ -1,0 +1,41 @@
+# Abdullah Azmat
+
+> Abdullah Azmat is an AI engineer and full-stack developer based in Pakistan. He designs and ships AI agents, RAG-powered tools, intelligent automation, and high-performance web applications using Python, LangChain, LangGraph, React, Next.js, Node.js, and MongoDB.
+
+Abdullah is in his fifth semester of a BS in Computer Science at the National University of Modern Languages (NUML). He has placed second at HackaForge NUML 1.0 and HackaForge NUML 3.0, holds a MERN stack certificate from PNY Training, and has built 7+ products. He is available for select freelance and full-time projects.
+
+## Primary page
+
+- [Abdullah Azmat — AI Engineer & Full-Stack Developer](https://abdullah-azmat-rho.vercel.app/): The complete portfolio: selected work, capabilities, stack, achievements, and contact details.
+
+## Selected work
+
+- [Law Firm Intake & Client Management System](https://abdullah-azmat-rho.vercel.app/#work): Featured full-stack build for a law firm with intake workflows, client records, and an admin dashboard.
+- [LegalIntel AI](https://abdullah-azmat-rho.vercel.app/#work): AI document intelligence for legal teams, with cited answers and clause-level risk analysis.
+- [Web and e-commerce projects](https://abdullah-azmat-rho.vercel.app/#work): a venue booking platform, an esports tournament site, a boutique storefront, a commerce build, and a campus lost-and-found app.
+
+## Services
+
+- [AI agents and RAG systems](https://abdullah-azmat-rho.vercel.app/#services): Agent architecture, retrieval pipelines, tool use, evaluation, and deployment.
+- [Full-stack web development](https://abdullah-azmat-rho.vercel.app/#services): React, Next.js, Node.js, and MongoDB applications built for speed and clarity.
+- [Automation and integrations](https://abdullah-azmat-rho.vercel.app/#services): Workflow automation, APIs, and third-party integrations.
+- [Growth roadmap](https://abdullah-azmat-rho.vercel.app/#roadmap): A four-question business assessment that maps a 90-day plan across offer, funnel, Meta Ads, and follow-up.
+
+## Background
+
+- [About Abdullah](https://abdullah-azmat-rho.vercel.app/#about): Background, education, working style, and timeline.
+- [Technology stack](https://abdullah-azmat-rho.vercel.app/#stack): Languages, frameworks, AI tooling, and infrastructure.
+- [Achievements](https://abdullah-azmat-rho.vercel.app/#achievements): Hackathon placements, certifications, and products built.
+
+## Contact
+
+- [Contact form](https://abdullah-azmat-rho.vercel.app/#contact): Start a project conversation.
+- Email: hassanazmat079@gmail.com
+- Phone: +92 308 4685669
+- GitHub: https://github.com/abdullahAzmat-art
+- LinkedIn: https://www.linkedin.com/in/abdullah-azmat-art/
+- Instagram: https://instagram.com/brav_eabdullah
+
+## Optional
+
+- [Résumé (PDF)](https://abdullah-azmat-rho.vercel.app/assets/Abdullah-Azmat-Resume.pdf): One-page CV with experience, projects, and education.

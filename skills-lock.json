@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "responsive-design": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/ui-design/skills/responsive-design/SKILL.md",
+      "computedHash": "155eff4b1bc8d867ae6bea9900c485ab1081de0b4873c1900adb66bf62466aed"
+    },
+    "ui-portfolio-design": {
+      "source": "levisegal/monay",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ui-portfolio-design/SKILL.md",
+      "computedHash": "9582162e9532a1d334cc9e6314c87af437ad921e87bf847a920954c948e05915"
+    }
+  }
+}

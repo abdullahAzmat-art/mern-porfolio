@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="NOVA e-commerce platform with product catalogue and cart">
+  <defs>
+    <linearGradient id="ec-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7FBFF"/>
+      <stop offset=".6" stop-color="#EAF4FF"/>
+      <stop offset="1" stop-color="#C8E0FA"/>
+    </linearGradient>
+    <linearGradient id="ec-hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102448"/>
+      <stop offset=".65" stop-color="#173A6E"/>
+      <stop offset="1" stop-color="#2479E8"/>
+    </linearGradient>
+    <linearGradient id="ec-metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EAF4FF"/>
+      <stop offset=".5" stop-color="#A9C9EE"/>
+      <stop offset="1" stop-color="#6E9CD4"/>
+    </linearGradient>
+    <filter id="ec-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#102448" flood-opacity=".16"/>
+    </filter>
+    <filter id="ec-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102448" flood-opacity=".1"/>
+    </filter>
+    <radialGradient id="ec-glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#C8E0FA" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#C8E0FA" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#ec-bg)"/>
+  <circle cx="1080" cy="110" r="260" fill="#A9C9EE" opacity=".22"/>
+  <circle cx="120" cy="700" r="220" fill="#A9C9EE" opacity=".18"/>
+
+  <!-- header -->
+  <g>
+    <text x="82" y="86" fill="#102448" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" letter-spacing="-1">NOVA<tspan fill="#2479E8">.</tspan></text>
+    <text x="82" y="102" fill="#102448" fill-opacity=".4" font-family="Arial, Helvetica, sans-serif" font-size="7" letter-spacing="2.6">EVERYDAY TECH</text>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#102448" fill-opacity=".6">
+      <text x="390" y="88">Shop</text>
+      <text x="450" y="88">Audio</text>
+      <text x="516" y="88">Wearables</text>
+      <text x="606" y="88">Deals</text>
+    </g>
+    <rect x="760" y="64" width="210" height="38" rx="19" fill="#FFFFFF" stroke="#102448" stroke-opacity=".08"/>
+    <circle cx="782" cy="83" r="6" fill="none" stroke="#102448" stroke-opacity=".45" stroke-width="1.4"/>
+    <path d="M787 88l5 5" stroke="#102448" stroke-opacity=".45" stroke-width="1.4" stroke-linecap="round"/>
+    <text x="800" y="87" fill="#102448" fill-opacity=".35" font-family="Arial, Helvetica, sans-serif" font-size="10.5">Search products…</text>
+    <circle cx="1010" cy="82" r="17" fill="#102448"/>
+    <path d="M1002 78h16l2 14h-20z" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-linejoin="round"/>
+    <path d="M1007 78c0-6 6-6 6 0" fill="none" stroke="#FFFFFF" stroke-width="1.2"/>
+    <circle cx="1022" cy="68" r="7" fill="#2479E8"/>
+    <text x="1022" y="72" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700" text-anchor="middle">2</text>
+    <circle cx="1068" cy="82" r="17" fill="#EAF4FF" stroke="#102448" stroke-opacity=".08"/>
+    <circle cx="1068" cy="77" r="5" fill="none" stroke="#102448" stroke-opacity=".5" stroke-width="1.2"/>
+    <path d="M1058 92c1-7 19-7 20 0" fill="none" stroke="#102448" stroke-opacity=".5" stroke-width="1.2"/>
+    <line x1="82" y1="120" x2="1118" y2="120" stroke="#102448" stroke-opacity=".08"/>
+  </g>
+
+  <!-- hero -->
+  <g filter="url(#ec-shadow)">
+    <rect x="82" y="150" width="642" height="238" rx="20" fill="url(#ec-hero)"/>
+  </g>
+  <circle cx="610" cy="270" r="180" fill="url(#ec-glow)"/>
+  <text x="114" y="196" fill="#A9C9EE" font-family="Arial, Helvetica, sans-serif" font-size="8.5" letter-spacing="2.6">NEW SEASON · AUDIO</text>
+  <text x="112" y="250" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" letter-spacing="-1.4">Sound that</text>
+  <text x="112" y="292" fill="#C8E0FA" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-style="italic" letter-spacing="-1">moves you.</text>
+  <text x="114" y="326" fill="#A9C9EE" fill-opacity=".65" font-family="Arial, Helvetica, sans-serif" font-size="11">Aero headphones. 40-hour battery. Studio-grade clarity.</text>
+  <rect x="114" y="346" width="144" height="34" rx="17" fill="#FFFFFF"/>
+  <text x="186" y="368" fill="#102448" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">Shop now →</text>
+
+  <!-- headphones -->
+  <g transform="translate(0 14)">
+    <path d="M458 300c0-42 32-74 72-74s72 32 72 74" fill="none" stroke="url(#ec-metal)" stroke-width="12" stroke-linecap="round"/>
+    <rect x="438" y="284" width="30" height="66" rx="15" fill="url(#ec-metal)"/>
+    <rect x="592" y="284" width="30" height="66" rx="15" fill="url(#ec-metal)"/>
+    <rect x="446" y="300" width="14" height="34" rx="7" fill="#102448" opacity=".6"/>
+    <rect x="600" y="300" width="14" height="34" rx="7" fill="#102448" opacity=".6"/>
+    <circle cx="530" cy="262" r="38" fill="#2479E8" opacity=".18"/>
+    <circle cx="530" cy="262" r="24" fill="none" stroke="#C8E0FA" stroke-opacity=".45"/>
+  </g>
+  <rect x="446" y="352" width="168" height="22" rx="11" fill="#0B1A36" fill-opacity=".55"/>
+  <text x="530" y="367" fill="#C8E0FA" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle">AERO MAX · MIDNIGHT</text>
+
+  <!-- product cards -->
+  <g font-family="Arial, Helvetica, sans-serif">
+    <!-- card 1 watch -->
+    <g filter="url(#ec-soft)"><rect x="82" y="418" width="198" height="234" rx="16" fill="#FFFFFF"/></g>
+    <rect x="98" y="434" width="166" height="112" rx="11" fill="#EAF4FF"/>
+    <rect x="166" y="452" width="30" height="72" rx="8" fill="#102448"/>
+    <rect x="170" y="460" width="22" height="52" rx="5" fill="#2479E8"/>
+    <circle cx="181" cy="485" r="9" fill="none" stroke="#C8E0FA" stroke-width="1.5"/>
+    <path d="M181 478v7l5 3" stroke="#C8E0FA" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <rect x="160" y="448" width="42" height="8" rx="4" fill="#1E4B8F"/>
+    <rect x="160" y="520" width="42" height="8" rx="4" fill="#1E4B8F"/>
+    <rect x="98" y="560" width="54" height="18" rx="9" fill="#EAF4FF"/>
+    <text x="125" y="573" fill="#2479E8" font-size="8" font-weight="700" text-anchor="middle">BESTSELLER</text>
+    <text x="98" y="602" fill="#102448" font-size="12.5" font-weight="700">Aero Watch S2</text>
+    <text x="98" y="620" fill="#102448" fill-opacity=".45" font-size="9.5">Midnight · 44mm</text>
+    <text x="98" y="642" fill="#102448" font-size="12" font-weight="800">PKR 18,900</text>
+    <circle cx="248" cy="634" r="13" fill="#2479E8"/>
+    <path d="M243 634h10M249 630l4 4-4 4" stroke="#FFFFFF" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- card 2 earbuds -->
+    <g filter="url(#ec-soft)"><rect x="298" y="418" width="198" height="234" rx="16" fill="#FFFFFF"/></g>
+    <rect x="314" y="434" width="166" height="112" rx="11" fill="#EAF4FF"/>
+    <rect x="352" y="458" width="90" height="66" rx="20" fill="#FFFFFF" stroke="#102448" stroke-opacity=".1"/>
+    <path d="M374 480c0-8 7-14 15-14s15 6 15 14v18c0 6-5 11-11 11h-8c-6 0-11-5-11-11z" fill="#102448"/>
+    <path d="M406 480c0-8 7-14 15-14s15 6 15 14v18c0 6-5 11-11 11h-8c-6 0-11-5-11-11z" fill="#2479E8"/>
+    <circle cx="381" cy="503" r="8" fill="#A9C9EE"/>
+    <circle cx="413" cy="503" r="8" fill="#C8E0FA"/>
+    <rect x="314" y="560" width="42" height="18" rx="9" fill="#EAF4FF"/>
+    <text x="335" y="573" fill="#2479E8" font-size="8" font-weight="700" text-anchor="middle">NEW</text>
+    <text x="314" y="602" fill="#102448" font-size="12.5" font-weight="700">Pulse Buds Pro</text>
+    <text x="314" y="620" fill="#102448" fill-opacity=".45" font-size="9.5">ANC · 32h battery</text>
+    <text x="314" y="642" fill="#102448" font-size="12" font-weight="800">PKR 9,450</text>
+    <circle cx="464" cy="634" r="13" fill="#2479E8"/>
+    <path d="M459 634h10M465 630l4 4-4 4" stroke="#FFFFFF" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- card 3 speaker -->
+    <g filter="url(#ec-soft)"><rect x="514" y="418" width="210" height="234" rx="16" fill="#FFFFFF"/></g>
+    <rect x="530" y="434" width="178" height="112" rx="11" fill="#EAF4FF"/>
+    <rect x="584" y="456" width="70" height="74" rx="26" fill="#102448"/>
+    <circle cx="619" cy="482" r="14" fill="none" stroke="#A9C9EE" stroke-width="1.4"/>
+    <circle cx="619" cy="482" r="5" fill="#2479E8"/>
+    <circle cx="619" cy="510" r="5" fill="#A9C9EE" opacity=".5"/>
+    <path d="M602 530h34" stroke="#2479E8" stroke-width="2" stroke-linecap="round"/>
+    <rect x="530" y="560" width="58" height="18" rx="9" fill="#EAF4FF"/>
+    <text x="559" y="573" fill="#2479E8" font-size="8" font-weight="700" text-anchor="middle">TRENDING</text>
+    <text x="530" y="602" fill="#102448" font-size="12.5" font-weight="700">Orbit Mini</text>
+    <text x="530" y="620" fill="#102448" fill-opacity=".45" font-size="9.5">Portable · 360° sound</text>
+    <text x="530" y="642" fill="#102448" font-size="12" font-weight="800">PKR 7,200</text>
+    <circle cx="692" cy="634" r="13" fill="#2479E8"/>
+    <path d="M687 634h10M693 630l4 4-4 4" stroke="#FFFFFF" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- cart -->
+  <g filter="url(#ec-shadow)">
+    <rect x="764" y="150" width="354" height="520" rx="20" fill="#FFFFFF"/>
+  </g>
+  <text x="792" y="188" fill="#102448" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800">Your cart</text>
+  <rect x="878" y="174" width="22" height="20" rx="10" fill="#EAF4FF"/>
+  <text x="889" y="188" fill="#2479E8" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" text-anchor="middle">3</text>
+  <text x="1090" y="188" fill="#102448" fill-opacity=".4" font-family="Arial, Helvetica, sans-serif" font-size="10" text-anchor="end">Continue shopping</text>
+  <line x1="790" y1="204" x2="1092" y2="204" stroke="#102448" stroke-opacity=".08"/>
+
+  <!-- cart item 1 -->
+  <rect x="790" y="222" width="58" height="58" rx="10" fill="#EAF4FF"/>
+  <rect x="808" y="236" width="22" height="32" rx="6" fill="#102448"/>
+  <rect x="812" y="242" width="14" height="20" rx="3" fill="#2479E8"/>
+  <text x="862" y="242" fill="#102448" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700">Aero Watch S2</text>
+  <text x="862" y="258" fill="#102448" fill-opacity=".45" font-family="Arial, Helvetica, sans-serif" font-size="9.5">Midnight · 44mm</text>
+  <text x="862" y="274" fill="#2479E8" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700">PKR 18,900</text>
+  <rect x="1050" y="232" width="26" height="20" rx="6" fill="#EAF4FF"/>
+  <text x="1063" y="246" fill="#102448" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" text-anchor="middle">1</text>
+  <line x1="790" y1="296" x2="1092" y2="296" stroke="#102448" stroke-opacity=".06"/>
+
+  <!-- cart item 2 -->
+  <rect x="790" y="312" width="58" height="58" rx="10" fill="#EAF4FF"/>
+  <rect x="800" y="326" width="38" height="28" rx="9" fill="#FFFFFF" stroke="#102448" stroke-opacity=".1"/>
+  <circle cx="810" cy="340" r="6" fill="#102448"/>
+  <circle cx="828" cy="340" r="6" fill="#2479E8"/>
+  <text x="862" y="332" fill="#102448" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700">Pulse Buds Pro</text>
+  <text x="862" y="348" fill="#102448" fill-opacity=".45" font-family="Arial, Helvetica, sans-serif" font-size="9.5">ANC · 32h battery</text>
+  <text x="862" y="364" fill="#2479E8" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700">PKR 9,450</text>
+  <rect x="1050" y="322" width="26" height="20" rx="6" fill="#EAF4FF"/>
+  <text x="1063" y="336" fill="#102448" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" text-anchor="middle">1</text>
+  <line x1="790" y1="386" x2="1092" y2="386" stroke="#102448" stroke-opacity=".06"/>
+
+  <!-- cart item 3 -->
+  <rect x="790" y="402" width="58" height="58" rx="10" fill="#EAF4FF"/>
+  <rect x="808" y="416" width="22" height="30" rx="9" fill="#102448"/>
+  <circle cx="819" cy="428" r="5" fill="none" stroke="#A9C9EE" stroke-width="1.2"/>
+  <text x="862" y="422" fill="#102448" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700">Orbit Mini</text>
+  <text x="862" y="438" fill="#102448" fill-opacity=".45" font-family="Arial, Helvetica, sans-serif" font-size="9.5">Portable · 360° sound</text>
+  <text x="862" y="454" fill="#2479E8" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700">PKR 7,200</text>
+  <rect x="1050" y="412" width="26" height="20" rx="6" fill="#EAF4FF"/>
+  <text x="1063" y="426" fill="#102448" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" text-anchor="middle">1</text>
+  <line x1="790" y1="476" x2="1092" y2="476" stroke="#102448" stroke-opacity=".08"/>
+
+  <text x="790" y="506" fill="#102448" fill-opacity=".5" font-family="Arial, Helvetica, sans-serif" font-size="10.5">Subtotal</text>
+  <text x="1092" y="506" fill="#102448" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" text-anchor="end">PKR 35,550</text>
+  <text x="790" y="528" fill="#102448" fill-opacity=".5" font-family="Arial, Helvetica, sans-serif" font-size="10.5">Shipping</text>
+  <text x="1092" y="528" fill="#2479E8" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" text-anchor="end">FREE</text>
+  <line x1="790" y1="544" x2="1092" y2="544" stroke="#102448" stroke-opacity=".08"/>
+  <text x="790" y="572" fill="#102448" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800">Total</text>
+  <text x="1092" y="572" fill="#102448" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" text-anchor="end">PKR 35,550</text>
+  <rect x="790" y="590" width="302" height="44" rx="12" fill="#2479E8"/>
+  <text x="941" y="617" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">Secure checkout →</text>
+  <text x="941" y="652" fill="#102448" fill-opacity=".35" font-family="Arial, Helvetica, sans-serif" font-size="8.5" text-anchor="middle">Visa · Mastercard · Cash on delivery</text>
+
+  <!-- free shipping pill -->
+  <g filter="url(#ec-soft)">
+    <rect x="430" y="128" width="294" height="36" rx="18" fill="#FFFFFF"/>
+  </g>
+  <circle cx="452" cy="146" r="6" fill="#2479E8"/>
+  <text x="466" y="150" fill="#102448" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="600">Free express shipping on orders over PKR 5,000</text>
+</svg>

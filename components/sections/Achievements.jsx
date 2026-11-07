@@ -43,7 +43,7 @@ export default function Achievements() {
       <div className="shell">
         <header className="section-head">
           <div className="kicker reveal">
-            <span className="kicker-num">06</span>
+            <span className="kicker-num">05</span>
             <span className="kicker-label">Recognition</span>
             <span className="kicker-tail" aria-hidden="true"></span>
           </div>

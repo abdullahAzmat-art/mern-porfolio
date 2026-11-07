@@ -35,14 +35,11 @@ export default function SiteHeader() {
             <a className="nav-link" href="#roadmap">
               <span>04</span>Roadmap
             </a>
-            <a className="nav-link" href="#stack">
-              <span>05</span>Stack
-            </a>
             <a className="nav-link" href="#achievements">
-              <span>06</span>Recognition
+              <span>05</span>Recognition
             </a>
             <a className="nav-link" href="#contact">
-              <span>07</span>Contact
+              <span>06</span>Contact
             </a>
           </nav>
 
@@ -99,19 +96,13 @@ export default function SiteHeader() {
               <use href="#i-arrow-up"></use>
             </svg>
           </a>
-          <a href="#stack" style={{ "--i": 4 }}>
-            <span>05</span>Stack
+          <a href="#achievements" style={{ "--i": 4 }}>
+            <span>05</span>Recognition
             <svg className="icon" aria-hidden="true">
               <use href="#i-arrow-up"></use>
             </svg>
           </a>
-          <a href="#achievements" style={{ "--i": 5 }}>
-            <span>06</span>Recognition
-            <svg className="icon" aria-hidden="true">
-              <use href="#i-arrow-up"></use>
-            </svg>
-          </a>
-          <a href="#contact" style={{ "--i": 6 }}>
+          <a href="#contact" style={{ "--i": 5 }}>
             <span>07</span>Contact
             <svg className="icon" aria-hidden="true">
               <use href="#i-arrow-up"></use>

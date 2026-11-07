@@ -9,7 +9,6 @@ import Work from "@/components/sections/Work";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Roadmap from "@/components/sections/Roadmap";
-import Stack from "@/components/sections/Stack";
 import Achievements from "@/components/sections/Achievements";
 import Contact from "@/components/sections/Contact";
 import { structuredData } from "@/lib/schema";
@@ -37,7 +36,6 @@ export default function Home() {
         <About />
         <Services />
         <Roadmap />
-        <Stack />
         <Achievements />
         <Contact />
       </main>

@@ -11,7 +11,7 @@ export default function ProjectDialog() {
           <use href="#i-close"></use>
         </svg>
       </button>
-      <div className="dialog-scroll">
+      <div className="dialog-scroll" data-lenis-prevent>
         <div className="dialog-media">
           <img id="dialog-image" width="1200" height="800" alt="" decoding="async" />
         </div>

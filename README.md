@@ -111,6 +111,7 @@ extra usage is never charged on Hobby — collection pauses instead.
 - Full SEO metadata, Open Graph, Twitter cards, JSON-LD, sitemap, `llms.txt`
 - Installable PWA with a service worker and an offline fallback page
 - Free traffic analytics via Vercel Web Analytics
+- Subtle Lenis smooth scrolling on desktop (native touch, reduced-motion aware)
 
 ## Notes
 

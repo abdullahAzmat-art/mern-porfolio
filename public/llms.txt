@@ -6,7 +6,7 @@ Abdullah is in his fifth semester of a BS in Computer Science at the National Un
 
 ## Primary page
 
-- [Abdullah Azmat — AI Engineer & Full-Stack Developer](https://abdullah-azmat-rho.vercel.app/): The complete portfolio: selected work, capabilities, achievements, and contact details.
+- [Abdullah Azmat — AI Engineer & Full-Stack Developer](https://abdullah-azmat-rho.vercel.app/): The complete portfolio: selected work, capabilities, stack, achievements, and contact details.
 
 ## Selected work
 
@@ -24,6 +24,7 @@ Abdullah is in his fifth semester of a BS in Computer Science at the National Un
 ## Background
 
 - [About Abdullah](https://abdullah-azmat-rho.vercel.app/#about): Background, education, working style, and timeline.
+- [Technology stack](https://abdullah-azmat-rho.vercel.app/#stack): Languages, frameworks, AI tooling, and infrastructure.
 - [Achievements](https://abdullah-azmat-rho.vercel.app/#achievements): Hackathon placements, certifications, and products built.
 
 ## Contact

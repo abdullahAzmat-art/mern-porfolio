@@ -66,7 +66,7 @@ extra usage is never charged on Hobby — collection pauses instead.
 │   ├── ProjectDialog.jsx          # Case-study dialog shell
 │   ├── SiteInteractions.jsx       # Client island that boots browser behavior
 │   └── sections/                  # Hero, Marquee, Work, About, Services,
-│                                  # Roadmap, Achievements, Contact
+│                                  # Roadmap, Stack, Achievements, Contact
 ├── data/
 │   ├── projects.js                # Case-study content
 │   └── roadmap.js                 # Growth quiz questions and plan logic

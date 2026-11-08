@@ -25,6 +25,7 @@ export default function SiteFooter() {
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#roadmap">Roadmap</a>
+          <a href="#stack">Stack</a>
           <a href="#achievements">Recognition</a>
           <a href="#contact">Contact</a>
         </nav>

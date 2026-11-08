@@ -5,7 +5,7 @@ export default function Contact() {
       <div className="shell contact-grid">
         <div className="contact-copy">
           <div className="kicker reveal">
-            <span className="kicker-num">06</span>
+            <span className="kicker-num">07</span>
             <span className="kicker-label">Contact</span>
             <span className="kicker-tail" aria-hidden="true"></span>
           </div>

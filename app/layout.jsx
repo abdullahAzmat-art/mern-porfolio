@@ -69,7 +69,7 @@ export const metadata = {
     siteName: "Abdullah Azmat",
     title: "Abdullah Azmat — AI Engineer & Full-Stack Developer",
     description:
-      "AI agents, RAG systems, and full-stack products built with intent. Explore selected work, capabilities, and contact details.",
+      "AI agents, RAG systems, and full-stack products built with intent. Explore selected work, capabilities, and the stack behind it.",
     url: `${SITE_URL}/`,
     locale: "en_US",
     images: [

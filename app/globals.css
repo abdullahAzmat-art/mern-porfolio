@@ -3821,11 +3821,6 @@ a.contact-detail:hover .contact-icon {
     padding-top: 48px;
   }
 
-  .stack-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px;
-  }
-
   .process-steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px 0;
@@ -3954,15 +3949,6 @@ a.contact-detail:hover .contact-icon {
 
   .about-facts {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .stack-grid {
-    grid-template-columns: 1fr;
-    gap: 26px;
-  }
-
-  .stack-word {
-    font-size: 42vw;
   }
 
   .award-grid {
@@ -4112,11 +4098,6 @@ a.contact-detail:hover .contact-icon {
     grid-template-columns: 1fr;
   }
 
-  .stack-footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .footer-wordmark {
     font-size: 13.6vw;
   }
@@ -4131,7 +4112,6 @@ a.contact-detail:hover .contact-icon {
 .section.work,
 .section.about,
 .section.services,
-.section.stack,
 .section.achievements {
   content-visibility: auto;
   contain-intrinsic-size: auto 1400px;
@@ -4195,7 +4175,6 @@ a.contact-detail:hover .contact-icon {
   .card-cat,
   .timeline-tag,
   .award-badge,
-  .stack-label,
   .process-label {
     font-size: 9.5px;
   }

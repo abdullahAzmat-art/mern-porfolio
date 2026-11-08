@@ -41,6 +41,16 @@ and the AI-readable files (`index.md`, `llms.txt`, `sitemap.xml`,
 Before going live, confirm the production URL in `app/layout.jsx`
 (`SITE_URL`) and `lib/schema.js` matches the final domain.
 
+## Analytics
+
+The site uses Vercel Web Analytics (cookieless, no consent banner needed).
+
+1. In the Vercel dashboard, open the project → **Analytics** → **Enable**.
+2. Deploy. Traffic data starts appearing in that tab after a few visits.
+
+The Hobby plan includes 50,000 events per month (a page view is one event);
+extra usage is never charged on Hobby — collection pauses instead.
+
 ## Structure
 
 ```
@@ -56,7 +66,7 @@ Before going live, confirm the production URL in `app/layout.jsx`
 │   ├── ProjectDialog.jsx          # Case-study dialog shell
 │   ├── SiteInteractions.jsx       # Client island that boots browser behavior
 │   └── sections/                  # Hero, Marquee, Work, About, Services,
-│                                  # Roadmap, Stack, Achievements, Contact
+│                                  # Roadmap, Achievements, Contact
 ├── data/
 │   ├── projects.js                # Case-study content
 │   └── roadmap.js                 # Growth quiz questions and plan logic
@@ -66,6 +76,7 @@ Before going live, confirm the production URL in `app/layout.jsx`
 ├── public/
 │   ├── assets/                    # Fonts, images, résumé PDF
 │   ├── favicon.svg
+│   ├── sw.js                      # Service worker: offline + installable PWA
 │   ├── robots.txt
 │   ├── sitemap.xml
 │   ├── site.webmanifest
@@ -98,6 +109,8 @@ Before going live, confirm the production URL in `app/layout.jsx`
 - Responsive mobile menu and layouts down to 360px, no horizontal overflow
 - Copy-email button and a contact form that composes a pre-filled email
 - Full SEO metadata, Open Graph, Twitter cards, JSON-LD, sitemap, `llms.txt`
+- Installable PWA with a service worker and an offline fallback page
+- Free traffic analytics via Vercel Web Analytics
 
 ## Notes
 

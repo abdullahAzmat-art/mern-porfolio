@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const bricolage = localFont({
@@ -68,7 +69,7 @@ export const metadata = {
     siteName: "Abdullah Azmat",
     title: "Abdullah Azmat — AI Engineer & Full-Stack Developer",
     description:
-      "AI agents, RAG systems, and full-stack products built with intent. Explore selected work, capabilities, and the stack behind it.",
+      "AI agents, RAG systems, and full-stack products built with intent. Explore selected work, capabilities, and contact details.",
     url: `${SITE_URL}/`,
     locale: "en_US",
     images: [
@@ -123,6 +124,7 @@ export default function RootLayout({ children }) {
         <link rel="me" href="https://instagram.com/brav_eabdullah" />
 
         {children}
+        <Analytics />
       </body>
     </html>
   );

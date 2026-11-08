@@ -71,14 +71,6 @@ A community platform for reporting, discovering, and recovering misplaced campus
 
 Stack: React, .NET, MySQL, C#.
 
-## Stack
-
-- **AI & data:** Python, LangChain, LangGraph, OpenAI, RAG, vector databases
-- **Frontend:** React, Next.js, TypeScript, Tailwind CSS
-- **Backend:** Node.js, Express, .NET, Spring Boot
-- **Data:** MongoDB, MySQL, Supabase
-- **Tooling:** Git, Vercel, REST APIs, WebSocket
-
 ## Achievements
 
 - 2nd place — HackaForge NUML 1.0

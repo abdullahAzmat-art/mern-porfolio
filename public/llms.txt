@@ -4,6 +4,15 @@
 
 Abdullah is in his fifth semester of a BS in Computer Science at the National University of Modern Languages (NUML). He has placed second at HackaForge NUML 1.0 and HackaForge NUML 3.0, holds a MERN stack certificate from PNY Training, and has built 7+ products. He is available for select freelance and full-time projects.
 
+## Direct answers
+
+- Who is Abdullah Azmat? An AI engineer and full-stack developer in Pakistan who builds AI agents, RAG systems, automation, and web applications.
+- What does Abdullah Azmat build? AI agents, retrieval-augmented generation tools, automation, and full-stack web products.
+- Where is Abdullah Azmat based? Pakistan; he works with clients worldwide.
+- How do you contact Abdullah Azmat? Email hassanazmat079@gmail.com or use the contact form on the portfolio.
+- What is Abdullah Azmat studying? BS Computer Science at NUML, currently in the fifth semester.
+- Is Abdullah Azmat available for hire? Yes, for select freelance projects, collaborations, and full-time roles.
+
 ## Primary page
 
 - [Abdullah Azmat — AI Engineer & Full-Stack Developer](https://abdullah-azmat-rho.vercel.app/): The complete portfolio: selected work, capabilities, stack, achievements, and contact details.
@@ -38,4 +47,5 @@ Abdullah is in his fifth semester of a BS in Computer Science at the National Un
 
 ## Optional
 
+- [Full profile](https://abdullah-azmat-rho.vercel.app/llms-full.txt): Complete plain-text profile with every project, the stack, achievements, and contact details.
 - [Résumé (PDF)](https://abdullah-azmat-rho.vercel.app/assets/Abdullah-Azmat-Resume.pdf): One-page CV with experience, projects, and education.

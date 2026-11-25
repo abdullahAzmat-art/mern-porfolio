@@ -81,6 +81,8 @@ extra usage is never charged on Hobby — collection pauses instead.
 │   ├── sitemap.xml
 │   ├── site.webmanifest
 │   ├── llms.txt
+│   ├── llms-full.txt              # Full plain-text profile for AI agents
+│   ├── google1d2577b77b0832dd.html # Google Search Console verification file
 │   └── index.md                   # Markdown alternate for AI crawlers
 ├── legacy/                        # Previous static build, kept for reference
 ├── next.config.mjs

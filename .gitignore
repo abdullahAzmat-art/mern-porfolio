@@ -7,6 +7,10 @@
 
 # production
 /build
+/dist
+
+# android / capacitor build output
+/android
 
 # local env files
 .env*.local
